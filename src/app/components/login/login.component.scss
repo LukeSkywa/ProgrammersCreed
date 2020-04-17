@@ -12,8 +12,8 @@ body {
 }
 
 .loginForm {
-    height: 350px;
-    width: 290px;
+    height: 400px;
+    width: 330px;
     background-image: linear-gradient(to right, rgb(3, 51, 70) 0%, rgba(3, 51, 70, 0.63) 100%);
     border-radius: 13px;
     box-shadow: -8px -8px #bfbdbd;
@@ -34,7 +34,7 @@ body {
 .inputFields {
     //margin: 15px 0;
     font-size: 16px;
-    width: 190px;
+    width: 220px;
     border: 1px solid white;
     border-top: none;
     border-left: none;
@@ -51,15 +51,15 @@ body {
     border: none;
     color: black;
     font-size: 13pt;
+    margin-top: 5px;
 }
 
 .switch {
     position: relative;
-    display: inline-block;
     width: 28px;
     height: 0px;
     float: left;
-    margin-left: 30px;
+    margin-left: 35px;
 }
 
 .switch input {
@@ -119,4 +119,19 @@ input:checked+.slider:before {
 
 .password {
     font-size: 10pt;
+    margin-right: 40px;
+}
+
+.btn-registrati {
+    height: 75px;
+    width: 75px;
+    background-color: rgb(3, 51, 70);
+    border: none;
+    border-radius: 50px;
+    font-size: 50px;
+    color: white;
+    outline: none;
+    position: absolute;
+    margin-left: 293px;
+    margin-top: 10px;
 }
