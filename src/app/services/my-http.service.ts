@@ -23,6 +23,10 @@ export class MyHttpService {
     return this.httpClient.get<User[]>('http://localhost:3000/games', { observe: 'response', params: params });
     //return this.httpClient.get<GameItem[]>('http://localhost:3000/games?genere=' + genere);
   }
+  
+  postUser(user:User){
+    return this.httpClient.post('http://localhost:3000/users', user);
+  }
 
 
 }
