@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item';
 import { Router } from '@angular/router';
 
@@ -8,19 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  view: boolean=false;
   menuList:MenuItem[]=[];
-  cerca=false;
+  cerca:boolean;
+  @Input()
+  version: number;
 
-  changeEditItem(){
-    if(sessionStorage.getItem('dettaglio')){
-      this.menuList=[     
-        { id:1, desc:"←"},
-        { id:2, desc:sessionStorage.getItem('nomeItem')},
-      ];
-      this.view=true;
-    }
-    else if(sessionStorage.getItem('login')){
+
+  createMenu(){
+    if(this.version===1){
       this.menuList=[     
         { id:1, desc:"Homepage"},
         { id:2, desc:"Lista"},
@@ -29,32 +24,34 @@ export class MenuComponent implements OnInit {
         { id:5, desc:"Profilo"},
         { id:6, desc:"Esci"},
       ]
-      this.view=true;
     }
-
+    else if(this.version===2){
+      this.menuList=[     
+        { id:1, desc:"←"},
+        { id:2, desc:sessionStorage.getItem('nomeItem')},
+      ];
+    }
   }
 
   constructor(private router: Router) {
-    this.changeEditItem();
   }
 
   ngOnInit(): void {
+    this.createMenu();
   }
 
   change(id:number){
-    this.cerca=false;
     if(id===6){
       sessionStorage.removeItem('login');
       this.router.navigateByUrl('/Login');
-      this.view=false;
     }
-    else if(id===2 || id===3)
-      this.cerca=true;
-
     this.router.events.subscribe(() => {
-      this.changeEditItem();
+      if(id===2 || id===3)
+        this.cerca=true;
+      else
+        this.cerca=false;
+      this.createMenu();
     });
-
   }
 
 }
