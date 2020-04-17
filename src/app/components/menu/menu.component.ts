@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
     }
     else if(this.version===2){
       this.menuList=[     
-        { id:1, desc:"←"+'NOMEITEM'},
+        { id:1, desc:'NOMEITEM'},
       ];
     }
   }
@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
   change(id:number){
     if(id===6){
       sessionStorage.removeItem('login');
-      this.router.navigateByUrl('/Login');
+      this.router.navigateByUrl('login');
     }
     this.router.events.subscribe(() => {
       if(id===2 || id===3)
@@ -52,6 +52,5 @@ export class MenuComponent implements OnInit {
       this.createMenu();
     });
   }
-
 }
 

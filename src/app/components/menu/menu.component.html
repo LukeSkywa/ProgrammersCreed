@@ -1,17 +1,22 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <nav class="menu">
     <ol>
+        <li *ngIf="version===2" class="menu-item" style="max-width:5%">
+            <a href=#0 [routerLink]="['list']" class="material-icons" style="line-height: 2.5rem;">
+                keyboard_backspace
+            </a>
+        </li>
         <li class="menu-item" *ngFor="let menuItem of menuList">
             <a href=#0 [routerLink]="menuItem.desc" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
         </li>
         <li class="menu-Item" *ngIf="cerca==true">
             <form action="">
-                <input type="search">
+                <input type="search" #search>
                 <i class="fa fa-search"></i>
             </form>
         </li>
-        <li class="menu-item">
-            <a href="#0" [routerLink]="['Home']" (click)="change(0)"><!--<img src="">-->LOGO</a>
+        <li class="menu-item" style="position:absolute;right:8px;width:20%;">
+            <a href=" #0 " [routerLink]="['home']" (click)="change(0) "> <img src="../assets/logo.png" alt="logo" class="logo"></a>
         </li>
     </ol>
 </nav>
