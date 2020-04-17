@@ -1,0 +1,84 @@
+.all{
+    background: rgb(1,29,40);
+    background: linear-gradient(90deg, rgba(1,29,40,1) 0%, rgba(75,128,171,1) 35%);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 13%;
+    height: 100%;
+}
+#titolo{
+    font-size: 1rem;
+    padding-left: 4%;
+    padding-top: 2.5%;
+}
+label {
+  font-size: .85rem;
+  
+  color: white;
+  background-color: rgba(88, 180, 216, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    &:focus {border-color: #111;}
+    color:white;
+    width: 150%;
+}
+select{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    &:focus {border-color: #111;}
+    color:white;
+    width: 32%;
+    height: 2rem;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+input{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    &:focus {border-color: #111;}
+    color:white;
+    width: 30%;
+    height: 2rem;
+    padding-left: 1rem;
+    font-weight: bold;
+
+  }
+  textarea{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    &:focus {border-color: #111;}
+    color:white;
+    width: 28.2%;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    font-weight: bold;
+
+  }
+ .container{
+    
+    padding-left: 30%;
+    //padding-right: 10rem;
+ }
+
+  button{
+    border-radius: 10rem;
+    width: 30.7%;
+    height: 2rem;
+    background-color: white;
+    cursor: pointer;
+    
+  }
+ 

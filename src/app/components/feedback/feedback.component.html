@@ -1,0 +1,65 @@
+<div class="all">
+    <div class="container">
+        <h1> <span id="titolo"><strong>Inviaci un tuo Feedback</strong></span></h1>
+
+        <form [formGroup]="feedbackForm" (ngSubmit)="invio()">
+            <div class="row">
+                <div class="input-group input-group-icon">
+                    <label for="nome">Nome</label><br>
+                    <input type="text" id="nome" formControlName="nome">
+                    <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p><br>
+                </div>
+                <div class="input-group input-group-icon">
+                    <label for="cognome">Cognome</label><br>
+                    <input type="text" id="cognome" formControlName="cognome">
+                    <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p><br>
+                </div>
+               
+                
+            </div>
+
+            <div class="row">
+                <label>Sesso</label><br>
+                <div class="input-group">
+                    <select formControlName="sesso">
+                        <option value={{sesso}} *ngFor="let sesso of sessi">{{sesso}}</option>
+                    </select>  
+                </div>
+                <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
+            </div>
+
+
+
+            <div class="row">
+                <div class="input-group input-group-icon">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" formControlName="email">
+                    <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p><br>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="input-group input-group-icon">
+                    <label for="telefono">Telefono</label><br>
+                    <input type="text" id="telefono" formControlName="telefono">
+                    <p *ngIf="telefonoControl.status === 'INVALID' && telefonoControl.dirty">Campo telefono obbligatorio</p><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group input-group-icon">
+                    <label for="commenti"><span class="scritta">Commenti</span></label><br>
+                    <!--<input type="text" id="commenti" formControlName="commenti">-->
+                    <textarea id="commenti" formControlName="commenti" rows="10" cols="10"></textarea>
+                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="button">
+                    <button type="submit" [disabled]="feedbackForm.status === 'INVALID'" ng-class="disabled">Invio</button>
+                </div>
+            </div>
+            
+            
+        </form>
+    </div>
+</div>
