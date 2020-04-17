@@ -1,0 +1,26 @@
+.login {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.loginForm {
+    height: 350px;
+    width: 270px;
+    background-image: linear-gradient(to right, rgb(3, 51, 70) 0%, rgba(1, 29, 40, 0.7) 100%);
+    border-radius: 13px;
+    box-shadow: -8px -8px #bfbdbd;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginForm * {
+    padding: 10px;
+}
+
+.title {
+    text-decoration: none;
+    font-size: 23pt;
+}
