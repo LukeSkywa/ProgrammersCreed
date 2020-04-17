@@ -1,6 +1,8 @@
 {
     "users": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
+        { "nome": "Luca", "cognome": "Leporati", "username": "lucaleporati", "email": "lucaleporati@gmail.com", "password": "123", "genere": "maschio", "telefono": "1234567890" },
+        { "nome": "Pietro", "cognome": "Locatelli", "username": "pietrolocatelli", "email": "pietrolocatelli@gmail.com", "password": "123", "genere": "maschio", "telefono": "1234567890" },
+        { "nome": "Andrea", "cognome": "Nani", "username": "andreanani", "email": "andreanani@gmail.com", "password": "123", "genere": "maschio", "telefono": "1234567890" }
     ],
     "serie": [
         { "id": 1, "body": "some comment", "postId": 1 }
