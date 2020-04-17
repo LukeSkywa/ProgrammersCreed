@@ -1,0 +1,17 @@
+<ng-container **ngIf="view===true">
+    <nav class="menu">
+        <ol>
+            <li class="menu-item" *ngFor="let menuItem of menuList">
+                <ng-container *ngIf="menuItem">
+                    <a href=#0 [routerLink]="menuItem.desc" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
+                </ng-container>
+            </li>
+            <li *ngIf="cerca==true">
+                <input type="text" placeholder="cerca">
+            </li>
+            <li class="menu-Item" [routerLink]="['Home']">
+                <a href="#0" [routerLink]="['Home']"><img src=""></a>
+            </li>
+        </ol>
+    </nav>
+</ng-container>
