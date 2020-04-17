@@ -4,16 +4,14 @@
         <li class="menu-item" *ngFor="let menuItem of menuList">
             <a href=#0 [routerLink]="menuItem.desc" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
         </li>
-        <ng-container>
-            <li class="menu-Item" *ngIf="cerca==true">
-                <form action="">
-                    <input type="search">
-                    <i class="fa fa-search"></i>
-                </form>
-            </li>
-            <li class="menu-item">
-                <a href="#0" [routerLink]="['Home']" (click)="change(0)"><!--<img src="">-->LOGO</a>
-            </li>
-        </ng-container>
+        <li class="menu-Item" *ngIf="cerca==true">
+            <form action="">
+                <input type="search">
+                <i class="fa fa-search"></i>
+            </form>
+        </li>
+        <li class="menu-item">
+            <a href="#0" [routerLink]="['Home']" (click)="change(0)"><!--<img src="">-->LOGO</a>
+        </li>
     </ol>
 </nav>

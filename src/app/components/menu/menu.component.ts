@@ -27,8 +27,7 @@ export class MenuComponent implements OnInit {
     }
     else if(this.version===2){
       this.menuList=[     
-        { id:1, desc:"←"},
-        { id:2, desc:sessionStorage.getItem('nomeItem')},
+        { id:1, desc:"←"+'NOMEITEM'},
       ];
     }
   }
