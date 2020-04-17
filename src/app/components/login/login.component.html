@@ -1,32 +1,25 @@
-<html>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<body leftmargin="0" topmargin="0">
-    <div class="login">
-        <div class="registrati">
-            <button class="btn-registrati">+</button>
+<div class="login">
+    <div class="registrati">
+        <button class="btn-registrati">+</button>
+    </div>
+    <form class="loginForm">
+        <div>
+            <img src="../assets/logo.png" alt="logo" class="logo">
+            <p class="title">Accedi</p>
+            <input id="username" placeholder="username" class="inputFields">
         </div>
-        <form class="loginForm">
-            <div>
-                <img src="../assets/logo.png" alt="logo" class="logo">
-                <p class="title">Accedi</p>
-                <input id="username" placeholder="username" class="inputFields">
-            </div>
-            <div>
-                <input id="password" placeholder="password" class="inputFields">
-            </div>
-            <div>
-                <span class="password">memorizza password</span>
-                <label class="switch">
+        <div>
+            <input id="password" placeholder="password" class="inputFields">
+        </div>
+        <div>
+            <span class="password">memorizza password</span>
+            <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
-            </div>
-            <div>
-                <button type="submit" class="btn-accedi">Accedi</button>
-            </div>
-        </form>
-    </div>
-</body>
-
-</html>
+        </div>
+        <div>
+            <button type="submit" class="btn-accedi">Accedi</button>
+        </div>
+    </form>
+</div>
