@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private listaUtenti: LoginService,private fb: FormBuilder) { 
+  constructor(private loginService: LoginService,private fb: FormBuilder) { 
     this.loginForm = this.fb.group({
       username:'',
       password:''
@@ -24,6 +24,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login(/*username: string, password: string*/form) {
-    this.listaUtenti.eseguiLogin(/*username,password*/form);
+    this.loginService.eseguiLogin(/*username,password*/form);
   }
 }

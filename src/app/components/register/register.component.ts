@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  registerForm: FormGroup;
+  
+  constructor(private loginService: LoginService,private fb: FormBuilder) { 
+    this.registerForm = this.fb.group({
+      username:'',
+      password:''
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  register(form){
+    this.loginService.addUser(form);
   }
 
 }

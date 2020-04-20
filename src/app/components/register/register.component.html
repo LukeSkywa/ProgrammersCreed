@@ -2,14 +2,14 @@
     <div class="registrati">
         <button class="btn-registrati" routerLink="/login">×</button>
     </div>
-    <form class="loginForm">
+    <form [formGroup]="registerForm" class="loginForm" (ngSubmit)="register(registerForm.value)">
         <div>
             <img src="../assets/logo.png" alt="logo" class="logo">
             <p class="title">Registrati</p>
-            <input id="email" placeholder="email" class="inputFields">
+            <input id="username" placeholder="username" class="inputFields" formControlName="username">
         </div>
         <div>
-            <input id="password" placeholder="password" class="inputFields">
+            <input id="password" placeholder="password" class="inputFields" formControlName="password">
         </div>
         <br><br>
         <button type="submit">

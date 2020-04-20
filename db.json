@@ -1,13 +1,68 @@
 {
-    "users": [
-        { "nome": "Luca", "cognome": "Leporati", "username": "lucaleporati", "email": "lucaleporati@gmail.com", "password": "123", "genere": "maschio", "telefono": "1234567890" },
-        { "nome": "Pietro", "cognome": "Locatelli", "username": "pietrolocatelli", "email": "pietrolocatelli@gmail.com", "password": "123", "genere": "maschio", "telefono": "1234567890" },
-        { "nome": "Andrea", "cognome": "Nani", "username": "andreanani", "email": "andreanani@gmail.com", "password": "123", "genere": "maschio", "telefono": "1234567890" }
-    ],
-    "serie": [
-        { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "posts": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "nome": "Luca",
+      "cognome": "Leporati",
+      "username": "lucaleporati",
+      "email": "lucaleporati@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890"
+    },
+    {
+      "id": 2,
+      "nome": "Pietro",
+      "cognome": "Locatelli",
+      "username": "pietrolocatelli",
+      "email": "pietrolocatelli@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890"
+    },
+    {
+      "id": 3,
+      "nome": "Andrea",
+      "cognome": "Nani",
+      "username": "andreanani",
+      "email": "andreanani@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890"
+    },
+    {
+      "id": 4,
+      "nome": "Alessandro",
+      "cognome": "Lanfranchi",
+      "username": "alessandrolanfranchi",
+      "email": "alessandrolanfranchi@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890"
+    },
+    {
+      "username": "aaa",
+      "password": "aaa",
+      "id": 5
+    },
+    {
+      "username": "aloi",
+      "password": "aloi",
+      "id": 6
+    }
+  ],
+  "serie": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ]
 }
