@@ -14,6 +14,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardsComponent } from './components/cards/cards.component';
+import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CardsComponent } from './components/cards/cards.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    CardsComponent
+    CardsComponent,
+    RemovewhitespacesPipe
   ],
   imports: [
     BrowserModule,
