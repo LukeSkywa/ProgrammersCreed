@@ -13,8 +13,11 @@ export class MyHttpService {
   getUsers(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
   }
-
-  getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
+  getSerie(): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie');
+  }
+  
+  /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
     let genere: string=""+author;
     let params: HttpParams;
     if (genere != null) {
@@ -22,9 +25,10 @@ export class MyHttpService {
     }
     return this.httpClient.get<User[]>('http://localhost:3000/games', { observe: 'response', params: params });
     //return this.httpClient.get<GameItem[]>('http://localhost:3000/games?genere=' + genere);
-  }
+  }*/
   
   postUser(user:User){
+    console.log(user);
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 

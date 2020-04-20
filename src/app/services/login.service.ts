@@ -28,7 +28,6 @@ export class LoginService {
   eseguiLogin(/*username: string,password:string*/form){
     if (this.accesso(form)) {
       this.router.navigateByUrl('/home');
-      window.alert("ok")
     }
     else{
       window.alert("utente non trovato")
@@ -39,9 +38,16 @@ export class LoginService {
   getUsers(){
     this.myHttpService.getUsers().subscribe(reponse => {
       this.usersList = reponse;
-      console.log(this.usersList);
     }, err => {
       console.log('error');
+    });
+  }
+
+  addUser(form){
+    this.myHttpService.postUser(form).subscribe(reponse => {
+      this.getUsers();
+      //console.log(this.usersList);
+      this.router.navigateByUrl('/login');
     });
   }
 

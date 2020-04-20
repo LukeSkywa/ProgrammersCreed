@@ -14,6 +14,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListSerieComponent } from './components/list-serie/list-serie.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ListSerieComponent } from './components/list-serie/list-serie.component
     RegisterComponent,
     ProfileComponent,
     ListSerieComponent
+    CardsComponent
   ],
   imports: [
     BrowserModule,
