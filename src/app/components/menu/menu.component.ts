@@ -18,11 +18,11 @@ export class MenuComponent implements OnInit {
     if(this.version===1){
       this.menuList=[     
         { id:1, desc:"Homepage"},
-        { id:2, desc:"Lista"},
+        { id:2, desc:"List"},
         { id:3, desc:"Cards"},
         { id:4, desc:"Feedback"},
-        { id:5, desc:"Profilo"},
-        { id:6, desc:"Esci"},
+        { id:5, desc:"Profile"},
+        { id:6, desc:"Exit"},
       ]
     }
     else if(this.version===2){
@@ -41,7 +41,7 @@ export class MenuComponent implements OnInit {
 
   change(id:number){
     if(id===6){
-      sessionStorage.removeItem('login');
+      sessionStorage.removeItem('user');
       this.router.navigateByUrl('login');
     }
     this.router.events.subscribe(() => {

@@ -7,7 +7,7 @@
             </a>
         </li>
         <li class="menu-item" *ngFor="let menuItem of menuList">
-            <a href=#0 [routerLink]="menuItem.desc" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
+            <a href=#0 [routerLink]="menuItem.desc|lowercase" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
         </li>
         <li class="menu-Item" *ngIf="cerca==true">
             <form action="">

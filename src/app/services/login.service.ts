@@ -18,6 +18,7 @@ export class LoginService {
     let controllo=false;
     this.usersList.forEach(element => {
       if(element.username==form.username && element.password==form.password){
+        sessionStorage.setItem('user', JSON.stringify(element));
         controllo=true;
       }
     });
@@ -26,7 +27,6 @@ export class LoginService {
 
   eseguiLogin(/*username: string,password:string*/form){
     if (this.accesso(form)) {
-      sessionStorage.setItem('user', form.username);
       this.router.navigateByUrl('/home');
       window.alert("ok")
     }
