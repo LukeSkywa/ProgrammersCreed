@@ -14,6 +14,8 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    ModificaprofiloComponent
+   
   ],
   imports: [
     BrowserModule,
