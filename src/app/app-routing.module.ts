@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'signin', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'feedback', component: FeedbackComponent},
-  {path:'cards',  component:CardsComponent},
+  {path: 'cards',  component:CardsComponent},
   {path: 'modificaProfilo', component: ModificaprofiloComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
