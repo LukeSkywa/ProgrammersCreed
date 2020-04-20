@@ -24,7 +24,7 @@ import { CardsComponent } from './components/cards/cards.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    ListSerieComponent
+    ListSerieComponent,
     CardsComponent
   ],
   imports: [
