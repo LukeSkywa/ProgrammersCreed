@@ -7,8 +7,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ListSerieComponent } from './components/list-serie/list-serie.component';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
-
-
+import { CardsComponent } from './components/cards/cards.component';
 
 
 
@@ -18,6 +17,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'feedback', component: FeedbackComponent},
   {path: 'list', component: ListSerieComponent},
+  {path: 'cards',  component:CardsComponent},
   {path: 'modificaProfilo', component: ModificaprofiloComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];

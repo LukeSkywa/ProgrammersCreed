@@ -10,18 +10,7 @@ export class SerieService {
   serie : Serie[];
 
   constructor(private myHttpService: MyHttpService) { 
-    this.getSerieDb();
+    
   }
 
-  getSerieDb(){
-    this.myHttpService.getSerie().subscribe(reponse => {
-      this.serie = reponse;
-    }, err => {
-      console.log('error');
-    });
-  }
-
-  getSerie(){
-    return this.serie;
-  }
 }

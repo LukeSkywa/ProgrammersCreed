@@ -5,6 +5,7 @@ import { User } from 'src/app/models/user.interface';
 
 
 
+
 @Component({
   selector: 'app-modificaprofilo',
   templateUrl: './modificaprofilo.component.html',
@@ -14,7 +15,7 @@ export class ModificaprofiloComponent implements OnInit {
 
   modificaprofilo: FormGroup;
   sessi=['maschio', 'femmina', 'altro'];
- 
+  
   
   get nomeControl(): FormControl{
     return this.modificaprofilo.get('nome') as FormControl;
@@ -31,25 +32,26 @@ export class ModificaprofiloComponent implements OnInit {
   get telefonoControl(): FormControl{
     return this.modificaprofilo.get('telefono') as FormControl;
   }
-  get commenti(): FormControl{
-    return this.modificaprofilo.get('commenti') as FormControl;
-  }
-
-  constructor(private fb: FormBuilder) {
-    this.modificaprofilo = this.fb.group({
-     
-      nome: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
-      cognome: ['', Validators.required],
-      sesso:['', Validators.required],
-      email: ['', Validators.required],
-      telefono: ['', Validators.required],
-      
-    });
-  }
-  myProfile:User;
   ngOnInit(): void {
     this.myProfile=JSON.parse(sessionStorage.getItem('user'));
+    this.modificaprofilo = this.fb.group({
+     
+      nome: [this.myProfile.nome,],
+      cognome: [this.myProfile.cognome, ],
+      email: [{value: this.myProfile.email, disabled: true }],
+      sesso:[this.myProfile.genere,],
+      telefono: [this.myProfile.telefono,],
+    });
+    
+
+    
   }
+  constructor(private fb: FormBuilder) {}
+
+
+
+  myProfile:User;
+  
 
   cls(){
     this.modificaprofilo.reset();
@@ -74,6 +76,41 @@ export class ModificaprofiloComponent implements OnInit {
       
     );
     
+  }
+
+  modify():boolean{
+    let modify:boolean=false;
+    const nome=this.nomeControl.value;
+    const cognome=this.cognomeControl.value;
+    const sesso=this.sessoControl.value;
+    const email=this.emailControl.value;
+    const telefono=this.telefonoControl.value;
+
+    if(nome!=this.myProfile.nome){
+      this.myProfile.nome=nome;
+      modify=true;
+    }
+    if(cognome!=this.myProfile.cognome){
+      this.myProfile.cognome=cognome;
+      modify=true;
+    }
+    if(email!=this.myProfile.email){
+      this.myProfile.email=email;
+      modify=true;
+    }
+    if(telefono!=this.myProfile.telefono){
+      this.myProfile.telefono=telefono;
+      modify=true;
+    }
+    if(sesso!=this.myProfile.genere){
+      this.myProfile.genere=sesso;
+      modify=true;
+    }
+      
+
+   
+    return modify;
+
   }
 
 

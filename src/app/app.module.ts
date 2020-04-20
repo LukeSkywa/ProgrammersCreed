@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListSerieComponent } from './components/list-serie/list-serie.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 
@@ -29,7 +30,8 @@ import { ModificaprofiloComponent } from './components/modificaprofilo/modificap
     ListSerieComponent,
     CardsComponent,
     CardsComponent,
-    ModificaprofiloComponent,
+    RemovewhitespacesPipe,
+    ModificaprofiloComponent
   ],
   imports: [
     BrowserModule,
