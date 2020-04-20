@@ -27,8 +27,7 @@ export class LoginService {
 
   eseguiLogin(/*username: string,password:string*/form){
     if (this.accesso(form)) {
-      this.router.navigateByUrl('/profile');
-      window.alert("ok")
+      this.router.navigateByUrl('/home');
     }
     else{
       window.alert("utente non trovato")
