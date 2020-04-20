@@ -2,7 +2,7 @@
     <ul>
         <li *ngFor="let item of serie;">
             {{item.nome}}
-            <img src="../assets/img/{{item.nome | lowercase}}.jpg">
+            <img src="../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" class="img">
         </li>
 
     </ul>
