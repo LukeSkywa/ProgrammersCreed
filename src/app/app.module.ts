@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardsComponent } from './components/cards/cards.component';
 import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 
+import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
     RegisterComponent,
     ProfileComponent,
     CardsComponent,
-    RemovewhitespacesPipe
+    RemovewhitespacesPipe,
+    ModificaprofiloComponent
   ],
   imports: [
     BrowserModule,
