@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardsComponent } from './components/cards/cards.component';
 
+import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { CardsComponent } from './components/cards/cards.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    CardsComponent
+    CardsComponent,
+    ModificaprofiloComponent,
   ],
   imports: [
     BrowserModule,
