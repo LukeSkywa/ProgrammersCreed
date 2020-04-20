@@ -5,7 +5,7 @@ import { MyHttpService } from './my-http.service';
 @Injectable({
   providedIn: 'root'
 })
-export class CardsService {
+export class SerieService {
 
   serie : Serie[];
 
