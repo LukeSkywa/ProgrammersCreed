@@ -13,7 +13,10 @@ export class MyHttpService {
   getUsers(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
   }
-
+  getSerie(): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie');
+  }
+  
   /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
     let genere: string=""+author;
     let params: HttpParams;
@@ -28,7 +31,6 @@ export class MyHttpService {
     console.log(user);
     return this.httpClient.post('http://localhost:3000/users', user);
   }
-
 
 
 }
