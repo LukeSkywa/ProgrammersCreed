@@ -6,6 +6,8 @@
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 13%;
     height: 100%;
+    padding-right: 4.5rem;
+    
 }
 #titolo{
     font-size: 1rem;
@@ -18,11 +20,15 @@ label {
   color: white;
     
 
-    &:focus {border-color: #111;}
+    //&:focus {border-color: #111;}
     color:white;
-    width: 150%;
-    padding-left: 4%;
-    padding-top: 1.4%;
+    width: 25%;
+   // padding-left: 4%;
+   // padding-top: 1.4%;
+   padding-top: 1.3rem;
+   padding-left: 3.6rem;
+    display: block;
+    float: initial;
     position: absolute;
 }
 select{
@@ -38,17 +44,13 @@ select{
     padding-left: 1rem;
     font-weight: bold;
 }
-#option{
+.optSesso{
     background-color: rgba(255, 255, 255, 0.3);
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    &:focus {border-color: #111;}
+    //&:focus {border-color: #111;}
     color:white;
     width: 25%;
     height: 2rem;
-    padding-left: 6.5%;
+    padding-left: 3.6rem;
     padding-top: 0.5%;
     font-weight: bold;
 }
@@ -58,11 +60,12 @@ input{
     border-right: 0;
     border-left: 0;
     border-radius: 0;
-    &:focus {border-color: #111;}
+    //&:focus {border-color: #111;}
     color:white;
     width: 25%;
     height: 2rem;
-    padding-left: 6.5%;
+   // padding-left: 6.5%;
+    padding-left: 3.6rem;
     padding-top: 0.5%;
     font-weight: bold;
 
@@ -73,7 +76,7 @@ input{
     border-right: 0;
     border-left: 0;
     border-radius: 0;
-    &:focus {border-color: #111;}
+  //  &:focus {border-color: #111;}
     color:white;
     width: 28.2%;
     height: 2rem;
@@ -98,12 +101,13 @@ input{
     
   }
   #iconaNome{
-      padding-top: 0.4%;
+      padding-top: 0.3%;
       padding-left: 1%;
       position: absolute;
   }
   #iconaCognome{
-    padding-top: 1.7%;
+    padding-top: 0.3%;
+    //padding-top: 1.7%;
     padding-left: 1%;
     position: absolute;
 }
@@ -121,4 +125,10 @@ input{
     padding-top: 0.3%;
     padding-left: 1%;
     position: absolute;
+}
+#idCognome{
+    padding-top: 2.9%;
+}
+#labelCognome{
+    padding-top: 0.2rem;
 }

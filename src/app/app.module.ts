@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListSerieComponent } from './components/list-serie/list-serie.component';
 import { CardsComponent } from './components/cards/cards.component';
 
+import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { CardsComponent } from './components/cards/cards.component';
     RegisterComponent,
     ProfileComponent,
     ListSerieComponent,
-    CardsComponent
+    CardsComponent,
+    CardsComponent,
+    ModificaprofiloComponent,
   ],
   imports: [
     BrowserModule,
