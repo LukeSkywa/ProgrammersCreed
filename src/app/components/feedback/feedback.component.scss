@@ -8,21 +8,21 @@
 }
 #titolo{
     font-size: 1rem;
-    padding-left: 4%;
+    padding-left: 4.5%;
     padding-top: 2.5%;
 }
 label {
-  font-size: .85rem;
+  font-size: .55rem;
   
   color: white;
-  background-color: rgba(88, 180, 216, 0.3);
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
+    
+
     &:focus {border-color: #111;}
     color:white;
     width: 150%;
+    padding-left: 4%;
+    padding-top: 1.4%;
+    position: absolute;
 }
 select{
     background-color: rgba(255, 255, 255, 0.3);
@@ -37,6 +37,20 @@ select{
     padding-left: 1rem;
     font-weight: bold;
 }
+#option{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    &:focus {border-color: #111;}
+    color:white;
+    width: 25%;
+    height: 2rem;
+    padding-left: 6.5%;
+    padding-top: 0.5%;
+    font-weight: bold;
+}
 input{
     background-color: rgba(255, 255, 255, 0.3);
     border-top: 0;
@@ -45,9 +59,10 @@ input{
     border-radius: 0;
     &:focus {border-color: #111;}
     color:white;
-    width: 30%;
+    width: 25%;
     height: 2rem;
-    padding-left: 1rem;
+    padding-left: 6.5%;
+    padding-top: 0.5%;
     font-weight: bold;
 
   }
@@ -81,4 +96,28 @@ input{
     cursor: pointer;
     
   }
- 
+  #iconaNome{
+      padding-top: 0.4%;
+      padding-left: 1%;
+      position: absolute;
+  }
+  #iconaCognome{
+    padding-top: 1.7%;
+    padding-left: 1%;
+    position: absolute;
+}
+#iconaSesso{
+    padding-top: 0.3%;
+    padding-left: 1%;
+    position: absolute;
+}
+#iconaMail{
+    padding-top: 0.3%;
+    padding-left: 1%;
+    position: absolute;
+}
+#iconaPhone{
+    padding-top: 0.3%;
+    padding-left: 1%;
+    position: absolute;
+}

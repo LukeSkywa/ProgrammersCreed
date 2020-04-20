@@ -4,25 +4,33 @@
 
         <form [formGroup]="feedbackForm" (ngSubmit)="invio()">
             <div class="row">
+                
                 <div class="input-group input-group-icon">
                     <label for="nome">Nome</label><br>
+                    <span id="iconaNome" class="material-icons">
+                        person
+                    </span>
                     <input type="text" id="nome" formControlName="nome">
                     <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p><br>
                 </div>
                 <div class="input-group input-group-icon">
+                    <span id="iconaCognome" class="material-icons">
+                        person
+                        </span>
                     <label for="cognome">Cognome</label><br>
                     <input type="text" id="cognome" formControlName="cognome">
                     <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p><br>
                 </div>
-               
-                
             </div>
 
             <div class="row">
                 <label>Sesso</label><br>
                 <div class="input-group">
+                    <span id="iconaSesso" class="material-icons">
+                        wc
+                        </span>
                     <select formControlName="sesso">
-                        <option value={{sesso}} *ngFor="let sesso of sessi">{{sesso}}</option>
+                        <option id="option" value={{sesso}} *ngFor="let sesso of sessi">{{sesso}}</option>
                     </select>  
                 </div>
                 <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
@@ -33,6 +41,9 @@
             <div class="row">
                 <div class="input-group input-group-icon">
                     <label for="email">Email</label><br>
+                    <span id="iconaMail" class="material-icons">
+                        email
+                        </span>
                     <input type="text" id="email" formControlName="email">
                     <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p><br>
                 </div> 
@@ -40,6 +51,9 @@
             <div class="row">
                 <div class="input-group input-group-icon">
                     <label for="telefono">Telefono</label><br>
+                    <span id="iconaPhone" class="material-icons">
+                        phone
+                        </span>
                     <input type="text" id="telefono" formControlName="telefono">
                     <p *ngIf="telefonoControl.status === 'INVALID' && telefonoControl.dirty">Campo telefono obbligatorio</p><br>
                 </div>
