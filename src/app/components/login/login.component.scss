@@ -41,16 +41,6 @@
     color: white;
 }
 
-.btn-accedi {
-    border-radius: 50px;
-    height: 48px;
-    width: 220px;
-    border: none;
-    color: black;
-    font-size: 13pt;
-    margin-top: 5px;
-}
-
 .switch {
     position: relative;
     width: 28px;
@@ -138,9 +128,91 @@ input:checked+.slider:before {
     background-color: rgb(75, 128, 171);
 }
 
+.btn-registrati:active {
+    background-color: rgb(58, 107, 148);
+    height: 75px;
+    width: 75px;
+    margin-top: 30px;
+}
+
 .logo {
     height: 90px;
     width: 130px;
     margin-bottom: -30px;
     padding: -30px;
+}
+
+//bottone accedi
+button {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: 210px;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+button span {
+    color: #164ca7;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+button:active {
+    width: 214px;
+    height: 52px;
+    margin-top: 3px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
 }
