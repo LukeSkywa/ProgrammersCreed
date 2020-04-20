@@ -4,11 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+
+
 
 const routes: Routes = [ 
   {path: 'login', component: LoginComponent},
   {path: 'signin', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'feedback', component: FeedbackComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

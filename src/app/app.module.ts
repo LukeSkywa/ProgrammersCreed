@@ -7,12 +7,17 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+
 import { ProfileComponent } from './components/profile/profile.component';
+
+import { FeedbackComponent } from './components/feedback/feedback.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FeedbackComponent,
     MenuComponent,
     LoginComponent,
     RegisterComponent,
@@ -21,9 +26,12 @@ import { ProfileComponent } from './components/profile/profile.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
