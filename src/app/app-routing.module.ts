@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ListSerieComponent } from './components/list-serie/list-serie.component';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'signin', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'feedback', component: FeedbackComponent},
+  {path: 'list', component: ListSerieComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
