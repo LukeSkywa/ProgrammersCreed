@@ -145,7 +145,7 @@ input:checked+.slider:before {
 
 //bottone registrati
 button {
-    margin-top: 0px;
+    margin-top: 6.5px;
     margin-bottom: 25px;
     position: relative;
     outline: none;
@@ -179,7 +179,7 @@ button:hover span {
 button:active {
     width: 214px;
     height: 52px;
-    margin-top: -2px;
+    margin-top: 8px;
 }
 
 @keyframes rotate {
