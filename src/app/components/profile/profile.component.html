@@ -1,33 +1,30 @@
 <div class="all">
     <p class="title">Benvenuto <br>
-        <strong>
-            {{myProfile.nome}} {{myProfile.cognome}}
-        </strong>
-    </p>
-    <img src="../assets/messi.jpg" alt="logo" class="logo">
-    <table>
-        <tr>
-            <td class="sx">Nome</td>
-            <td class="dx">{{myProfile.nome}}</td>
-        </tr>
-        <tr>
-            <td class="sx">Cognome</td>
-            <td class="dx">{{myProfile.cognome}}</td>
-        </tr>
-        <tr>
-            <td class="sx">Sesso</td>
-            <td class="dx">{{myProfile.genere}}</td>
-        </tr>
-        <tr>
-            <td class="sx">Email</td>
-            <td class="dx">{{myProfile.email}}</td>
-        </tr>
-        <tr>
-            <td class="sx">Telefono</td>
-            <td class="dx">{{myProfile.telefono}}</td>
-        </tr>
-    </table>
-    <button [routerLink]="'modify'">
+        <p class="nome">{{myProfile.nome}} {{myProfile.cognome}}</p>
+        <img src="../assets/messi.jpg" alt="logo" class="logo">
+        <table>
+            <tr>
+                <td class="sx">Nome</td>
+                <td class="dx">{{myProfile.nome}}</td>
+            </tr>
+            <tr>
+                <td class="sx">Cognome</td>
+                <td class="dx">{{myProfile.cognome}}</td>
+            </tr>
+            <tr>
+                <td class="sx">Sesso</td>
+                <td class="dx">{{myProfile.genere}}</td>
+            </tr>
+            <tr>
+                <td class="sx">Email</td>
+                <td class="dx">{{myProfile.email}}</td>
+            </tr>
+            <tr>
+                <td class="sx">Telefono</td>
+                <td class="dx">{{myProfile.telefono}}</td>
+            </tr>
+        </table>
+        <button [routerLink]="'modify'">
         <span>Modifica</span>
     </button>
 </div>
