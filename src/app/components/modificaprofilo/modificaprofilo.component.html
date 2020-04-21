@@ -1,10 +1,11 @@
+<app-menu [version]=1></app-menu>
 <div class="all">
     <div class="container">
         <h1> <span id="titolo"><strong>Inviaci un tuo Feedback</strong></span></h1>
 
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()">
             <div class="row">
-                
+
                 <div class="input-group input-group-icon">
                     <label for="nome">Nome</label><br>
                     <span id="iconaNome" class="material-icons">
@@ -13,8 +14,8 @@
                     <input type="text" id="nome" formControlName="nome">
                     <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p><br>
                 </div>
-                
-                <div class="input-group input-group-icon" id="idCognome">   
+
+                <div class="input-group input-group-icon" id="idCognome">
                     <label id="labelCognome" for="cognome">Cognome</label>
                     <span id="iconaCognome" class="material-icons">
                         person
@@ -30,13 +31,13 @@
                     <!--<span id="iconaSesso" class="material-icons">
                         wc
                     </span>-->
-                    
+
                     <div class="customSesso">
                         <select formControlName="sesso">
                             <option value={{sesso}} *ngFor="let sesso of sessi"> <span class="optSesso"> {{sesso}}</span> </option>
-                        </select>  
+                        </select>
                     </div>
-                    
+
                 </div>
                 <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
             </div>
@@ -51,7 +52,7 @@
                         </span>
                     <input type="text" id="email" formControlName="email">
                     <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p><br>
-                </div> 
+                </div>
             </div>
             <div class="row">
                 <div class="input-group input-group-icon">
@@ -77,8 +78,8 @@
                     <button type="submit" [disabled]="modificaprofilo.status === 'INVALID'" ng-class="disabled">Invio</button>
                 </div>
             </div>
-            
-            
+
+
         </form>
     </div>
 </div>
