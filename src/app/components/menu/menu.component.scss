@@ -1,6 +1,7 @@
 @media screen and (min-width: 551px) {
     .logo {
         // height: 3.4rem;
+        margin-bottom: -15px;
         width: 30%;
         height: auto;
         margin-top: -5px;
@@ -39,6 +40,10 @@
     padding: 0;
     display: flex;
     width: 60%;
+}
+
+.menu li:hover {
+    border-bottom: 2px solid white;
 }
 
 .menu>ol>.menu-item {

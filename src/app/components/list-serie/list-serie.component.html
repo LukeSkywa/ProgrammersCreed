@@ -1,3 +1,35 @@
-<div *ngFor="let item of serie">
-    <p>{{item.nome}}</p>
+<div class="all">
+    <div class="buttons">
+        <button class="primo">Tutti</button>
+        <button>Preferiti</button>
+        <button>Nascosti</button>
+    </div>
+    <div>
+        <ul>
+            <ng-container *ngFor="let item of serie; let i = index;">
+                <li *ngIf="i<5 && mostra==false">
+                    <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
+                    <span class="nome">{{item.nome}}</span> <br>
+                    <span class="descrizione">{{item.descrizione}}</span>
+                </li>
+                <div class="btn">
+                    <button *ngIf="i==4 && mostra==false;" (click)="mostra=true">Mostra di più</button>
+                </div>
+            </ng-container>
+        </ul>
+    </div>
+    <div *ngIf="mostra==true">
+        <ul>
+            <ng-container *ngFor="let item of serie; let i = index;">
+                <li>
+                    <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
+                    <span class="nome">{{item.nome}}</span><br>
+                    <span class="descrizione">{{item.descrizione}}</span>
+                </li>
+            </ng-container>
+            <div class="btn">
+                <button (click)="mostra=false">Mostra di meno</button>
+            </div>
+        </ul>
+    </div>
 </div>

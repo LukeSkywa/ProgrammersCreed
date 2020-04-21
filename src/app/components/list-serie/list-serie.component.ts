@@ -9,11 +9,11 @@ import { MyHttpService } from 'src/app/services/my-http.service';
   styleUrls: ['./list-serie.component.scss']
 })
 export class ListSerieComponent implements OnInit {
-
+  mostra:boolean;
   serie: Serie[];
  
   constructor(private myHttpService: MyHttpService,private serieService:SerieService) { 
-    
+    this.mostra=false;
   }
  
   ngOnInit(): void {
@@ -23,6 +23,10 @@ export class ListSerieComponent implements OnInit {
       console.log('error');
     });
     //console.log(this.serie);
+  }
+
+  altro(){
+    this.mostra=true;
   }
 
 }
