@@ -9,6 +9,7 @@ import { MyHttpService } from 'src/app/services/my-http.service';
   styleUrls: ['./list-serie.component.scss']
 })
 export class ListSerieComponent implements OnInit {
+  daMostrare;
   mostra:boolean;
   serie: Serie[];
  
@@ -25,8 +26,13 @@ export class ListSerieComponent implements OnInit {
     //console.log(this.serie);
   }
 
-  altro(){
-    this.mostra=true;
+  show(i:number){
+    if(this.daMostrare==i){
+      this.daMostrare=null;
+    }
+    else{
+      this.daMostrare=i;
+    }
   }
 
 }
