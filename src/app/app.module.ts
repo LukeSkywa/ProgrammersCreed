@@ -19,6 +19,7 @@ import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PreferitiIconComponent } from './components/preferiti-icon/preferiti-icon.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     CardsComponent,
     RemovewhitespacesPipe,
     ModificaprofiloComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PreferitiIconComponent
   ],
   imports: [
     BrowserModule,
