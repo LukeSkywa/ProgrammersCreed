@@ -13,17 +13,25 @@ import { FormGroup, FormBuilder,FormArray,Validators, FormControl } from '@angul
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  show: boolean;
 
   constructor(private loginService: LoginService,private fb: FormBuilder) { 
     this.loginForm = this.fb.group({
       username:'',
       password:''
     });
+    this.show = false;
   }
 
   ngOnInit(): void {}
 
   login(/*username: string, password: string*/form) {
     this.loginService.eseguiLogin(/*username,password*/form);
+    
+  }
+
+  password() {
+    this.show = !this.show;
+    console.log(this.show);
   }
 }

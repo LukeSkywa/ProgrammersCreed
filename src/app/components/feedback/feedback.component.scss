@@ -6,7 +6,6 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
     text-align: center;
-    height: 100%;
 }
 
 #titolo {
@@ -16,7 +15,6 @@
 
 label {
     text-align: center;
-    
     margin-bottom: -15px;
     margin-left: -270px;
     font-size: .58rem;
@@ -41,6 +39,7 @@ select {
     margin-right: auto;
     background-repeat: no-repeat;
     background-position: 5px 8px;
+    padding-top: 10px;
 }
 
 select option {

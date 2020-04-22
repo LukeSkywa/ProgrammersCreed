@@ -11,6 +11,7 @@ import { MyHttpService } from 'src/app/services/my-http.service';
 export class CardsComponent implements OnInit {
 
   serie: Serie[];
+  mostra=false;
 
   constructor(private myHttpService: MyHttpService,private serieService:SerieService) { 
     
