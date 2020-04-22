@@ -1,0 +1,104 @@
+html { font-size: 22px; }
+/*body { 
+    padding: 1rem; 
+    background: rgb(1,29,40);
+    background: linear-gradient(90deg, rgba(1,29,40,1) 0%, rgba(75,128,171,1) 35%);
+    
+    
+
+}*/
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(1,29,40);
+    background: linear-gradient(90deg, rgba(1,29,40,1) 0%, rgba(75,128,171,1) 35%);
+    height: 100%;
+    color: white;
+    margin-top: -20px;
+    
+}
+#social{
+    padding-left: 3%;
+    padding-top: 56%;
+    font-size: 1.3em;
+}
+.testo{
+    padding-top: 50%;
+    padding-left: 20%;
+    
+    text-align: left;
+    font-size: 0.8rem;
+    
+}
+.footer{
+    padding-top: 39%;
+    padding-left: 70%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.card { 
+  //color: white;
+  padding: 1rem;
+  height: 4rem;
+}
+#titolo{
+    font-size: 5rem;
+}
+#immagine{
+    margin-left: -15px;
+    width: 150%;
+}
+
+.cards {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    
+    
+  }
+
+.descrizione{
+    margin-top: -5px;
+    font-weight: bold;
+}
+
+#immagine2{
+    margin-top: 8%;
+    width: 100%;
+    height: 900%;
+}
+
+
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr);
+            
+    }
+            
+  }
+  @media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+
+}
+@media screen and (max-width: 900px) {
+    .testo {
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    #immagine2 {
+        display: none;
+        
+    }
+    #immagine{
+        width: 30%;
+        margin-bottom: 300px;
+    }
+    
+}

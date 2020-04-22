@@ -20,6 +20,7 @@ import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     RemovewhitespacesPipe,
     ModificaprofiloComponent,
     PageNotFoundComponent,
+    DettaglioComponent
   ],
   imports: [
     BrowserModule,

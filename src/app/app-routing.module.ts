@@ -11,6 +11,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 
 
 
@@ -22,8 +23,16 @@ const routes: Routes = [
   {path: 'list', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path:'**',component: PageNotFoundComponent }
+  { path:'**',component: PageNotFoundComponent },
+  {path: 'login', component: LoginComponent},
+  {path: 'signin', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'feedback', component: FeedbackComponent},
+  {path: 'list', component: ListSerieComponent},
+  {path: 'cards',  component:CardsComponent},
+  {path: 'modificaProfilo', component: ModificaprofiloComponent},
+  {path: 'dettaglio', component: DettaglioComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
 @NgModule({
