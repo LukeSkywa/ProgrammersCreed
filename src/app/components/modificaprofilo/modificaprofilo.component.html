@@ -1,37 +1,28 @@
 <app-menu [version]=1></app-menu>
 <div class="all">
     <div class="container">
-        <h1> <span id="titolo"><strong>Inviaci un tuo Feedback</strong></span></h1>
+        <h1> <span id="titolo"><strong>Modifica</strong></span></h1>
 
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()">
-            <div class="row">
+            
 
                 <div class="input-group input-group-icon">
                     <label for="nome">Nome</label><br>
-                    <span id="iconaNome" class="material-icons">
-                        person
-                    </span>
-                    <input type="text" id="nome" formControlName="nome">
+                    <input type="text" id="nome" formControlName="nome" style=" background-image: url('./assets/icone/account.png');">
                     <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p><br>
                 </div>
 
+                <br>
                 <div class="input-group input-group-icon" id="idCognome">
                     <label id="labelCognome" for="cognome">Cognome</label>
-                    <span id="iconaCognome" class="material-icons">
-                        person
-                        </span>
-                    <input type="text" id="cognome" formControlName="cognome">
+                    <input type="text" id="cognome" formControlName="cognome" style=" background-image: url('./assets/icone/account.png');">
                     <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p><br>
                 </div>
-            </div>
+            
 
-            <div class="row">
+            
                 <label>Sesso</label><br>
                 <div class="input-group">
-                    <!--<span id="iconaSesso" class="material-icons">
-                        wc
-                    </span>-->
-
                     <div class="customSesso">
                         <select formControlName="sesso">
                             <option value={{sesso}} *ngFor="let sesso of sessi"> <span class="optSesso"> {{sesso}}</span> </option>
@@ -40,44 +31,36 @@
 
                 </div>
                 <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
-            </div>
+            
 
 
 
-            <div class="row">
+            
                 <div class="input-group input-group-icon">
                     <label for="email">Email</label><br>
-                    <span id="iconaMail" class="material-icons">
-                        email
-                        </span>
-                    <input type="text" id="email" formControlName="email">
+                    
+                    <input type="text" id="email" formControlName="email" style=" background-image: url('./assets/icone/email.png');">
                     <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p><br>
                 </div>
-            </div>
-            <div class="row">
+            
+            
                 <div class="input-group input-group-icon">
                     <label for="telefono">Telefono</label><br>
-                    <span id="iconaPhone" class="material-icons">
-                        phone
-                        </span>
-                    <input type="text" id="telefono" formControlName="telefono">
+                    <input type="text" id="telefono" formControlName="telefono" style=" background-image: url('./assets/icone/phone.png');">
                     <p *ngIf="telefonoControl.status === 'INVALID' && telefonoControl.dirty">Campo telefono obbligatorio</p><br>
                 </div>
-            </div>
-            <div class="row">
-                <!--<div class="input-group input-group-icon">
-                    <label for="commenti"><span class="scritta">Commenti</span></label><br>
-                    <input type="text" id="commenti" formControlName="commenti">
-                    <textarea id="commenti" formControlName="commenti" rows="10" cols="10"></textarea>
-                    
-                </div>-->
-            </div>
+            
             <br>
-            <div class="row">
+            
                 <div class="button">
+                  
+                    <button routerLink="/profile">Annulla</button>
                     <button type="submit" [disabled]="modificaprofilo.status === 'INVALID'" ng-class="disabled">Invio</button>
+               
+                
+                  
                 </div>
-            </div>
+            
 
 
         </form>
