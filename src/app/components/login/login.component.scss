@@ -244,6 +244,9 @@ button:hover span {
     }
 }
 
-.person {
-    background-image: url('../../../assets/icone/account.png');
+.eye {
+    position: absolute;
+    margin-left: -52px;
+    margin-top: -5px;
+    cursor: pointer;
 }
