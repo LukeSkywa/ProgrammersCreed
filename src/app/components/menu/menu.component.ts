@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
 
 
   createMenu(){
-    if(this.version===1){
+    if(this.version===1 || this.version==3){
       this.menuList=[     
         { id:1, desc:"Homepage"},
         { id:2, desc:"List"},
@@ -45,10 +45,14 @@ export class MenuComponent implements OnInit {
       this.router.navigateByUrl('login');
     }
     this.router.events.subscribe(() => {
-      if(id===2 || id===3)
-        this.cerca=true;
-      else
-        this.cerca=false;
+      // if(id===2 || id===3){
+      //   this.cerca=true;
+      //   console.log("apro");
+      // }
+      // else{
+      //   this.cerca=false;
+      //   console.log("chiudo");
+      // }
       this.createMenu();
     });
   }

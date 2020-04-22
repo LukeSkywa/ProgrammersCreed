@@ -32,5 +32,9 @@ export class MyHttpService {
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 
+  modifyUser(user: User){
+    return this.httpClient.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
+  }
+
 
 }
