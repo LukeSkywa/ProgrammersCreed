@@ -10,10 +10,11 @@ export class RouteGuardsPagesService {
   constructor(private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    if (sessionStorage.getItem('user') == null) {
-      return true;
-    } else {
+    if (sessionStorage.getItem('user') != null) {
+      this.router.navigateByUrl('/profile');
       return false;
+    } else {
+      return true;
     }
   }
 }
