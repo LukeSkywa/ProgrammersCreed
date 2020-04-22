@@ -65,11 +65,26 @@ html { font-size: 22px; }
 
   @media (min-width: 600px) {
     .cards { grid-template-columns: repeat(2, 1fr);
-            padding-bottom: 300%;
+            
     }
             
   }
   @media (min-width: 900px) {
-  .cards { grid-template-columns: repeat(3, 1fr);
-           padding-bottom: 300%; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+
+}
+@media screen and (max-width: 900px) {
+    .testo {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    #immagine2 {
+        display: none;
+        
+    }
+    #immagine{
+        width: 30%;
+        margin-bottom: 300px;
+    }
 }
