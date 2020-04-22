@@ -38,8 +38,7 @@ export class MyHttpService {
   }
 
   putSerie(serie: Serie){
-    return this.httpClient.put('http://localhost:3000/games/'+serie.id, serie);
+    return this.httpClient.put('http://localhost:3000/serie/'+serie.id, serie);
   }
-
 
 }

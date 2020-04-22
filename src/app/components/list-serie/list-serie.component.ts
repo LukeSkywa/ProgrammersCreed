@@ -40,6 +40,13 @@ export class ListSerieComponent implements OnInit {
     this.serie.forEach(element => {
       if(element.id===id){
         element.preferiti=true;
+        this.myHttpService.putSerie(element).subscribe(()=>{
+          this.myHttpService.getSerie().subscribe(reponse => {
+            this.serie = reponse;
+          }, err => {
+            console.log('error');
+          });
+        });
         console.log(element);
       }
     });
@@ -50,6 +57,13 @@ export class ListSerieComponent implements OnInit {
     this.serie.forEach(element => {
       if(element.id===id){
         element.preferiti=false;
+        this.myHttpService.putSerie(element).subscribe(()=>{
+          this.myHttpService.getSerie().subscribe(reponse => {
+            this.serie = reponse;
+          }, err => {
+            console.log('error');
+          });
+        });
         console.log(element);
       }
     });
