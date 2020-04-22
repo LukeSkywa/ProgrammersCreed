@@ -38,11 +38,11 @@ export class ListSerieComponent implements OnInit {
       this.daMostrare = i;
     }
   }
-  aggiungiPreferiti(id:number){
+  gestisciPreferiti(id:number){
     console.log(this.serie);
     this.serie.forEach(element => {
       if(element.id===id){
-        element.preferiti=true;
+        element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
           this.caricaSerie();
         });
@@ -51,18 +51,18 @@ export class ListSerieComponent implements OnInit {
     });
   }
 
-  rimuoviPreferiti(id:number){
-    console.log(this.serie);
-    this.serie.forEach(element => {
-      if(element.id===id){
-        element.preferiti=false;
-        this.myHttpService.putSerie(element).subscribe(()=>{
-            this.caricaSerie();
-        });
-        console.log(element);
-      }
-    });
-  }
+  // rimuoviPreferiti(id:number){
+  //   console.log(this.serie);
+  //   this.serie.forEach(element => {
+  //     if(element.id===id){
+  //       element.preferiti=false;
+  //       this.myHttpService.putSerie(element).subscribe(()=>{
+  //           this.caricaSerie();
+  //       });
+  //       console.log(element);
+  //     }
+  //   });
+  // }
 
   filtra(filtro: number) {
     this.serieFiltrata = this.serie.filter(item =>{

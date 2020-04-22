@@ -11,10 +11,10 @@
                 <li *ngIf="i<5 && mostra==false">
                     <div class="bottoni">
                         <ng-container *ngIf="!item.preferiti">
-                            <button (click)="aggiungiPreferiti(item.id)"><span style="font-size:26px; color: black;">&#10084;</span></button>
+                            <button (click)="gestisciPreferiti(item.id)"><span style="font-size:26px; color: black;">&#10084;</span></button>
                         </ng-container>
                         <ng-container *ngIf="item.preferiti">
-                            <button (click)="rimuoviPreferiti(item.id)"><span style="font-size:26px; color: red;">&#10084;</span></button>
+                            <button (click)="gestisciPreferiti(item.id)"><span style="font-size:26px; color: red;">&#10084;</span></button>
                         </ng-container>
                         <button class="icons"><img src="../assets/icone/share.png" ></button>
 
@@ -49,10 +49,10 @@
                 <li>
                     <div class="bottoni">
                         <ng-container *ngIf="item.preferiti==false">
-                            <button (click)="aggiungiPreferiti(item.id)"><span style="font-size:26px; color: black;">&#10084;</span></button>
+                            <button (click)="gestisciPreferiti(item.id)"><span style="font-size:26px; color: black;">&#10084;</span></button>
                         </ng-container>
                         <ng-container *ngIf="item.preferiti==true">
-                            <button (click)="rimuoviPreferiti(item.id)"><span style="font-size:26px; color: red;">&#10084;</span></button>
+                            <button (click)="gestisciPreferiti(item.id)"><span style="font-size:26px; color: red;">&#10084;</span></button>
                         </ng-container>
                         <button class="icons"><img src="../assets/icone/share.png" ></button>
                         <button class="icons" (click)="show(i)"><img src="../assets/icone/dots.png"></button>

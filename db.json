@@ -67,7 +67,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -76,7 +76,7 @@
       "stagioni": 8,
       "genere": "fantastico,drammatico",
       "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -94,7 +94,7 @@
       "stagioni": 4,
       "genere": "drammatico,commedia",
       "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -121,7 +121,7 @@
       "stagioni": 5,
       "genere": "drammatico",
       "descrizione": "Serie antologica che esplora le peggiori paure legate alla tecnologia, con storie che attingono ai disagi collettivi del mondo moderno.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -148,7 +148,7 @@
       "stagioni": 6,
       "genere": "drammatico",
       "descrizione": "Con l'aiuto del fratello Rollo e dell'amico Floki, l'ambizioso guerriero vichingo Ragnar costruisce una flotta per spingersi verso le inesplorate coste inglesi: il suo progetto viene però ostacolato dal potente Jarl Haraldson.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
