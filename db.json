@@ -58,7 +58,7 @@
       "stagioni": 4,
       "genere": "drammatico,azione",
       "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": "false"
     },
     {
@@ -67,7 +67,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": "false"
     },
     {
@@ -85,7 +85,7 @@
       "stagioni": 3,
       "genere": "fantastico,horror",
       "descrizione": "Hawkins anni 80. Un gruppo di amici fa esperienza di una serie di eventi soprannaturali. In seguito alla misteriosa sparizione di un ragazzino, Jane fa la propria apparizione in città dopo essere scappata da un laboratorio segreto.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": "false"
     },
     {
