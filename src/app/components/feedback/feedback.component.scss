@@ -40,6 +40,7 @@ select {
     margin-right: auto;
     background-repeat: no-repeat;
     background-position: 5px 8px;
+    padding-top: 10px;
 }
 
 select option {
@@ -222,4 +223,20 @@ button:active {
     #titolo {
         margin-bottom: 15px;
     }
+}
+
+.person {
+    background-image: url('../../../assets/icone/account.png');
+}
+
+.phone {
+    background-image: url('../../../assets/icone/phone.png');
+}
+
+.gender {
+    background-image: url('../../../assets/icone/gender.png');
+}
+
+.email {
+    background-image: url('../../../assets/icone/email.png');
 }

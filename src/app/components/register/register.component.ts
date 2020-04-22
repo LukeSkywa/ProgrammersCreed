@@ -10,12 +10,14 @@ import { LoginService } from 'src/app/services/login.service';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
+  show: boolean;
   
   constructor(private loginService: LoginService,private fb: FormBuilder) { 
     this.registerForm = this.fb.group({
       username:'',
       password:''
     });
+    this.show = false;
   }
 
   ngOnInit(): void {
@@ -25,4 +27,8 @@ export class RegisterComponent implements OnInit {
     this.loginService.addUser(form);
   }
 
+  password() {
+    this.show = !this.show;
+    console.log(this.show);
+  }
 }

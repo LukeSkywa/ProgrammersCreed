@@ -7,8 +7,8 @@
 }
 
 .loginForm {
-    height: 440px;
-    width: 330px;
+    height: 460px;
+    width: 350px;
     //background-image: linear-gradient(to right, rgb(3, 51, 70) 0%, rgba(3, 51, 70, 0.733) 100%);
     background-image: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 100%);
     border-radius: 13px;
@@ -36,7 +36,8 @@
 .inputFields {
     //margin: 15px 0;
     font-size: 16px;
-    width: 220px;
+    width: 240px;
+    height: 23px;
     border: 1px solid white;
     border-top: none;
     border-left: none;
@@ -44,6 +45,28 @@
     background: rgba(226, 225, 225, 0.2);
     outline: none;
     color: white;
+    background-image: url('../../../assets/icone/account-big.png');
+    background-repeat: no-repeat;
+    text-indent: 34px;
+    background-position: 2px;
+}
+
+.inputFieldsPassword {
+    //margin: 15px 0;
+    font-size: 16px;
+    width: 240px;
+    height: 26px;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(226, 225, 225, 0.2);
+    outline: none;
+    color: white;
+    background-image: url('../../../assets/icone/lock.png');
+    background-repeat: no-repeat;
+    text-indent: 34px;
+    background-position: 2px;
 }
 
 .switch {
@@ -51,7 +74,7 @@
     width: 28px;
     height: 0px;
     float: left;
-    margin-left: 35px;
+    margin-left: 45px;
 }
 
 .switch input {
@@ -219,4 +242,11 @@ button:hover span {
     100% {
         transform: translate3d(0, 0, 0) translateZ(0);
     }
+}
+
+.eye {
+    position: absolute;
+    margin-left: -52px;
+    margin-top: -5px;
+    cursor: pointer;
 }
