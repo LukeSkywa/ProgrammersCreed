@@ -206,6 +206,10 @@ button:hover span {
     line-height: 31px;
 }
 
+.dropdown-conten:active {
+    display: none;
+}
+
 .items {
     text-decoration: none;
     // line-height: 31px;
