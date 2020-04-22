@@ -1,124 +1,240 @@
-.all{
+.all {
     padding-top: 1px;
-    background: rgb(1,29,40);
-    background: linear-gradient(90deg, rgba(1,29,40,1) 0%, rgba(75,128,171,1) 35%);
+    background: rgb(1, 29, 40);
+    background: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 35%);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 13%;
-    height: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
-#titolo{
+
+#titolo {
+    margin: 20px auto;
     font-size: 1rem;
-    padding-left: 4.5%;
-    padding-top: 2.5%;
 }
+
 label {
-  font-size: .55rem;
-  
-  color: white;
-    
+    text-align: center;
+    margin-bottom: -15px;
+    margin-left: -270px;
+    font-size: .58rem;
+    color: white;
+    color: white;
+    display: block;
+    float: initial;
+}
 
-    &:focus {border-color: #111;}
-    color:white;
-    width: 150%;
-    padding-left: 4%;
-    padding-top: 1.4%;
+select {
+    border: 0;
+    margin-bottom: 10px;
+    height: 40px;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 33%;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+}
+
+select option {
+    background: rgba(75, 128, 171, 1);
+}
+
+input:focus,
+#commenti:focus,
+select:focus {
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+// .optSesso {
+//     background-color: rgba(255, 255, 255, 0.3);
+//     color: black;
+//     height: 40px;
+//     font-weight: bold;
+// }
+#commenti {
+    margin-bottom: 15px;
+    width: 33%;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding-top: 20px 50px;
+    text-indent: 50px;
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+}
+
+input {
+    border: 0;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid white;
+    color: white;
+    width: 33%;
+    height: 45px;
+    font-weight: bold;
+    text-indent: 50px;
+    background-repeat: no-repeat;
+    background-position: 5px 12px;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 33%;
+    height: 123px;
+    padding-top: 20px;
+    font-weight: bold;
+    resize: none;
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+}
+
+// button {
+//     border-radius: 10rem;
+//     width: 33%;
+//     height: 2rem;
+//     background-color: white;
+//     cursor: pointer;
+//     margin-bottom: 20px;
+// }
+#iconaNome {
+    padding-top: 0.5%;
+    padding-left: 1%;
     position: absolute;
 }
-select{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    &:focus {border-color: #111;}
-    color:white;
-    width: 32%;
-    height: 2rem;
-    padding-left: 1rem;
-    font-weight: bold;
-}
-#option{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    &:focus {border-color: #111;}
-    color:white;
-    width: 25%;
-    height: 2rem;
-    padding-left: 6.5%;
+
+#iconaCognome {
     padding-top: 0.5%;
-    font-weight: bold;
+    //padding-top: 1.7%;
+    padding-left: 1%;
+    position: absolute;
 }
-input{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    &:focus {border-color: #111;}
-    color:white;
-    width: 25%;
-    height: 2rem;
-    padding-left: 6.5%;
+
+#iconaSesso {
     padding-top: 0.5%;
-    font-weight: bold;
+    padding-left: 1%;
+    position: absolute;
+}
 
-  }
-  textarea{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    &:focus {border-color: #111;}
-    color:white;
-    width: 28.2%;
-    height: 2rem;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    padding-right: 1rem;
-    font-weight: bold;
+#iconaMail {
+    padding-top: 0.5%;
+    padding-left: 1%;
+    position: absolute;
+}
 
-  }
- .container{
-    
-    padding-left: 30%;
-    //padding-right: 10rem;
- }
+#iconaPhone {
+    padding-top: 0.5%;
+    padding-left: 1%;
+    position: absolute;
+}
 
-  button{
-    border-radius: 10rem;
-    width: 30.7%;
-    height: 2rem;
-    background-color: white;
+//bottone
+button {
+    //min-width: 260px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    
-  }
-  #iconaNome{
-      padding-top: 0.4%;
-      padding-left: 1%;
-      position: absolute;
-  }
-  #iconaCognome{
-    padding-top: 1.7%;
-    padding-left: 1%;
-    position: absolute;
+    height: 50px;
+    width: 33%;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
 }
-#iconaSesso{
-    padding-top: 0.3%;
-    padding-left: 1%;
-    position: absolute;
+
+button span {
+    color: #164ca7;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
 }
-#iconaMail{
-    padding-top: 0.3%;
-    padding-left: 1%;
-    position: absolute;
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
 }
-#iconaPhone{
-    padding-top: 0.3%;
-    padding-left: 1%;
-    position: absolute;
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+button:active {
+    width: 33.5%;
+    height: 52px;
+    margin-top: 3px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    label {
+        display: none;
+    }
+    select,
+    input,
+    #commenti {
+        margin-bottom: 10px;
+    }
+    #titolo {
+        margin-bottom: 15px;
+    }
+}
+
+.person {
+    background-image: url('../../../assets/icone/account.png');
+}
+
+.phone {
+    background-image: url('../../../assets/icone/phone.png');
+}
+
+.gender {
+    background-image: url('../../../assets/icone/gender.png');
+}
+
+.email {
+    background-image: url('../../../assets/icone/email.png');
 }

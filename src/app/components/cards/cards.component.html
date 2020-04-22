@@ -1,0 +1,9 @@
+<app-menu [version]=1></app-menu>
+<div class="container">
+    <ul>
+        <li *ngFor="let item of serie;">
+            {{item.nome}}
+            <img src="../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" class="img">
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,58 @@
+<app-menu [version]=1></app-menu>
+<div class="all">
+    <div class="buttons">
+        <button class="primo">Tutti</button>
+        <button>Preferiti</button>
+        <button>Nascosti</button>
+    </div>
+    <div>
+        <ul>
+            <ng-container *ngFor="let item of serie; let i = index;">
+                <li *ngIf="i<5 && mostra==false">
+                    <div class="bottoni">
+                        <button><img src="../assets/icone/heart.png" alt=""></button>
+                        <button class="icons"><img src="../assets/icone/share.png" ></button>
+                        <div class="dropdown">
+                            <a href="" class="items">mostra di più</a>
+                            <hr width=100% size=1 color=#011D28>
+                            <a href="" class="items">nascondi</a>
+                        </div>
+                        <!--<div class="dropdown">-->
+                        <button class="icons"><img src="../assets/icone/dots.png" ></button>
+                        <!--   <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                    </div>-->
+                    </div>
+                    <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
+                    <span class="nome">{{item.nome}}</span> <br>
+                    <span class="descrizione">{{item.descrizione}}</span>
+                </li>
+                <div class="btn">
+                    <button *ngIf="i==4 && mostra==false;" (click)="mostra=true">Mostra di più</button>
+                </div>
+            </ng-container>
+        </ul>
+    </div>
+    <div *ngIf="mostra==true">
+        <ul>
+            <ng-container *ngFor="let item of serie; let i = index;">
+                <li>
+                    <div class="bottoni">
+                        <button><img src="../assets/icone/heart.png" alt=""></button>
+                        <button><img src="../assets/icone/share.png" class="icons"></button>
+                        <button><img src="../assets/icone/dots.png"  class="icons"></button>
+                    </div>
+                    <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
+                    <span class="nome">{{item.nome}}</span><br>
+                    <span class="descrizione">{{item.descrizione}}</span>
+                </li>
+            </ng-container>
+            <div class="btn">
+                <button (click)="mostra=false">Mostra di meno</button>
+            </div>
+        </ul>
+    </div>
+</div>
