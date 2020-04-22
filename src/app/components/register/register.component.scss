@@ -243,3 +243,10 @@ button:hover span {
         transform: translate3d(0, 0, 0) translateZ(0);
     }
 }
+
+.eye {
+    position: absolute;
+    margin-left: -52px;
+    margin-top: -5px;
+    cursor: pointer;
+}
