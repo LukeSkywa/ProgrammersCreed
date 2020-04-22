@@ -16,14 +16,21 @@
 
 label {
     text-align: center;
-    
-    margin-bottom: -15px;
-    margin-left: -270px;
+    padding-right: 24%;
+    padding-top: 2%;
+    margin-bottom: -30px;
+    //margin-left: -270px;
     font-size: .58rem;
     color: white;
     color: white;
     display: block;
     float: initial;
+}
+
+#labelCognome{
+    margin-bottom: -15px;
+    padding-left: 1%;
+    padding-top:1%;
 }
 
 select {
