@@ -7,16 +7,16 @@
             </a>
         </li>
         <li class="menu-item" *ngFor="let menuItem of menuList">
-            <a href=#0 [routerLink]="menuItem.desc|lowercase" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
+            <a href=#0 routerLink="/{{menuItem.desc|lowercase}}" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
         </li>
         <li class="menu-Item" *ngIf="cerca==true">
-            <form action="">
+            <form>
                 <input type="search" #search>
                 <i class="fa fa-search"></i>
             </form>
         </li>
         <li class="menu-item" style="position:absolute;right:8px;width:20%;">
-            <a href=" #0 " [routerLink]="['home']" (click)="change(0) "> <img src="../assets/logo.png" alt="logo" class="logo"></a>
+            <a href=#0 [routerLink]="['home']" (click)="change(0) "> <img src="../assets/logo.png" alt="logo" class="logo"></a>
         </li>
     </ol>
 </nav>
