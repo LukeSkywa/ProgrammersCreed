@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.interface';
+import { Serie } from '../models/serie.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,10 @@ export class MyHttpService {
 
   modifyUser(user: User){
     return this.httpClient.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
+  }
+
+  putSerie(serie: Serie){
+    return this.httpClient.put('http://localhost:3000/games/'+serie.id, serie);
   }
 
 
