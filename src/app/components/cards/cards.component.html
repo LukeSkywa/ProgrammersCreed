@@ -1,9 +1,9 @@
 <div class="container">
-    <ul>
-        <li *ngFor="let item of serie;">
-            {{item.nome}}
-            <img src="../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" class="img">
-        </li>
-
-    </ul>
+    <div class="card" *ngFor="let serie of serie;">
+        <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}.jpg" class="img">
+        <div class="content">
+            <h1 class="title">{{serie.nome}}</h1>
+            <p class="description">{{serie.descrizione}}</p>
+        </div>
+    </div>
 </div>
