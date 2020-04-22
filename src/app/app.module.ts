@@ -18,6 +18,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ModificaprofiloComponent } from './components/modificaprofilo/modificap
     CardsComponent,
     CardsComponent,
     RemovewhitespacesPipe,
-    ModificaprofiloComponent
+    ModificaprofiloComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
