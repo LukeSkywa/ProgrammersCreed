@@ -17,11 +17,10 @@
                             <button (click)="gestisciPreferiti(item.id)"><span class="cuoreRosso">&#10084;</span></button>
                         </ng-container>
                         <button class="icons"><img src="../assets/icone/share.png" ></button>
-
                         <button class="icons" (click)="show(i)"><img src="../assets/icone/dots.png"></button>
                         <ng-container *ngIf="daMostrare==i">
                             <div class="dropdown-content">
-                                <a href="" class="items">mostra di più</a>
+                                <a [routerLink]="['/dettaglio', item.id]" class="items">mostra di più</a>
                                 <hr width=100% size=1 color=#011D28>
                                 <a href="" class="items">nascondi</a>
                             </div>

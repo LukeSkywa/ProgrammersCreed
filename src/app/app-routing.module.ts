@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'list', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'dettaglio', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 

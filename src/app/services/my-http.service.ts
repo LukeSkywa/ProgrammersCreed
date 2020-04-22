@@ -17,6 +17,10 @@ export class MyHttpService {
   getSerie(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie');
   }
+
+  getOneSerie(id:number):Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie/'+id);
+  }
   
   /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
     let genere: string=""+author;
