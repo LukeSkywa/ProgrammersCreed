@@ -18,15 +18,18 @@ export class ListSerieComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.caricaSerie();
+    //console.log(this.serie);
+  }
+
+  caricaSerie(){
     this.myHttpService.getSerie().subscribe(reponse => {
       this.serie = reponse;
       this.filtra(0);
     }, err => {
       console.log('error');
     });
-    //console.log(this.serie);
   }
-
   show(i: number) {
     if (this.daMostrare == i) {
       this.daMostrare = null;
@@ -41,11 +44,7 @@ export class ListSerieComponent implements OnInit {
       if(element.id===id){
         element.preferiti=true;
         this.myHttpService.putSerie(element).subscribe(()=>{
-          this.myHttpService.getSerie().subscribe(reponse => {
-            this.serie = reponse;
-          }, err => {
-            console.log('error');
-          });
+          this.caricaSerie();
         });
         console.log(element);
       }
@@ -58,11 +57,7 @@ export class ListSerieComponent implements OnInit {
       if(element.id===id){
         element.preferiti=false;
         this.myHttpService.putSerie(element).subscribe(()=>{
-          this.myHttpService.getSerie().subscribe(reponse => {
-            this.serie = reponse;
-          }, err => {
-            console.log('error');
-          });
+            this.caricaSerie();
         });
         console.log(element);
       }

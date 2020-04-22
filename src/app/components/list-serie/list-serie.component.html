@@ -38,7 +38,7 @@
                     <span class="descrizione">{{item.descrizione}}</span>
                 </li>
                 <div class="btn">
-                    <button *ngIf="i==4 && mostra==false;" (click)="mostra=true">Mostra di più</button>
+                    <button *ngIf="i==5 && mostra==false;" (click)="mostra=true">Mostra di più</button>
                 </div>
             </ng-container>
         </ul>
@@ -48,10 +48,10 @@
             <ng-container *ngFor="let item of serieFiltrata; let i = index;">
                 <li>
                     <div class="bottoni">
-                        <ng-container *ngIf="!item.preferiti">
+                        <ng-container *ngIf="item.preferiti==false">
                             <button (click)="aggiungiPreferiti(item.id)"><span style="font-size:26px; color: black;">&#10084;</span></button>
                         </ng-container>
-                        <ng-container *ngIf="item.preferiti">
+                        <ng-container *ngIf="item.preferiti==true">
                             <button (click)="rimuoviPreferiti(item.id)"><span style="font-size:26px; color: red;">&#10084;</span></button>
                         </ng-container>
                         <button class="icons"><img src="../assets/icone/share.png" ></button>
