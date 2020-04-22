@@ -1,5 +1,8 @@
 .container {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-top: 1px;
     background: rgb(1, 29, 40);
     background: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 35%);
@@ -10,6 +13,7 @@
 }
 
 .card {
+    position: relative;
     margin: 20px;
     background-color: #dedede;
     width: 300px;
