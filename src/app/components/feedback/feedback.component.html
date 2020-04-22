@@ -7,13 +7,13 @@
 
                 <div>
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" formControlName="nome" style=" background-image: url('./assets/icone/account.png');">
+                    <input type="text" id="nome" formControlName="nome" class="person">
                     <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p>
                 </div>
 
                 <div class="input-group input-group-icon" id="idCognome">
                     <label id="labelCognome" for="cognome">Cognome</label>
-                    <input type="text" id="cognome" formControlName="cognome" style=" background-image: url('./assets/icone/account.png');">
+                    <input type="text" id="cognome" formControlName="cognome" class="person">
                     <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <label>Sesso</label>
                 <div>
                     <div class="customSesso">
-                        <select formControlName="sesso" style=" background-image: url('./assets/icone/gender.png');">
+                        <select formControlName="sesso" class="gender">
                             <option value={{sesso}} *ngFor="let sesso of sessi"> 
                             <span class="optSesso"> {{sesso}}</span> </option>
                         </select>
@@ -33,14 +33,14 @@
             <div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" id="email" formControlName="email" style=" background-image: url('./assets/icone/email.png');">
+                    <input type="text" id="email" formControlName="email" class="email">
                     <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p>
                 </div>
             </div>
             <div>
                 <div class="input-group input-group-icon">
                     <label for="telefono">Telefono</label>
-                    <input type="text" id="telefono" formControlName="telefono" style=" background-image: url('./assets/icone/phone.png');">
+                    <input type="text" id="telefono" formControlName="telefono" class="phone">
                     <p *ngIf="telefonoControl.status === 'INVALID' && telefonoControl.dirty">Campo telefono obbligatorio</p>
                 </div>
             </div>
