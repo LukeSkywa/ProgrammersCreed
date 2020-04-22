@@ -9,7 +9,7 @@ import { MyHttpService } from 'src/app/services/my-http.service';
   styleUrls: ['./list-serie.component.scss']
 })
 export class ListSerieComponent implements OnInit {
-  daMostrare;
+  daMostrare:number;
   mostra: boolean;
   serie: Serie[] = [];
   serieFiltrata: Serie[];

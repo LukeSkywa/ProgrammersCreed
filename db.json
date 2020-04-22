@@ -58,7 +58,7 @@
       "stagioni": 4,
       "genere": "drammatico,azione",
       "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     },
     {
@@ -67,7 +67,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -112,7 +112,7 @@
       "stagioni": 5,
       "genere": "drammatico",
       "descrizione": "Tornati nei bassifondi di Birmingham dai campi di battaglia della Prima Guerra Mondiale, i fratelli Tommy e Arthur Shelby sono pronti ad affermarsi nel mondo della criminalità locale con le scommesse illegali e il mercato nero.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -130,7 +130,7 @@
       "stagioni": 7,
       "genere": "drammatico",
       "descrizione": "Una banda di motociclisti protegge la cittadina di Charming dagli aggressori che la minacciano.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
