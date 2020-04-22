@@ -15,6 +15,7 @@ export class ListSerieComponent implements OnInit {
  
   constructor(private myHttpService: MyHttpService,private serieService:SerieService) { 
     this.mostra=false;
+    
   }
  
   ngOnInit(): void {
@@ -33,6 +34,25 @@ export class ListSerieComponent implements OnInit {
     else{
       this.daMostrare=i;
     }
+  }
+  aggiungiPreferiti(id:number){
+    console.log(this.serie);
+    this.serie.forEach(element => {
+      if(element.id===id){
+        element.preferiti=true;
+        console.log(element);
+      }
+    });
+  }
+
+  rimuoviPreferiti(id:number){
+    console.log(this.serie);
+    this.serie.forEach(element => {
+      if(element.id===id){
+        element.preferiti=false;
+        console.log(element);
+      }
+    });
   }
 
 }

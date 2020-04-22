@@ -10,8 +10,14 @@
             <ng-container *ngFor="let item of serie; let i = index;">
                 <li *ngIf="i<5 && mostra==false">
                     <div class="bottoni">
-                        <button><img src="../assets/icone/heart.png" alt=""></button>
+                        <ng-container *ngIf="item.preferiti==false">
+                            <button (click)="aggiungiPreferiti(item.id)"><span style="font-size:26px; color: black;">&#10084;</span></button>
+                        </ng-container>
+                        <ng-container *ngIf="item.preferiti==true">
+                            <button (click)="rimuoviPreferiti(item.id)"><span style="font-size:26px; color: red;">&#10084;</span></button>
+                        </ng-container>
                         <button class="icons"><img src="../assets/icone/share.png" ></button>
+
                         <button class="icons" (click)="show(i)"><img src="../assets/icone/dots.png"></button>
                         <ng-container *ngIf="daMostrare==i">
                             <div class="dropdown-content">
