@@ -12,7 +12,7 @@ export class ListSerieComponent implements OnInit {
   daMostrare;
   mostra:boolean;
   serie: Serie[];
- 
+  serieFiltrata: Serie[];
   constructor(private myHttpService: MyHttpService,private serieService:SerieService) { 
     this.mostra=false;
   }
@@ -24,6 +24,7 @@ export class ListSerieComponent implements OnInit {
       console.log('error');
     });
     //console.log(this.serie);
+    this.serieFiltrata=this.filtra(0);
   }
 
   show(i:number){
@@ -32,6 +33,33 @@ export class ListSerieComponent implements OnInit {
     }
     else{
       this.daMostrare=i;
+    }
+  }
+
+  filtra(filtro:number): Serie[]{
+    let filtrata: Serie[];
+    switch(filtro){
+      case 0:{ 
+      this.serie.forEach(item => {
+        if(item.nascosto!=true){
+          filtrata.push(item);
+        }
+      });
+    }
+      case 1: {
+      this.serie.forEach(item => {
+        if(item.preferiti==true){
+          filtrata.push(item);
+        }
+      });}
+      case 2:{
+        this.serie.forEach(item => {
+          if(item.nascosto==true){
+            filtrata.push(item);
+          }
+      });
+    }
+    return filtrata;
     }
   }
 
