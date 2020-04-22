@@ -1,0 +1,134 @@
+.all{
+    padding-top: 1px;
+    background: rgb(1,29,40);
+    background: linear-gradient(90deg, rgba(1,29,40,1) 0%, rgba(75,128,171,1) 35%);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 13%;
+    height: 100%;
+    padding-right: 4.5rem;
+    
+}
+#titolo{
+    font-size: 1rem;
+    padding-left: 9.5%;
+    padding-top: 2.5%;
+}
+label {
+  font-size: .55rem;
+  
+  color: white;
+    
+
+    //&:focus {border-color: #111;}
+    color:white;
+    width: 25%;
+   // padding-left: 4%;
+   // padding-top: 1.4%;
+   padding-top: 1.3rem;
+   padding-left: 3.6rem;
+    display: block;
+    float: initial;
+    position: absolute;
+}
+select{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    &:focus {border-color: #111;}
+    color:white;
+    width: 32%;
+    height: 2rem;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+.optSesso{
+    background-color: rgba(255, 255, 255, 0.3);
+    //&:focus {border-color: #111;}
+    color:white;
+    width: 25%;
+    height: 2rem;
+    padding-left: 3.6rem;
+    padding-top: 0.5%;
+    font-weight: bold;
+}
+input{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    //&:focus {border-color: #111;}
+    color:white;
+    width: 25%;
+    height: 2rem;
+   // padding-left: 6.5%;
+    padding-left: 3.6rem;
+    padding-top: 0.5%;
+    font-weight: bold;
+
+  }
+  textarea{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  //  &:focus {border-color: #111;}
+    color:white;
+    width: 28.2%;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    font-weight: bold;
+
+  }
+ .container{
+    
+    padding-left: 30%;
+    //padding-right: 10rem;
+ }
+
+  button{
+    border-radius: 10rem;
+    width: 30.7%;
+    height: 2rem;
+    background-color: white;
+    cursor: pointer;
+    
+  }
+  #iconaNome{
+      padding-top: 0.3%;
+      padding-left: 1%;
+      position: absolute;
+  }
+  #iconaCognome{
+    padding-top: 0.3%;
+    //padding-top: 1.7%;
+    padding-left: 1%;
+    position: absolute;
+}
+#iconaSesso{
+    padding-top: 0.3%;
+    padding-left: 1%;
+    position: absolute;
+}
+#iconaMail{
+    padding-top: 0.3%;
+    padding-left: 1%;
+    position: absolute;
+}
+#iconaPhone{
+    padding-top: 0.3%;
+    padding-left: 1%;
+    position: absolute;
+}
+#idCognome{
+    padding-top: 2.9%;
+}
+#labelCognome{
+    padding-top: 0.2rem;
+}
