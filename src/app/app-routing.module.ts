@@ -8,6 +8,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ListSerieComponent } from './components/list-serie/list-serie.component';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'list', component: ListSerieComponent},
   {path: 'cards',  component:CardsComponent},
   {path: 'modificaProfilo', component: ModificaprofiloComponent},
+  {path: 'dettaglio', component: DettaglioComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
