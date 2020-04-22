@@ -1,68 +1,40 @@
 <app-menu [version]=1></app-menu>
 <div class="all">
     <div class="container">
-        <h1> <span id="titolo"><strong>Modifica</strong></span></h1>
-
+        <p class="title">Benvenuto </p>
+        <p class="nome">{{myProfile.nome}} {{myProfile.cognome}}</p>
+        <img src="../assets/messi.jpg" alt="logo" class="logo">
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()">
-            
+            <label for="nome" id="labelNome">Nome</label>
+            <input type="text" id="nome" formControlName="nome" class="person">
+            <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p>
 
-                <div class="input-group input-group-icon">
-                    <label for="nome">Nome</label><br>
-                    <input type="text" id="nome" formControlName="nome" style=" background-image: url('./assets/icone/account.png');">
-                    <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p><br>
-                </div>
+            <label id="labelCognome" for="cognome">Cognome</label>
+            <input type="text" id="cognome" formControlName="cognome" class="person">
+            <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p>
 
-                <br>
-                <div class="input-group input-group-icon" id="idCognome">
-                    <label id="labelCognome" for="cognome">Cognome</label>
-                    <input type="text" id="cognome" formControlName="cognome" style=" background-image: url('./assets/icone/account.png');">
-                    <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p><br>
-                </div>
-            
-
-            
-                <label>Sesso</label><br>
-                <div class="input-group">
-                    <div class="customSesso">
-                        <select formControlName="sesso">
+            <label id="labelSesso">Sesso</label>
+            <div class="customSesso">
+                <select formControlName="sesso" class="gender">
                             <option value={{sesso}} *ngFor="let sesso of sessi"> <span class="optSesso"> {{sesso}}</span> </option>
                         </select>
-                    </div>
+            </div>
 
-                </div>
-                <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
-            
+            <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
+            <div>
+                <label for="email" id="labelEmail">Email</label>
+                <input type="text" id="email" formControlName="email" class="email">
+                <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p>
+            </div>
 
+            <label for="telefono" id="labelTel">Telefono</label>
+            <input type="text" id="telefono" formControlName="telefono" class="phone">
+            <p *ngIf="telefonoControl.status==='INVALID' && telefonoControl.dirty ">Campo telefono obbligatorio</p>
 
-
-            
-                <div class="input-group input-group-icon">
-                    <label for="email">Email</label><br>
-                    
-                    <input type="text" id="email" formControlName="email" style=" background-image: url('./assets/icone/email.png');">
-                    <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p><br>
-                </div>
-            
-            
-                <div class="input-group input-group-icon">
-                    <label for="telefono">Telefono</label><br>
-                    <input type="text" id="telefono" formControlName="telefono" style=" background-image: url('./assets/icone/phone.png');">
-                    <p *ngIf="telefonoControl.status === 'INVALID' && telefonoControl.dirty">Campo telefono obbligatorio</p><br>
-                </div>
-            
-            <br>
-            
-                <div class="button">
-                  
-                    <button routerLink="/profile">Annulla</button>
-                    <button type="submit" [disabled]="modificaprofilo.status === 'INVALID'" ng-class="disabled">Invio</button>
-               
-                
-                  
-                </div>
-            
-
-
+            <div class="button ">
+                <button routerLink="/profile ">Annulla</button>
+                <button type="submit " [disabled]="modificaprofilo.status==='INVALID' " ng-class="disabled ">Invio</button>
+            </div>
         </form>
     </div>
 </div>
