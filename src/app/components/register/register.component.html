@@ -1,8 +1,6 @@
 <div class="login">
-    <div class="registrati">
-        <button class="btn-registrati" routerLink="/login">×</button>
-    </div>
     <form [formGroup]="registerForm" class="loginForm" (ngSubmit)="register(registerForm.value)">
+        <button class="btn-registrati" routerLink="/login">×</button>
         <div>
             <img src="../assets/logo.png" alt="logo" class="logo">
             <p class="title">Registrati</p>
