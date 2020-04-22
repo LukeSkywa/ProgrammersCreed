@@ -17,7 +17,7 @@
 label {
     text-align: center;
     padding-right: 24%;
-    padding-top: 2%;
+    padding-top: 1%;
     margin-bottom: -30px;
     //margin-left: -270px;
     font-size: .58rem;
@@ -30,7 +30,7 @@ label {
 #labelCognome{
     margin-bottom: -15px;
     padding-left: 1%;
-    padding-top:1%;
+    padding-top:0.5%;
 }
 
 select {
@@ -144,7 +144,7 @@ textarea {
 
 //bottone
 button {
-    //min-width: 260px;
+    //width:50%;
     margin-top: 0px;
     margin-bottom: 15px;
     position: relative;
@@ -155,7 +155,7 @@ button {
     align-items: center;
     cursor: pointer;
     height: 50px;
-    width: 33%;
+    width: 17%;
     background-color: #ffffff;
     border: 1px solid rgba(22, 76, 167, 0.6);
 }
