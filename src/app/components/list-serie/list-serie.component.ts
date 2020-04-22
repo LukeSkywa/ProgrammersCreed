@@ -10,57 +10,69 @@ import { MyHttpService } from 'src/app/services/my-http.service';
 })
 export class ListSerieComponent implements OnInit {
   daMostrare;
-  mostra:boolean;
-  serie: Serie[];
+  mostra: boolean;
+  serie: Serie[] = [];
   serieFiltrata: Serie[];
-  constructor(private myHttpService: MyHttpService,private serieService:SerieService) { 
-    this.mostra=false;
+  constructor(private myHttpService: MyHttpService, private serieService: SerieService) {
+    this.mostra = false;
   }
- 
+
   ngOnInit(): void {
     this.myHttpService.getSerie().subscribe(reponse => {
       this.serie = reponse;
+      this.filtra(0);
     }, err => {
       console.log('error');
     });
     //console.log(this.serie);
-    this.serieFiltrata=this.filtra(0);
   }
 
-  show(i:number){
-    if(this.daMostrare==i){
-      this.daMostrare=null;
+  show(i: number) {
+    if (this.daMostrare == i) {
+      this.daMostrare = null;
     }
-    else{
-      this.daMostrare=i;
+    else {
+      this.daMostrare = i;
     }
   }
 
-  filtra(filtro:number): Serie[]{
-    let filtrata: Serie[];
-    switch(filtro){
-      case 0:{ 
-      this.serie.forEach(item => {
-        if(item.nascosto!=true){
-          filtrata.push(item);
-        }
-      });
-    }
-      case 1: {
-      this.serie.forEach(item => {
-        if(item.preferiti==true){
-          filtrata.push(item);
-        }
-      });}
-      case 2:{
-        this.serie.forEach(item => {
-          if(item.nascosto==true){
-            filtrata.push(item);
-          }
-      });
-    }
-    return filtrata;
-    }
+  filtra(filtro: number) {
+    this.serieFiltrata = this.serie.filter(item =>{
+      switch(filtro){
+        case 0: return !item.nascosto;
+        case 1: return item.preferiti;
+        case 2: return item.nascosto;
+      }
+    });
+    // this.serieFiltrata = [];
+    // switch (filtro) {
+    //   case 0: {
+    //     this.serie.forEach(item => {
+    //       if (!item.nascosto) {
+    //         this.serieFiltrata.push(item);
+    //         console.log(item);
+    //       }
+    //     });
+    //     break;
+    //   }
+    //   case 1: {
+    //     this.serie.forEach(item => {
+    //       if (item.preferiti) {
+    //         this.serieFiltrata.push(item);
+    //       }
+    //     });
+    //     break;
+    //   }
+    //   case 2: {
+    //     this.serie.forEach(item => {
+    //       if (item.nascosto) {
+    //         this.serieFiltrata.push(item);
+    //       }
+    //     });
+    //     break;
+    //   }
+    // }
+    console.log(this.serieFiltrata);
   }
 
 }

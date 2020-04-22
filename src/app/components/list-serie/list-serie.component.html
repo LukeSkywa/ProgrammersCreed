@@ -1,13 +1,13 @@
 <app-menu [version]=3></app-menu>
 <div class="all">
     <div class="buttons">
-        <button class="primo">Tutti</button>
-        <button>Preferiti</button>
-        <button>Nascosti</button>
+        <button class="primo" (click)="filtra(0);mostra=false">Tutti</button>
+        <button (click)="filtra(1);mostra=false">Preferiti</button>
+        <button (click)="filtra(2);mostra=false">Nascosti</button>
     </div>
     <div>
         <ul>
-            <ng-container *ngFor="let item of serie; let i = index;">
+            <ng-container *ngFor="let item of serieFiltrata; let i = index;">
                 <li *ngIf="i<5 && mostra==false">
                     <div class="bottoni">
                         <button><img src="../assets/icone/heart.png" alt=""></button>
@@ -39,7 +39,7 @@
     </div>
     <div *ngIf="mostra==true">
         <ul>
-            <ng-container *ngFor="let item of serie; let i = index;">
+            <ng-container *ngFor="let item of serieFiltrata; let i = index;">
                 <li>
                     <div class="bottoni">
                         <button><img src="../assets/icone/heart.png" alt=""></button>
