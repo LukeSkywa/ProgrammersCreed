@@ -22,14 +22,18 @@ export class ListSerieComponent implements OnInit {
     //console.log(this.serie);
   }
 
-  caricaSerie(){
+  caricaSerie(id?:number){
     this.myHttpService.getSerie().subscribe(reponse => {
       this.serie = reponse;
-      this.filtra(0);
+      if(id!=null)
+        this.filtra(id);
+      else
+        this.filtra(0);
     }, err => {
       console.log('error');
     });
   }
+
   show(i: number) {
     if (this.daMostrare == i) {
       this.daMostrare = null;
@@ -38,14 +42,19 @@ export class ListSerieComponent implements OnInit {
       this.daMostrare = i;
     }
   }
+
+  
   gestisciPreferiti(id:number){
     console.log(this.serie);
     this.serie.forEach(element => {
       if(element.id===id){
         element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
-          this.caricaSerie();
-        });
+          if(element.preferiti)
+            this.caricaSerie();
+          else
+            this.caricaSerie(1);
+        }); 
         console.log(element);
       }
     });
