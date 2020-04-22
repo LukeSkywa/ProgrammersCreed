@@ -5,7 +5,7 @@
         <p class="nome">{{myProfile.nome}} {{myProfile.cognome}}</p>
         <img src="../assets/messi.jpg" alt="logo" class="logo">
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()">
-            <label for="nome" id="labelNome">Nome &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="nome" id="labelNome">Nome </label>
             <input type="text" id="nome" formControlName="nome" class="person">
             <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p>
 
@@ -13,7 +13,7 @@
             <input type="text" id="cognome" formControlName="cognome" class="person">
             <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p>
 
-            <label id="labelSesso">Sesso&nbsp;&nbsp;&nbsp;</label>
+            <label id="labelSesso">Sesso&emsp;</label>
             <div class="customSesso">
                 <select formControlName="sesso" class="gender">
                             <option value={{sesso}} *ngFor="let sesso of sessi"> <span class="optSesso"> {{sesso}}</span> </option>
@@ -22,7 +22,7 @@
 
             <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
             <div>
-                <label for="email" id="labelEmail">Email&nbsp;&nbsp;&nbsp;</label>
+                <label for="email" id="labelEmail">Email&emsp;</label>
                 <input type="text" id="email" formControlName="email" class="email">
                 <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p>
             </div>
