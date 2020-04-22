@@ -10,29 +10,29 @@ import { MyHttpService } from 'src/app/services/my-http.service';
 })
 export class ListSerieComponent implements OnInit {
   daMostrare;
-  mostra:boolean;
-  serie: Serie[];
- 
-  constructor(private myHttpService: MyHttpService,private serieService:SerieService) { 
-    this.mostra=false;
-    
+  mostra: boolean;
+  serie: Serie[] = [];
+  serieFiltrata: Serie[];
+  constructor(private myHttpService: MyHttpService, private serieService: SerieService) {
+    this.mostra = false;
   }
- 
+
   ngOnInit(): void {
     this.myHttpService.getSerie().subscribe(reponse => {
       this.serie = reponse;
+      this.filtra(0);
     }, err => {
       console.log('error');
     });
     //console.log(this.serie);
   }
 
-  show(i:number){
-    if(this.daMostrare==i){
-      this.daMostrare=null;
+  show(i: number) {
+    if (this.daMostrare == i) {
+      this.daMostrare = null;
     }
-    else{
-      this.daMostrare=i;
+    else {
+      this.daMostrare = i;
     }
   }
   aggiungiPreferiti(id:number){
@@ -67,6 +67,45 @@ export class ListSerieComponent implements OnInit {
         console.log(element);
       }
     });
+  }
+
+  filtra(filtro: number) {
+    this.serieFiltrata = this.serie.filter(item =>{
+      switch(filtro){
+        case 0: return !item.nascosto;
+        case 1: return item.preferiti;
+        case 2: return item.nascosto;
+      }
+    });
+    // this.serieFiltrata = [];
+    // switch (filtro) {
+    //   case 0: {
+    //     this.serie.forEach(item => {
+    //       if (!item.nascosto) {
+    //         this.serieFiltrata.push(item);
+    //         console.log(item);
+    //       }
+    //     });
+    //     break;
+    //   }
+    //   case 1: {
+    //     this.serie.forEach(item => {
+    //       if (item.preferiti) {
+    //         this.serieFiltrata.push(item);
+    //       }
+    //     });
+    //     break;
+    //   }
+    //   case 2: {
+    //     this.serie.forEach(item => {
+    //       if (item.nascosto) {
+    //         this.serieFiltrata.push(item);
+    //       }
+    //     });
+    //     break;
+    //   }
+    // }
+    console.log(this.serieFiltrata);
   }
 
 }
