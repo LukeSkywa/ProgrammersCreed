@@ -17,13 +17,17 @@
                             <button (click)="gestisciPreferiti(item.id)"><span class="cuoreRosso">&#10084;</span></button>
                         </ng-container>
                         <button class="icons"><img src="../assets/icone/share.png" ></button>
-
                         <button class="icons" (click)="show(i)"><img src="../assets/icone/dots.png"></button>
                         <ng-container *ngIf="daMostrare==i">
                             <div class="dropdown-content">
                                 <a href="" class="items">mostra di più</a>
                                 <hr width=100% size=1 color=#011D28>
-                                <a href="" class="items">nascondi</a>
+                                <ng-container *ngIf="!item.nascosto">
+                                    <a (click)="nascondi(item.id)" class="items">nascondi</a>
+                                </ng-container>
+                                <ng-container *ngIf="item.nascosto">
+                                    <a (click)="nascondi(item.id)" class="items">mostra</a>
+                                </ng-container>
                             </div>
                         </ng-container>
                         <!--   <div class="dropdown-content">
@@ -60,7 +64,12 @@
                             <div class="dropdown-content">
                                 <a href="" class="items">mostra di più</a>
                                 <hr width=100% size=1 color=#011D28>
-                                <a href="" class="items">nascondi</a>
+                                <ng-container *ngIf="!item.nascosto">
+                                    <a (click)="nascondi(item.id)" class="items">nascondi</a>
+                                </ng-container>
+                                <ng-container *ngIf="item.nascosto">
+                                    <a (click)="nascondi(item.id)" class="items">mostra</a>
+                                </ng-container>
                             </div>
                         </ng-container>
                     </div>

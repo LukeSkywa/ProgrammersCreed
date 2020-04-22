@@ -112,4 +112,15 @@ export class ListSerieComponent implements OnInit {
     console.log(this.serieFiltrata);
   }
 
+  nascondi(id:number){
+    this.serie.forEach(element => {
+      if(element.id===id){
+        element.nascosto=!element.nascosto;
+        this.myHttpService.putSerie(element).subscribe(()=>{
+            this.caricaSerie();
+        }); 
+        console.log(element);
+      }
+    });
+  }
 }

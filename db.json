@@ -113,7 +113,7 @@
       "genere": "drammatico",
       "descrizione": "Tornati nei bassifondi di Birmingham dai campi di battaglia della Prima Guerra Mondiale, i fratelli Tommy e Arthur Shelby sono pronti ad affermarsi nel mondo della criminalità locale con le scommesse illegali e il mercato nero.",
       "preferiti": true,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 8,
@@ -140,7 +140,7 @@
       "genere": "drammatico",
       "descrizione": "Eventi reali connessi alle vicende di alcuni dei più noti signori della droga e il lavoro delle forze dell'ordine che cercano di fermarne i loro affari illeciti.",
       "preferiti": false,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 11,
