@@ -1,9 +1,9 @@
 <app-menu [version]=3></app-menu>
 <div class="all">
     <div class="buttons">
-        <button class="primo" (click)="filtra(0);mostra=false">Tutti</button>
-        <button (click)="filtra(1);  mostra=false">Preferiti</button>
-        <button (click)="filtra(2);  mostra=false">Nascosti</button>
+        <button class="primo" (click)="filtra(0);mostra=false; ricerca=null">Tutti</button>
+        <button (click)="filtra(1);  mostra=false; ricerca=null">Preferiti</button>
+        <button (click)="filtra(2);  mostra=false; ricerca=null">Nascosti</button>
     </div>
     <div>
         <ul>
@@ -30,12 +30,6 @@
                                 </ng-container>
                             </div>
                         </ng-container>
-                        <!--   <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                    </div>-->
                     </div>
                     <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
                     <span class="nome">{{item.nome}}</span> <br>

@@ -7,7 +7,7 @@
             "email": "lucaleporati@gmail.com",
             "password": "123",
             "genere": "maschio",
-            "telefono": "456"
+            "telefono": "45678901"
         },
         {
             "id": 2,
@@ -56,8 +56,8 @@
             "stagioni": 4,
             "genere": "drammatico,azione",
             "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-            "preferiti": true,
-            "nascosto": false
+            "preferiti": false,
+            "nascosto": true
         },
         {
             "id": 2,
@@ -66,9 +66,7 @@
             "genere": "drammatico,azione",
             "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
             "preferiti": false,
-            "nascosto": true
-
-
+            "nascosto": false
         },
         {
             "id": 3,
@@ -76,7 +74,7 @@
             "stagioni": 8,
             "genere": "fantastico,drammatico",
             "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
-            "preferiti": true,
+            "preferiti": false,
             "nascosto": false
         },
         {
@@ -94,7 +92,7 @@
             "stagioni": 4,
             "genere": "drammatico,commedia",
             "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
-            "preferiti": false,
+            "preferiti": true,
             "nascosto": false
         },
         {
@@ -103,7 +101,7 @@
             "stagioni": 2,
             "genere": "commedia",
             "descrizione": "Otis, il figlio insicuro di una sessuologa, e Maeve, una ribelle, sono due studenti delle scuole superiori che decidono di avviare una consulenza sessuale improvvisata nel loro liceo.",
-            "preferiti": false,
+            "preferiti": true,
             "nascosto": false
         },
         {
@@ -113,15 +111,15 @@
             "genere": "drammatico",
             "descrizione": "Tornati nei bassifondi di Birmingham dai campi di battaglia della Prima Guerra Mondiale, i fratelli Tommy e Arthur Shelby sono pronti ad affermarsi nel mondo della criminalità locale con le scommesse illegali e il mercato nero.",
             "preferiti": false,
-            "nascosto": false
+            "nascosto": true
         },
         {
             "id": 8,
-            "nome": "Black mirror",
+            "nome": "Black Mirror",
             "stagioni": 5,
             "genere": "drammatico",
             "descrizione": "Serie antologica che esplora le peggiori paure legate alla tecnologia, con storie che attingono ai disagi collettivi del mondo moderno.",
-            "preferiti": false,
+            "preferiti": true,
             "nascosto": false
         },
         {
@@ -140,7 +138,7 @@
             "genere": "drammatico",
             "descrizione": "Eventi reali connessi alle vicende di alcuni dei più noti signori della droga e il lavoro delle forze dell'ordine che cercano di fermarne i loro affari illeciti.",
             "preferiti": false,
-            "nascosto": false
+            "nascosto": true
         },
         {
             "id": 11,
