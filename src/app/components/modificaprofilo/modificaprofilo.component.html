@@ -4,7 +4,7 @@
         <p class="title">Benvenuto </p>
         <p class="nome">{{myProfile?.nome}} {{myProfile?.cognome}}</p>
         <img src="../assets/messi.jpg" alt="logo" class="logo">
-        <form [formGroup]="modificaprofilo" (ngSubmit)="invio()">
+        <form [formGroup]="modificaprofilo" (ngSubmit)="invio()" *ngIf="myProfile">
             <label for="nome" id="labelNome">Nome </label>
             <input type="text" id="nome" formControlName="nome" class="person">
             <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p>

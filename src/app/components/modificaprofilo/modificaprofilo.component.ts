@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { User } from 'src/app/models/user.interface';
 import { Router } from '@angular/router';
 import { MyHttpService } from 'src/app/services/my-http.service';
@@ -40,17 +40,15 @@ export class ModificaprofiloComponent implements OnInit {
     this.myHttpService.getMyProfile().subscribe(reponse => {
       this.myProfile = reponse;
       this.modificaprofilo = this.fb.group({
-        id: [this.myProfile.id],
-        nome: [this.myProfile.nome,],
-        cognome: [this.myProfile.cognome, ],
-        username: [this.myProfile.username],
-        email: [this.myProfile.email],
-        password: [this.myProfile.password],
-        genere:[this.myProfile.genere,],
-        telefono: [this.myProfile.telefono,],
+        id: this.myProfile.id,
+        nome: this.myProfile.nome,
+        cognome: this.myProfile.cognome,
+        username: this.myProfile.username,
+        email: this.myProfile.email,
+        password: this.myProfile.password,
+        genere:this.myProfile.genere,
+        telefono: this.myProfile.telefono,
       });
-    }, err => {
-      console.log('error');
     });
   }
 
