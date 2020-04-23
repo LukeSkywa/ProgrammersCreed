@@ -234,3 +234,16 @@
     animation-direction: forwards;
     object-fit: cover;
 }
+
+.loghi {
+    //width:100%;
+    position: absolute;
+    bottom: 5px;
+    margin-left: 15px;
+}
+
+.loghi img {
+    position: relative;
+    display: block;
+    float: left;
+}
