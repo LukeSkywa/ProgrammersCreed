@@ -13,6 +13,7 @@ import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { HomeComponent } from './components/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,16 +23,17 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'feedback', component: FeedbackComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'list', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'list/:filtro', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'dettaglio', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
 @NgModule({
   imports: [
-      RouterModule.forRoot(routes)
+      RouterModule.forRoot(routes),
   ],
   exports: [
       RouterModule

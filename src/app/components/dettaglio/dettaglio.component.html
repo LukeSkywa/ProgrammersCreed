@@ -1,60 +1,60 @@
-<app-menu [version]=2></app-menu>
+<app-menu [version]=2 [nome]=serie.nome></app-menu>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<br>
-    <div class="container">    
-        <div class="cards">
-            <div class="card">
-            
-                <strong id="titolo">Nome dell'item</strong>
-                <div class="descrizione">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
-                    Nulla sollicitudin turpis eu tellus faucibus faucibus. <br>
-                    Pellentesque tempus lectus vel porta lobortis. <br>
-                    Sed blandit bibendum tellus at fermentum. <br>
-                    Sed libero magna, auctor nec lectus sit amet, pretium iaculis purus. <br>
-                    Nam malesuada lobortis neque eget auctor. Nam fringilla arcu libero. <br>
-                    Sed maximus risus eget imperdiet feugiat. Nullam rutrum diam metus, <br>
-                    quis venenatis turpis gravida vitae. <br>
-                    Vestibulum pharetra scelerisque nibh non interdum. <br>
-                </div>
-                <br>
-                <div class="cards">
-                    <div class="card">
-                        <img id="immagine" src="../assets/messi.jpg" alt="logo" class="logo">
-                    </div>
-                    <div class="card">
-                        <p id="descrizione">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                    </div>
-                </div>
+<div class="grid-container">
+    <!--<h1 class="titolo">{{serie.nome}}</h1>
+    <div class="descrizione">
+        {{serie.descrizione}}
+    </div>
+    <br>
+    <div class="cards">
+        <div class="card">
+            <p id="descrizione">{{serie.genere}}</p>
+        </div>
+        <div class="card"><img id="immagine2" src="../assets/img/{{serie.nome|lowercase|removewhitespaces}}.jpg" alt="logo" class="logo"></div>
+        <div class="card">
+            <div class="testo">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nulla sollicitudin turpis eu tellus faucibus faucibus. <br> Pellentesque tempus lectus vel porta lobortis. <br> Sed blandit bibendum tellus at fermentum. <br> Sed libero magna,
+                auctor nec lectus sit amet, pretium iaculis purus. <br> Nam malesuada lobortis neque eget auctor. Nam fringilla arcu libero. <br> Sed maximus risus eget imperdiet feugiat. Nullam rutrum diam metus, <br> quis venenatis turpis gravida vitae.
+                <br> Vestibulum pharetra scelerisque nibh non interdum. <br>
             </div>
-
-
-
-            <div class="card"><img id="immagine2" src="../assets/messi.jpg" alt="logo" class="logo"></div>
-            <div class="card">
-
-                <div class="testo">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
-                    Nulla sollicitudin turpis eu tellus faucibus faucibus. <br>
-                    Pellentesque tempus lectus vel porta lobortis. <br>
-                    Sed blandit bibendum tellus at fermentum. <br>
-                    Sed libero magna, auctor nec lectus sit amet, pretium iaculis purus. <br>
-                    Nam malesuada lobortis neque eget auctor. Nam fringilla arcu libero. <br>
-                    Sed maximus risus eget imperdiet feugiat. Nullam rutrum diam metus, <br>
-                    quis venenatis turpis gravida vitae. <br>
-                    Vestibulum pharetra scelerisque nibh non interdum. <br>
-                </div>
-
-                <div class="footer">
-                    <a href="#" id="social" class="fa fa-facebook"></a>
-                    <a href="#" id="social" class="fa fa-instagram"></a>
-                    <a href="#" id="social" class="fa fa-telegram"></a>
-                    <a href="#" id="social" class="fa fa-snapchat"></a>
-                    <a href="#" id="social" class="fa fa-pinterest"></a>
-                </div>
-
+            <div class="footer">
             </div>
         </div>
-       
-    </div>    
+    </div>-->
+    <div class="titolo">
+        <h1>{{serie.nome}}</h1>
+    </div>
+    <div class="descrizione">
+        <p>
+            {{serie.descrizione}}
+        </p>
+    </div>
+    <div class="img1">
+        <img src="../assets/img/{{serie.nome|lowercase|removewhitespaces}}2.jpg" alt="">
+    </div>
+    <div class="img-big">
+        <img src="../assets/img/{{serie.nome|lowercase|removewhitespaces}}.jpg" alt="">
+    </div>
+    <div class="genere">
+        <h4 class="init">Genere:</h4>
+        <h2>{{serie.genere}}</h2>
+        <h4 class="sec">Preferito:</h4>
+        <h2 *ngIf="serie.preferiti">Sì</h2>
+        <h2 *ngIf="!serie.preferiti">No</h2>
+    </div>
+    <div class="share">
+        <div class="btn_wrap">
+            <span>Share</span>
+            <div class="container">
+                <i class="fab fa-facebook-f" (click)="social()"></i>
+                <i class="fab fa-twitter" (click)="social()"></i>
+                <i class="fab fa-instagram" (click)="social()"></i>
+                <i class="fab fa-github" (click)="social()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright</p>
+    </div>
 
+</div>

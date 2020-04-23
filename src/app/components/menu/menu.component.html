@@ -2,7 +2,7 @@
 <nav class="menu">
     <ol>
         <li *ngIf="version===2" class="menu-item" style="max-width:5%">
-            <a href=#0 [routerLink]="['list']" class="material-icons" style="line-height: 2.5rem;">
+            <a href=#0 routerLink='/list' class="material-icons" style="line-height: 2.5rem;">
                 keyboard_backspace
             </a>
         </li>
@@ -12,8 +12,8 @@
 
         <li class="menu-Item" *ngIf="version==3">
             <form>
-                <input type="search" #search>
-                <i class="fa fa-search"></i>
+                <input type="text" #search>
+                <i class="fa fa-search" (click)="ricerca(search.value)"></i>
             </form>
         </li>
         <li class="menu-item" style="position:absolute;right:8px;width:20%;">

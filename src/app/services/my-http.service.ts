@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/comm
 import { Observable } from 'rxjs';
 import { User } from '../models/user.interface';
 import { Serie } from '../models/serie.interface';
+import { isInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,17 @@ export class MyHttpService {
   getUsers(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
   }
+
+  getMyProfile():Observable<any>{
+    return this.httpClient.get('http://localhost:3000/users/'+Number.parseInt(sessionStorage.getItem('user')));
+  }
+
   getSerie(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie');
+  }
+
+  getOneSerie(id:number):Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie/'+id);
   }
   
   /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
@@ -33,8 +43,10 @@ export class MyHttpService {
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 
-  modifyUser(user: User){
-    return this.httpClient.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
+  putUser(user: User){
+    console.log(".put(http://localhost:3000/users/"+user.id, user);
+    //sessionStorage.setItem('user',JSON.stringify(user));
+    return this.httpClient.put('http://localhost:3000/users/'+user.id, user);
   }
 
   putSerie(serie: Serie){

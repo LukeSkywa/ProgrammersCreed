@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { User } from 'src/app/models/user.interface';
+import { Router } from '@angular/router';
+import { MyHttpService } from 'src/app/services/my-http.service';
 
 
 
@@ -26,27 +28,29 @@ export class ModificaprofiloComponent implements OnInit {
   get emailControl(): FormControl{
     return this.modificaprofilo.get('email') as FormControl;
   }
-  get sessoControl(): FormControl{
-    return this.modificaprofilo.get('sesso') as FormControl;
+  get genereControl(): FormControl{
+    return this.modificaprofilo.get('genere') as FormControl;
   }
   get telefonoControl(): FormControl{
     return this.modificaprofilo.get('telefono') as FormControl;
   }
-  ngOnInit(): void {
-    this.myProfile=JSON.parse(sessionStorage.getItem('user'));
-    this.modificaprofilo = this.fb.group({
-     
-      nome: [this.myProfile.nome,],
-      cognome: [this.myProfile.cognome, ],
-      email: [{value: this.myProfile.email, disabled: true }],
-      sesso:[this.myProfile.genere,],
-      telefono: [this.myProfile.telefono,],
+  ngOnInit(): void {    }
+  
+  constructor(private fb: FormBuilder,private router:Router, private myHttpService: MyHttpService) {
+    this.myHttpService.getMyProfile().subscribe(reponse => {
+      this.myProfile = reponse;
+      this.modificaprofilo = this.fb.group({
+        id: this.myProfile.id,
+        nome: this.myProfile.nome,
+        cognome: this.myProfile.cognome,
+        username: this.myProfile.username,
+        email: this.myProfile.email,
+        password: this.myProfile.password,
+        genere:this.myProfile.genere,
+        telefono: this.myProfile.telefono,
+      });
     });
-    
-
-    
   }
-  constructor(private fb: FormBuilder) {}
 
 
 
@@ -58,59 +62,18 @@ export class ModificaprofiloComponent implements OnInit {
   }
 
   invio(){
-    /*let profilo: User ={
-      
-      nome: this.nomeControl.value,
-      cognome: this.cognomeControl.value,
-      genere: this.sessoControl.value,
-      email: this.emailControl.value,
-      telefono: this.telefonoControl.value,
-      
-    };*/
-    console.log(
-      this.nomeControl.value,
-      this.cognomeControl.value,
-      this.sessoControl.value,
-      this.emailControl.value,
-      this.telefonoControl.value,
-      
-    );
-    
-  }
-
-  modify():boolean{
-    let modify:boolean=false;
-    const nome=this.nomeControl.value;
-    const cognome=this.cognomeControl.value;
-    const sesso=this.sessoControl.value;
-    const email=this.emailControl.value;
-    const telefono=this.telefonoControl.value;
-
-    if(nome!=this.myProfile.nome){
-      this.myProfile.nome=nome;
-      modify=true;
-    }
-    if(cognome!=this.myProfile.cognome){
-      this.myProfile.cognome=cognome;
-      modify=true;
-    }
-    if(email!=this.myProfile.email){
-      this.myProfile.email=email;
-      modify=true;
-    }
-    if(telefono!=this.myProfile.telefono){
-      this.myProfile.telefono=telefono;
-      modify=true;
-    }
-    if(sesso!=this.myProfile.genere){
-      this.myProfile.genere=sesso;
-      modify=true;
-    }
-      
-
-   
-    return modify;
-
+    console.log(this.modificaprofilo.value);
+    let user=this.modificaprofilo.value;
+    // user.nome=this.nomeControl.value;
+    // user.cognome=this.cognomeControl.value;
+    // user.email=this.emailControl.value;
+    // user.telefono=this.telefonoControl.value;
+    // user.genere=this.cognomeControl.value;
+    // user.id=this.myProfile.id;
+    // user.username=this.myProfile.username;
+    // user.password=this.myProfile.password;
+    this.myHttpService.putUser(user).subscribe();
+    this.router.navigateByUrl('profile');
   }
 
 

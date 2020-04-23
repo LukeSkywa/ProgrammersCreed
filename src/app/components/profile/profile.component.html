@@ -1,28 +1,28 @@
 <app-menu [version]=1></app-menu>
 <div class="all">
     <p class="title">Benvenuto <br>
-        <p class="nome">{{myProfile.username}}</p>
+        <p class="nome">{{myProfile?.username}}</p>
         <img src="../assets/messi.jpg" alt="logo" class="logo">
         <table>
             <tr>
                 <td class="sx">Nome</td>
-                <td class="dx">{{myProfile.nome}}</td>
+                <td class="dx">{{myProfile?.nome}}</td>
             </tr>
             <tr>
                 <td class="sx">Cognome</td>
-                <td class="dx">{{myProfile.cognome}}</td>
+                <td class="dx">{{myProfile?.cognome}}</td>
             </tr>
             <tr>
                 <td class="sx">Sesso</td>
-                <td class="dx">{{myProfile.genere}}</td>
+                <td class="dx">{{myProfile?.genere}}</td>
             </tr>
             <tr>
                 <td class="sx">Email</td>
-                <td class="dx">{{myProfile.email}}</td>
+                <td class="dx">{{myProfile?.email}}</td>
             </tr>
             <tr>
                 <td class="sx">Telefono</td>
-                <td class="dx">{{myProfile.telefono}}</td>
+                <td class="dx">{{myProfile?.telefono}}</td>
             </tr>
         </table>
         <button routerLink="/modificaProfilo">

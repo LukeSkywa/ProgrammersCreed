@@ -12,7 +12,8 @@ export class MenuComponent implements OnInit {
   cerca:boolean;
   @Input()
   version: number;
-
+  @Input()
+  nome:string;
 
   createMenu(){
     if(this.version===1 || this.version==3){
@@ -27,7 +28,7 @@ export class MenuComponent implements OnInit {
     }
     else if(this.version===2){
       this.menuList=[     
-        { id:1, desc:'NOMEITEM'},
+        { id:7, desc:this.nome},
       ];
     }
   }
@@ -44,6 +45,9 @@ export class MenuComponent implements OnInit {
       sessionStorage.removeItem('user');
       this.router.navigateByUrl('login');
     }
+    else if(id===7){
+      this.router.navigateByUrl('list');
+    }
     this.router.events.subscribe(() => {
       // if(id===2 || id===3){
       //   this.cerca=true;
@@ -55,6 +59,10 @@ export class MenuComponent implements OnInit {
       // }
       this.createMenu();
     });
+  }
+
+  ricerca(s:string){
+    this.router.navigateByUrl("list/"+s);
   }
 }
 
