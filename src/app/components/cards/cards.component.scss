@@ -146,22 +146,22 @@
 //     line-height: 50px;
 // }
 .container {
-    margin-top: 20px;
+    margin: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: auto;
-    align-content: start
+    align-items: stretch;
+    align-content: flex-start;
 }
 
 .container:after {
     display: block;
-    margin: 10px;
     flex: 999 999 auto;
 }
 
 .card {
+    height: 100%;
     text-align: center;
     width: 22%;
     flex: 0 0 auto;
@@ -187,5 +187,5 @@
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    //white-space: nowrap;
+    white-space: normal;
 }
