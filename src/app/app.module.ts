@@ -37,7 +37,7 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //FormsModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,

@@ -72,8 +72,9 @@ export class ModificaprofiloComponent implements OnInit {
     // user.id=this.myProfile.id;
     // user.username=this.myProfile.username;
     // user.password=this.myProfile.password;
-    this.myHttpService.putUser(user).subscribe();
-    this.router.navigateByUrl('profile');
+    this.myHttpService.putUser(user).subscribe(()=>{
+      this.router.navigateByUrl('profile');
+    });
   }
 
 
