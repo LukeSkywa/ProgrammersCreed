@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'feedback', component: FeedbackComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'list', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'list/:filtro', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},

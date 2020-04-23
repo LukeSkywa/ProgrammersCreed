@@ -12,8 +12,8 @@
 
         <li class="menu-Item" *ngIf="version==3">
             <form>
-                <input type="search" #search>
-                <i class="fa fa-search"></i>
+                <input type="text" #search>
+                <i class="fa fa-search" (click)="ricerca(search.value)"></i>
             </form>
         </li>
         <li class="menu-item" style="position:absolute;right:8px;width:20%;">

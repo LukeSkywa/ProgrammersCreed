@@ -60,5 +60,9 @@ export class MenuComponent implements OnInit {
       this.createMenu();
     });
   }
+
+  ricerca(s:string){
+    this.router.navigateByUrl("list/"+s);
+  }
 }
 
