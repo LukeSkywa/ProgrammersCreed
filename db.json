@@ -68,7 +68,7 @@
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 3,
@@ -94,7 +94,7 @@
       "stagioni": 4,
       "genere": "drammatico,commedia",
       "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {

@@ -12,6 +12,7 @@ import { RouteGuardsLoginRegisterService } from './services/route-guards-login-r
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -24,7 +25,7 @@ const routes: Routes = [
   {path: 'cards',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'home', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
