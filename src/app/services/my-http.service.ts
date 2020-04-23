@@ -37,8 +37,10 @@ export class MyHttpService {
     return this.httpClient.post('http://localhost:3000/users', user);
   }
 
-  modifyUser(user: User){
-    return this.httpClient.put('http://localhost:3000/users/'+sessionStorage.getItem('id'), user);
+  putUser(user: User){
+    console.log(".put(http://localhost:3000/users/"+user.id, user);
+    //sessionStorage.setItem('user',JSON.stringify(user));
+    return this.httpClient.put('http://localhost:3000/users/'+user.id, user);
   }
 
   putSerie(serie: Serie){
