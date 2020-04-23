@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SerieService } from 'src/app/services/serie.service';
 import { Serie } from 'src/app/models/serie.interface';
 import { MyHttpService } from 'src/app/services/my-http.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-serie',
@@ -10,13 +10,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./list-serie.component.scss']
 })
 export class ListSerieComponent implements OnInit {
+  controllo:number=0;
   sub:any;
   daMostrare;
   mostra: boolean;
   serie: Serie[] = [];
   serieFiltrata: Serie[];
   ricerca:string;
-  constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute) {
+
+  constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
     this.mostra = false;
   }
 
@@ -24,21 +26,17 @@ export class ListSerieComponent implements OnInit {
     //console.log(this.serie);
     this.sub = this.route.params.subscribe(params => {
       this.ricerca= params['filtro'];
-      this.caricaSerie();
+      this.caricaSerie(0);
    });
   }
 
   caricaSerie(id?:number){
     this.myHttpService.getSerie().subscribe(reponse => {
       this.serie = reponse;
-      if(id!=null)
-        this.filtra(id);
-      else if(this.ricerca){
+      if(this.ricerca)
         this.filtra(3);
-        console.log(this.ricerca)
-      }
-      else
-        this.filtra(0);
+      else if(id!=null)
+        this.filtra(id);
     });
   }
 
@@ -58,9 +56,9 @@ export class ListSerieComponent implements OnInit {
       if(element.id===id){
         element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
-          if(element.preferiti)
-            this.caricaSerie();
-          else
+          if(element.preferiti && this.controllo!=2)
+            this.caricaSerie(0);
+          else if(this.controllo==1)
             this.caricaSerie(1);
         }); 
         console.log(element);
@@ -82,6 +80,7 @@ export class ListSerieComponent implements OnInit {
   // }
 
   filtra(filtro: number) {
+    this.controllo=filtro;
     this.serieFiltrata = this.serie.filter(item =>{
       switch(filtro){
         case 0: return !item.nascosto;
@@ -90,7 +89,6 @@ export class ListSerieComponent implements OnInit {
         case 3: return item.nome.toLowerCase().includes(this.ricerca.toLowerCase()) || item.descrizione.toLowerCase().includes(this.ricerca.toLowerCase());
       }
     });
-    console.log(this.serieFiltrata);
   }
 
 }
