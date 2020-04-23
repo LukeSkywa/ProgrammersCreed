@@ -35,13 +35,17 @@ export class ModificaprofiloComponent implements OnInit {
     return this.modificaprofilo.get('telefono') as FormControl;
   }
   ngOnInit(): void {
-    this.myProfile=JSON.parse(sessionStorage.getItem('user'));
-    this.modificaprofilo = this.fb.group({
-      nome: [this.myProfile.nome,],
-      cognome: [this.myProfile.cognome, ],
-      email: [this.myProfile.email],
-      sesso:[this.myProfile.genere,],
-      telefono: [this.myProfile.telefono,],
+    this.myHttpService.getMyProfile().subscribe(reponse => {
+      this.myProfile = reponse;
+      this.modificaprofilo = this.fb.group({
+        nome: [this.myProfile.nome,],
+        cognome: [this.myProfile.cognome, ],
+        email: [this.myProfile.email],
+        sesso:[this.myProfile.genere,],
+        telefono: [this.myProfile.telefono,],
+      });
+    }, err => {
+      console.log('error');
     });
     
 

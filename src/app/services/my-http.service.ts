@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/comm
 import { Observable } from 'rxjs';
 import { User } from '../models/user.interface';
 import { Serie } from '../models/serie.interface';
+import { isInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,11 @@ export class MyHttpService {
   getUsers(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
   }
+
+  getMyProfile():Observable<any>{
+    return this.httpClient.get('http://localhost:3000/users/'+Number.parseInt(sessionStorage.getItem('user')));
+  }
+
   getSerie(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie');
   }
