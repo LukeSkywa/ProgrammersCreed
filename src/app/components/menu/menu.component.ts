@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   createMenu(){
     if(this.version===1 || this.version==3){
       this.menuList=[     
-        { id:1, desc:"Homepage"},
+        { id:1, desc:"Home"},
         { id:2, desc:"List"},
         { id:3, desc:"Cards"},
         { id:4, desc:"Feedback"},
