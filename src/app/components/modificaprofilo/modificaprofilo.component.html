@@ -2,7 +2,7 @@
 <div class="all">
     <div class="container">
         <p class="title">Benvenuto </p>
-        <p class="nome">{{myProfile.nome}} {{myProfile.cognome}}</p>
+        <p class="nome">{{myProfile?.nome}} {{myProfile?.cognome}}</p>
         <img src="../assets/messi.jpg" alt="logo" class="logo">
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()">
             <label for="nome" id="labelNome">Nome </label>
@@ -15,12 +15,12 @@
 
             <label id="labelSesso">Sesso&emsp;</label>
             <div class="customSesso">
-                <select formControlName="sesso" class="gender">
+                <select formControlName="genere" class="gender">
                             <option value={{sesso}} *ngFor="let sesso of sessi"> <span class="optSesso"> {{sesso}}</span> </option>
                         </select>
             </div>
 
-            <p *ngIf="sessoControl.status === 'INVALID' && sessoControl.dirty">Campo sesso obbligatorio</p>
+            <p *ngIf="genereControl.status === 'INVALID' && genereControl.dirty">Campo sesso obbligatorio</p>
             <div>
                 <label for="email" id="labelEmail">Email&emsp;</label>
                 <input type="text" id="email" formControlName="email" class="email">

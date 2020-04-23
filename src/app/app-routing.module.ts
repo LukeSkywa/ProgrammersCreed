@@ -12,6 +12,7 @@ import { RouteGuardsLoginRegisterService } from './services/route-guards-login-r
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -30,7 +31,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-      RouterModule.forRoot(routes)
+      RouterModule.forRoot(routes),
   ],
   exports: [
       RouterModule
