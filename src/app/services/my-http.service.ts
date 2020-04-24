@@ -67,4 +67,10 @@ export class MyHttpService {
     return this.httpClient.put('http://localhost:3000/serie/'+serie.id, serie);
   }
 
+  invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
+    headers: import("@angular/common/http").HttpHeaders;
+  }) {
+    return this.httpClient.post(url,body,arg2); 
+  }
+
 }
