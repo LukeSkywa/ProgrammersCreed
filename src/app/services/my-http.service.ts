@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { User } from '../models/user.interface';
 import { Serie } from '../models/serie.interface';
 import { isInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
+import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'
@@ -28,12 +29,23 @@ export class MyHttpService {
     return this.httpClient.get('http://localhost:3000/serie');
   }
 
-  getSerieFiltrata(filtro:string):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie?'+filtro+'=true');
+  getSerieFiltrata(filtro?:string):Observable<any>{
+    let s:string='http://localhost:3000/serie?';
+    if(filtro)
+      s+=filtro+'=true';
+    else
+      s+='nascosto=false';
+    return this.httpClient.get(s);
   }
 
-  get8SerieFiltrata(filtro:string, limit:number):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie?_page=1&_limit='+limit+'?'+filtro+'=true');
+  get8SerieFiltrata(filtro?:string):Observable<any>{
+    let s:string='http://localhost:3000/serie?';
+    if(filtro)
+      s+=filtro+'=true&';
+    else
+      s+='nascosto=false&';
+    s+='_page=1&_limit=8';
+    return this.httpClient.get(s);
   }
 
   getOneSerie(id:number):Observable<any>{

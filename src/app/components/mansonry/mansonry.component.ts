@@ -27,31 +27,32 @@ export class MansonryComponent implements OnInit {
   showList(filtro?:string){
     this.controllo=filtro;
     if(!this.mostra){
-        this.myHttpService.get8Serie().subscribe(reponse => {
+        //gestisco un array di 8 elementi
+        this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
+          this.serie = reponse;
+        });
+        this.myHttpService.get8SerieFiltrata(filtro).subscribe(reponse => {
           this.serieFiltrata = reponse;
-          if(this.serieFiltrata.length<8)
+          console.log('filtro:'+ filtro);
+          console.log(this.serieFiltrata);
+          if(this.serie.length<=8){
             this.mostra=null;
+          }
       });
     }
     else{
-      if(filtro)
       this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
         this.serieFiltrata = reponse;
-        if(this.serieFiltrata.length<8)
+        if(this.serie.length<=8){
           this.mostra=null;
+        }
       });
-      else{
-        this.myHttpService.getSerie().subscribe(reponse => {
-          this.serieFiltrata = reponse;
-          if(this.serieFiltrata.length<8)
-            this.mostra=null;
-      });
-      }
     }
   }
   
 
   ngOnInit(): void {
+    this.controllo=null;
     this.mostra=false;
     this.showList();
   }
@@ -62,6 +63,7 @@ export class MansonryComponent implements OnInit {
       if(element.id===id){
         element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
+          this.showList(this.controllo);
         }); 
         console.log(element);
       }

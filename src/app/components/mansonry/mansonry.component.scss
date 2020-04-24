@@ -1,13 +1,14 @@
   .masonry-wrapper {
       padding: 1.5em;
-      max-width: 960px;
       margin-right: auto;
       margin-left: auto;
+      width: 90%;
   }
   
   .masonry {
+      width: 100%;
       columns: 1;
-      column-gap: 20px;
+      column-gap: 30px;
   }
   
   .masonry-item {
@@ -16,9 +17,15 @@
       margin-bottom: 20px;
   }
   
-  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+  @media only screen and (max-width: 767px) and (min-width: 650px) {
       .masonry {
           columns: 2;
+      }
+  }
+  
+  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+      .masonry {
+          columns: 3;
       }
   }
   
@@ -30,7 +37,7 @@
   
   .masonry-item,
   .masonry-content {
-      border-radius: 5px;
+      border-radius: 15px;
       overflow: hidden;
   }
   
@@ -60,24 +67,21 @@
   .masonry-title {
       font-weight: 700;
       font-size: 1.1rem;
-      padding: 1rem 1.5rem;
+      padding: 10px 20px;
+      padding-bottom: 5px;
   }
   
   .masonry-description {
-      padding: 1.5rem;
+      padding: 5px 20px;
       font-size: .75rem;
       border-top: 1px solid rgba(0, 0, 0, .05);
-  }
-  
-  img {
-      width: 100%;
-      margin: 0px;
+      padding-bottom: 0px;
   }
   
   //bottoni
   .btn {
       text-align: center;
-      margin: 10px auto;
+      margin: 0 auto;
   }
   
   button {
@@ -205,4 +209,56 @@
       padding: 0;
       border: 0;
       line-height: 50px;
+  }
+  
+  img {
+      width: 100%;
+  }
+  
+  //bottoni sulle card
+  .share {
+      display: none;
+      margin-left: 8px;
+      float: left;
+      width: 30%;
+      height: 40px;
+      margin-bottom: -20px;
+      margin-top: 8px;
+  }
+  
+  .like {
+      display: none;
+      margin-right: 8px;
+      float: right;
+      width: 30%;
+      height: 40px;
+      margin-bottom: -20px;
+      margin-top: 8px;
+  }
+  
+  button>span {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      line-height: 35px;
+  }
+  
+  .masonry-item:hover .share {
+      display: block;
+  }
+  
+  .masonry-item:hover .like {
+      display: block;
+  }
+  
+  .masonry-item:hover .img {
+      margin-top: -28px;
+  }
+  
+  #more {
+      margin-right: 20px;
+      float: right;
+      font-size: 30px;
+      margin-bottom: 10px;
+      cursor: pointer;
   }

@@ -48,17 +48,6 @@ export class MenuComponent implements OnInit {
     else if(id===7){
       this.router.navigateByUrl('list');
     }
-    this.router.events.subscribe(() => {
-      // if(id===2 || id===3){
-      //   this.cerca=true;
-      //   console.log("apro");
-      // }
-      // else{
-      //   this.cerca=false;
-      //   console.log("chiudo");
-      // }
-      this.createMenu();
-    });
   }
 
   ricerca(s:string){

@@ -1,156 +1,158 @@
 {
-    "users": [{
-            "id": 1,
-            "nome": "Luca12",
-            "cognome": "Leporati34",
-            "username": "lucaleporati",
-            "email": "lucaleporati@gmail.com256",
-            "password": "123",
-            "genere": "maschio",
-            "telefono": "4563456",
-            "immagine": "../assets/profile/nagatomo.jpg"
-        },
-        {
-            "id": 2,
-            "nome": "Pietro",
-            "cognome": "Locatelli",
-            "username": "pietrolocatelli",
-            "email": "pietrolocatelli@gmail.com",
-            "password": "123",
-            "genere": "maschio",
-            "telefono": "1234567890",
-            "immagine": "../assets/profile/messi.jpg"
-        },
-        {
-            "id": 3,
-            "nome": "Andrea",
-            "cognome": "Nani",
-            "username": "andreanani",
-            "email": "andreanani@gmail.com",
-            "password": "123",
-            "genere": "maschio",
-            "telefono": "1234567890",
-            "immagine": "../assets/profile/messi.jpg"
-        },
-        {
-            "id": 4,
-            "nome": "Alessandro",
-            "cognome": "Lanfranchi",
-            "username": "alessandrolanfranchi",
-            "email": "alessandrolanfranchi@gmail.com",
-            "password": "123",
-            "genere": "maschio",
-            "telefono": "1234567890",
-            "immagine": "../assets/profile/messi.jpg"
-        }
-    ],
-    "serie": [{
-            "id": 1,
-            "nome": "La casa di carta",
-            "stagioni": 4,
-            "genere": "drammatico, azione",
-            "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-            "preferiti": false,
-            "nascosto": false
-        },
-        {
-            "id": 2,
-            "nome": "Breaking bad",
-            "stagioni": 5,
-            "genere": "drammatico, azione",
-            "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-            "preferiti": false,
-            "nascosto": true
-        },
-        {
-            "id": 3,
-            "nome": "Il Trono di Spade",
-            "stagioni": 8,
-            "genere": "fantastico, drammatico",
-            "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
-            "preferiti": false,
-            "nascosto": false
-        },
-        {
-            "id": 4,
-            "nome": "Stranger Things",
-            "stagioni": 3,
-            "genere": "fantastico, horror",
-            "descrizione": "Hawkins anni 80. Un gruppo di amici fa esperienza di una serie di eventi soprannaturali. In seguito alla misteriosa sparizione di un ragazzino, Jane fa la propria apparizione in città dopo essere scappata da un laboratorio segreto.",
-            "preferiti": false,
-            "nascosto": true
-        },
-        {
-            "id": 5,
-            "nome": "Lucifer",
-            "stagioni": 4,
-            "genere": "drammatico, commedia",
-            "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
-            "preferiti": false,
-            "nascosto": false
-        },
-        {
-            "id": 6,
-            "nome": "Sex Education",
-            "stagioni": 2,
-            "genere": "commedia",
-            "descrizione": "Otis, il figlio insicuro di una sessuologa, e Maeve, una ribelle, sono due studenti delle scuole superiori che decidono di avviare una consulenza sessuale improvvisata nel loro liceo.",
-            "preferiti": false,
-            "nascosto": false
-        },
-        {
-            "id": 7,
-            "nome": "Peaky Blinders",
-            "stagioni": 5,
-            "genere": "drammatico",
-            "descrizione": "Tornati nei bassifondi di Birmingham dai campi di battaglia della Prima Guerra Mondiale, i fratelli Tommy e Arthur Shelby sono pronti ad affermarsi nel mondo della criminalità locale con le scommesse illegali e il mercato nero.",
-            "preferiti": false,
-            "nascosto": true
-        },
-        {
-            "id": 8,
-            "nome": "Black Mirror",
-            "stagioni": 5,
-            "genere": "drammatico",
-            "descrizione": "Serie antologica che esplora le peggiori paure legate alla tecnologia, con storie che attingono ai disagi collettivi del mondo moderno.",
-            "preferiti": false,
-            "nascosto": false
-        },
-        {
-            "id": 9,
-            "nome": "Sons of Anarchy",
-            "stagioni": 7,
-            "genere": "drammatico",
-            "descrizione": "Una banda di motociclisti protegge la cittadina di Charming dagli aggressori che la minacciano.",
-            "preferiti": false,
-            "nascosto": false
-        },
-        {
-            "id": 10,
-            "nome": "Narcos",
-            "stagioni": 3,
-            "genere": "drammatico",
-            "descrizione": "Eventi reali connessi alle vicende di alcuni dei più noti signori della droga e il lavoro delle forze dell'ordine che cercano di fermarne i loro affari illeciti.",
-            "preferiti": true,
-            "nascosto": true
-        },
-        {
-            "id": 11,
-            "nome": "Vikings",
-            "stagioni": 6,
-            "genere": "drammatico",
-            "descrizione": "Con l'aiuto del fratello Rollo e dell'amico Floki, l'ambizioso guerriero vichingo Ragnar costruisce una flotta per spingersi verso le inesplorate coste inglesi: il suo progetto viene però ostacolato dal potente Jarl Haraldson.",
-            "preferiti": true,
-            "nascosto": false
-        },
-        {
-            "id": 12,
-            "nome": "Prison break",
-            "stagioni": 5,
-            "genere": "drammatico, azione",
-            "descrizione": "Michael Scofield decide di farsi arrestare di proposito in modo da poter entrare nel carcere di Fox River, dove il fratello è stato imprigionato ingiustamente. Il suo scopo è quello di progettare un'evasione dall'interno.",
-            "preferiti": true,
-            "nascosto": false
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "nome": "Luca12",
+      "cognome": "Leporati34",
+      "username": "lucaleporati",
+      "email": "lucaleporati@gmail.com256",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "4563456",
+      "immagine": "../assets/profile/nagatomo.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Pietro",
+      "cognome": "Locatelli",
+      "username": "pietrolocatelli",
+      "email": "pietrolocatelli@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890",
+      "immagine": "../assets/profile/messi.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Andrea",
+      "cognome": "Nani",
+      "username": "andreanani",
+      "email": "andreanani@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890",
+      "immagine": "../assets/profile/messi.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Alessandro",
+      "cognome": "Lanfranchi",
+      "username": "alessandrolanfranchi",
+      "email": "alessandrolanfranchi@gmail.com",
+      "password": "123",
+      "genere": "maschio",
+      "telefono": "1234567890",
+      "immagine": "../assets/profile/messi.jpg"
+    }
+  ],
+  "serie": [
+    {
+      "id": 1,
+      "nome": "La casa di carta",
+      "stagioni": 4,
+      "genere": "drammatico,azione",
+      "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
+      "preferiti": true,
+      "nascosto": false
+    },
+    {
+      "id": 2,
+      "nome": "Breaking bad",
+      "stagioni": 5,
+      "genere": "drammatico,azione",
+      "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
+      "preferiti": false,
+      "nascosto": false
+    },
+    {
+      "id": 3,
+      "nome": "Il Trono di Spade",
+      "stagioni": 8,
+      "genere": "fantastico,drammatico",
+      "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
+      "preferiti": true,
+      "nascosto": true
+    },
+    {
+      "id": 4,
+      "nome": "Stranger Things",
+      "stagioni": 3,
+      "genere": "fantastico,horror",
+      "descrizione": "Hawkins anni 80. Un gruppo di amici fa esperienza di una serie di eventi soprannaturali. In seguito alla misteriosa sparizione di un ragazzino, Jane fa la propria apparizione in città dopo essere scappata da un laboratorio segreto.",
+      "preferiti": false,
+      "nascosto": true
+    },
+    {
+      "id": 5,
+      "nome": "Lucifer",
+      "stagioni": 4,
+      "genere": "drammatico,commedia",
+      "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
+      "preferiti": true,
+      "nascosto": true
+    },
+    {
+      "id": 6,
+      "nome": "Sex Education",
+      "stagioni": 2,
+      "genere": "commedia",
+      "descrizione": "Otis, il figlio insicuro di una sessuologa, e Maeve, una ribelle, sono due studenti delle scuole superiori che decidono di avviare una consulenza sessuale improvvisata nel loro liceo.",
+      "preferiti": false,
+      "nascosto": true
+    },
+    {
+      "id": 7,
+      "nome": "Peaky Blinders",
+      "stagioni": 5,
+      "genere": "drammatico",
+      "descrizione": "Tornati nei bassifondi di Birmingham dai campi di battaglia della Prima Guerra Mondiale, i fratelli Tommy e Arthur Shelby sono pronti ad affermarsi nel mondo della criminalità locale con le scommesse illegali e il mercato nero.",
+      "preferiti": true,
+      "nascosto": true
+    },
+    {
+      "id": 8,
+      "nome": "Black Mirror",
+      "stagioni": 5,
+      "genere": "drammatico",
+      "descrizione": "Serie antologica che esplora le peggiori paure legate alla tecnologia, con storie che attingono ai disagi collettivi del mondo moderno.",
+      "preferiti": true,
+      "nascosto": true
+    },
+    {
+      "id": 9,
+      "nome": "Sons of Anarchy",
+      "stagioni": 7,
+      "genere": "drammatico",
+      "descrizione": "Una banda di motociclisti protegge la cittadina di Charming dagli aggressori che la minacciano.",
+      "preferiti": true,
+      "nascosto": true
+    },
+    {
+      "id": 10,
+      "nome": "Narcos",
+      "stagioni": 3,
+      "genere": "drammatico",
+      "descrizione": "Eventi reali connessi alle vicende di alcuni dei più noti signori della droga e il lavoro delle forze dell'ordine che cercano di fermarne i loro affari illeciti.",
+      "preferiti": true,
+      "nascosto": true
+    },
+    {
+      "id": 11,
+      "nome": "Vikings",
+      "stagioni": 6,
+      "genere": "drammatico",
+      "descrizione": "Con l'aiuto del fratello Rollo e dell'amico Floki, l'ambizioso guerriero vichingo Ragnar costruisce una flotta per spingersi verso le inesplorate coste inglesi: il suo progetto viene però ostacolato dal potente Jarl Haraldson.",
+      "preferiti": false,
+      "nascosto": false
+    },
+    {
+      "id": 12,
+      "nome": "Prison break",
+      "stagioni": 5,
+      "genere": "drammatico,azione",
+      "descrizione": "Michael Scofield decide di farsi arrestare di proposito in modo da poter entrare nel carcere di Fox River, dove il fratello è stato imprigionato ingiustamente. Il suo scopo è quello di progettare un'evasione dall'interno.",
+      "preferiti": false,
+      "nascosto": true
+    }
+  ]
 }
