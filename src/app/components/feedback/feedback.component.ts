@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Feedback } from 'src/app/models/feedback';
+import { HttpHeaders } from '@angular/common/http';
 
 
 
@@ -10,8 +11,10 @@ import { Feedback } from 'src/app/models/feedback';
   styleUrls: ['./feedback.component.scss']
 })
 export class FeedbackComponent implements OnInit {
+  http: any;
   ngOnInit(): void {
   }
+ 
 
   sessi=['maschio', 'femmina', 'altro'];
 
@@ -55,7 +58,7 @@ export class FeedbackComponent implements OnInit {
     this.feedbackForm.reset();
   }
 
-  invio(){
+  invio(feedbackForm){
     let feedback : Feedback={
       
       nome: this.nomeControl.value,
@@ -73,6 +76,18 @@ export class FeedbackComponent implements OnInit {
       this.telefonoControl.value,
       this.commenti.value
     );
+
+    if (feedbackForm.valid) {
+      const email = feedbackForm.value;
+      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      this.http.post('https://formspree.io/asdlf7asdf',
+        { name: email.nome, replyto: email.email, message: email.commenti },
+        { 'headers': headers }).subscribe(
+          response => {
+            console.log(response);
+          }
+        );
+    }
     
   }
 
