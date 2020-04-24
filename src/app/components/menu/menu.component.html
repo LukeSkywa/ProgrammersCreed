@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <nav class="menu">
     <ol>
-        <li *ngIf="version===2" class="menu-item" style="max-width:5%">
-            <a href=#0 routerLink='/list' class="material-icons" style="line-height: 2.5rem;">
+        <li *ngIf="version===2" class="menu-item" id="freccia">
+            <a href=#0 routerLink='/list' class="material-icons" id="align">
                 keyboard_backspace
             </a>
         </li>
@@ -16,7 +16,7 @@
                 <i class="fa fa-search" (click)="ricerca(search.value)"></i>
             </form>
         </li>
-        <li class="menu-item" style="position:absolute;right:8px;width:20%;">
+        <li class="menu-item" id="logo">
             <a href=#0 routerLink="/home" (click)="change(0) "> <img src="../assets/logo.png" alt="logo" class="logo"></a>
         </li>
     </ol>
