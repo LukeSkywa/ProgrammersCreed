@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -14,8 +14,8 @@ export class RegisterComponent implements OnInit {
   
   constructor(private loginService: LoginService,private fb: FormBuilder) { 
     this.registerForm = this.fb.group({
-      username:'',
-      password:''
+      username:['', Validators.compose([Validators.required, Validators.minLength(3)])],
+      password:['', Validators.compose([Validators.required, Validators.minLength(3)])]
     });
     this.show = false;
   }
