@@ -31,7 +31,7 @@
       "password": "123",
       "genere": "maschio",
       "telefono": "1234567890",
-      "immagine": "https://cdn.calciomercato.com/images/2020-02/rebic.milan.2019.20.esulta1.460x340.jpg"
+      "immagine": "../assets/profile/nagatomo.jpg"
     },
     {
       "id": 4,
