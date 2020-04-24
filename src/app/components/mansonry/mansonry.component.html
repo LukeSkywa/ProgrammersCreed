@@ -1,0 +1,11 @@
+<app-menu [version]=3></app-menu>
+<div class="masonry-wrapper">
+    <div class="masonry">
+        <div class="masonry-item" *ngFor="let serie of serieFiltrata">
+            <div class="masonry-content">
+                <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}2.jpg" class="img">
+                <h3 class="masonry-title">{{serie.nome}}</h3>
+                <p class="masonry-description">{{serie.descrizione}}</p>
+            </div>
+        </div>
+    </div>

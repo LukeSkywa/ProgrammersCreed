@@ -181,6 +181,8 @@ button:hover span {
     margin: 15px;
     background-color: white;
     border-radius: 5%;
+    flex: auto;
+    flex-flow: row wrap;
 }
 
 .card:hover {

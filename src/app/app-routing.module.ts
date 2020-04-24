@@ -15,10 +15,12 @@ import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
+import { MansonryComponent } from './components/mansonry/mansonry.component';
 
 
 
 const routes: Routes = [ 
+  {path: 'mansonry', component: MansonryComponent},
   {path: 'login', component: LoginComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'signin', component: RegisterComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},

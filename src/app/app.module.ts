@@ -19,6 +19,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { HomeComponent } from './components/home/home.component';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
+import { MansonryComponent } from './components/mansonry/mansonry.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ModificaImmagineComponent } from './components/modifica-immagine/modifi
     PageNotFoundComponent,
     DettaglioComponent,
     HomeComponent,
-    ModificaImmagineComponent
+    ModificaImmagineComponent,
+    MansonryComponent
   ],
   imports: [
     BrowserModule,
