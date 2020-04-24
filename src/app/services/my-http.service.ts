@@ -20,6 +20,10 @@ export class MyHttpService {
     return this.httpClient.get('http://localhost:3000/users/'+Number.parseInt(sessionStorage.getItem('user')));
   }
 
+  get8Serie(): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie?_page=1&_limit=8');
+  }
+
   getSerie(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie');
   }
