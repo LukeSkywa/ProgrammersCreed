@@ -11,7 +11,7 @@
             <img (click)="password()" src="../../../assets/icone/eye.png" alt="occhio" class="eye">
         </div>
         <br><br>
-        <button type="submit">
+        <button type="submit" [disabled]="registerForm.status === 'INVALID'">
             <span>Registrati</span>
         </button>
     </form>
