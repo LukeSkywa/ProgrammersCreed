@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MyHttpService } from 'src/app/services/my-http.service';
+import { User } from 'src/app/models/user.interface';
 
 @Component({
   selector: 'app-modifica-immagine',
@@ -24,7 +27,13 @@ export class ModificaImmagineComponent implements OnInit {
     "../assets/profile/juve.jpg"
   ];
   
-  constructor() { }
+  myProfile:User;
+
+  constructor(private router:Router, private myHttpService: MyHttpService) { 
+    this.myHttpService.getMyProfile().subscribe(reponse => {
+      this.myProfile = reponse;
+    });
+  }
 
   ngOnInit(): void {
   }

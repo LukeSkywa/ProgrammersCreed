@@ -2,19 +2,11 @@
 <div class="all">
     <h1>Scegli la tua immagine profilo</h1>
     <div class="immagini">
-        <img src="../assets/profile/messi.jpg">
-        <img src="../assets/profile/ronaldo.jpg">
-        <img src="../assets/profile/candreva.jpg">
-        <img src="../assets/profile/nagatomo.jpg">
-        <img src="../assets/profile/allegri.jpg">
-        <img src="../assets/profile/hernandez.jpg">
-        <img src="../assets/profile/balotelli.jpg">
-        <img src="../assets/profile/buffon.jpg">
-        <img src="../assets/profile/simeone.jpg">
-        <img src="../assets/profile/ibra.jpg">
-        <img src="../assets/profile/neymar.jpg">
-        <img src="../assets/profile/mazzarri.jpg">
-        <img src="../assets/profile/mourinho.jpg">
-        <img src="../assets/profile/juve.jpg">
+        <ng-container *ngFor="let immagine of immagini">
+            <img src="{{immagine}}" alt="avatar">
+        </ng-container>
     </div>
+    <br><br>
+    <h1>Oppure inserisci il link della tua immagine</h1>
+
 </div>
