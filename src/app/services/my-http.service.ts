@@ -28,9 +28,19 @@ export class MyHttpService {
     return this.httpClient.get('http://localhost:3000/serie');
   }
 
+  getSerieFiltrata(filtro:string):Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie?'+filtro+'=true');
+  }
+
+  get8SerieFiltrata(filtro:string, limit:number):Observable<any>{
+    return this.httpClient.get('http://localhost:3000/serie?_page=1&_limit='+limit+'?'+filtro+'=true');
+  }
+
   getOneSerie(id:number):Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie/'+id);
   }
+
+
   
   /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
     let genere: string=""+author;
