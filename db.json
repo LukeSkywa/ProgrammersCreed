@@ -8,7 +8,8 @@
       "email": "lucaleporati@gmail.com",
       "password": "123",
       "genere": "maschio",
-      "telefono": "45634"
+      "telefono": "45634",
+      "immagine": "../assets/profile/messi.jpg"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "email": "pietrolocatelli@gmail.com",
       "password": "123",
       "genere": "maschio",
-      "telefono": "1234567890"
+      "telefono": "1234567890",
+      "immagine": "../assets/profile/messi.jpg"
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "email": "andreanani@gmail.com",
       "password": "123",
       "genere": "maschio",
-      "telefono": "1234567890"
+      "telefono": "1234567890",
+      "immagine": "../assets/profile/messi.jpg"
     },
     {
       "id": 4,
@@ -38,27 +41,8 @@
       "email": "alessandrolanfranchi@gmail.com",
       "password": "123",
       "genere": "maschio",
-      "telefono": "1234567890"
-    },
-    {
-      "username": "Aloi euguenio",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "username": "persona",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "nome": "pierino",
-      "cognome": "ciao",
-      "username": "piero",
-      "email": "ciao@gmail.com",
-      "password": "123",
-      "genere": "femmina",
-      "telefono": "678"
+      "telefono": "1234567890",
+      "immagine": "../assets/profile/messi.jpg"
     }
   ],
   "serie": [
@@ -78,7 +62,7 @@
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
       "preferiti": true,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 3,
