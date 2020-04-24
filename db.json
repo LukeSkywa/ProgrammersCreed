@@ -8,7 +8,7 @@
             "password": "123",
             "genere": "maschio",
             "telefono": "45634",
-            "immagine": "../assets/messi.jpg"
+            "immagine": "../assets/profile/messi.jpg"
         },
         {
             "id": 2,
@@ -19,7 +19,7 @@
             "password": "123",
             "genere": "maschio",
             "telefono": "1234567890",
-            "immagine": "../assets/messi.jpg"
+            "immagine": "../assets/profile/messi.jpg"
 
         },
         {
@@ -31,7 +31,7 @@
             "password": "123",
             "genere": "maschio",
             "telefono": "1234567890",
-            "immagine": "../assets/messi.jpg"
+            "immagine": "../assets/profile/messi.jpg"
         },
         {
             "id": 4,
@@ -42,7 +42,7 @@
             "password": "123",
             "genere": "maschio",
             "telefono": "1234567890",
-            "immagine": "../assets/messi.jpg"
+            "immagine": "../assets/profile/messi.jpg"
         }
     ],
     "serie": [{
