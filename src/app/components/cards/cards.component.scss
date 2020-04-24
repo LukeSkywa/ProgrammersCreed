@@ -174,14 +174,18 @@ button:hover span {
 }
 
 .card {
-    margin: 0 auto;
-    height: 100%;
+    //height: 100%;
     text-align: center;
     max-width: 22%;
     flex: 999 999 auto;
     margin: 15px;
     background-color: white;
     border-radius: 5%;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px white;
+    width: 23%;
 }
 
 .img {
