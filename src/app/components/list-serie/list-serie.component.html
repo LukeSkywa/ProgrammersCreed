@@ -20,10 +20,10 @@
                         <button class="icons" (click)="show(i)"><img src="../assets/icone/dots.png"></button>
                         <ng-container *ngIf="daMostrare==i">
                             <div class="dropdown-content">
-                                <a [routerLink]="['/dettaglio', item.id]" class="items">mostra di più</a>
+                                <span id="showMore"><a [routerLink]="['/dettaglio', item.id]" class="items"> mostra di più </a></span>
                                 <hr width=100% size=1 color=#011D28>
                                 <ng-container *ngIf="!item.nascosto">
-                                    <a (click)="nascondi(item.id)" class="items">nascondi</a>
+                                    <span id="nascondi"><a (click)="nascondi(item.id)" class="items"> nascondi </a></span>
                                 </ng-container>
                                 <ng-container *ngIf="item.nascosto">
                                     <a (click)="nascondi(item.id)" class="items">mostra</a>

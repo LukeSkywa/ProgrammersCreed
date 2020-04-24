@@ -78,7 +78,7 @@
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
       "preferiti": true,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 3,
@@ -87,7 +87,7 @@
       "genere": "fantastico,drammatico",
       "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
       "preferiti": true,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
       "genere": "fantastico,horror",
       "descrizione": "Hawkins anni 80. Un gruppo di amici fa esperienza di una serie di eventi soprannaturali. In seguito alla misteriosa sparizione di un ragazzino, Jane fa la propria apparizione in città dopo essere scappata da un laboratorio segreto.",
       "preferiti": false,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 5,
