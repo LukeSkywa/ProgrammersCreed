@@ -33,9 +33,16 @@ export class ModificaImmagineComponent implements OnInit {
     this.myHttpService.getMyProfile().subscribe(reponse => {
       this.myProfile = reponse;
     });
+    
   }
 
   ngOnInit(): void {
   }
 
+  modificaImmagine(immagine:string){
+    this.myProfile.immagine=immagine;
+    this.myHttpService.putUser(this.myProfile).subscribe(()=>{
+      this.router.navigateByUrl('profile');
+    });
+  }
 }

@@ -3,7 +3,7 @@
     <h1>Scegli la tua immagine profilo</h1>
     <div class="immagini">
         <ng-container *ngFor="let immagine of immagini">
-            <img src="{{immagine}}" alt="avatar">
+            <img src="{{immagine}}" alt="avatar" (click)="modificaImmagine(immagine)">
         </ng-container>
     </div>
     <br><br>
