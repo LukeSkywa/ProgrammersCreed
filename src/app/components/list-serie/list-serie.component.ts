@@ -18,6 +18,7 @@ export class ListSerieComponent implements OnInit {
   serie: Serie[] = [];
   serieFiltrata: Serie[];
   ricerca:string;
+  lunghezza:number;
 
   constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
     this.mostra = false;
@@ -28,6 +29,7 @@ export class ListSerieComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.ricerca= params['filtro'];
       this.caricaSerie(0);
+      //this.checkMore();
    });
   }
 
@@ -103,4 +105,14 @@ export class ListSerieComponent implements OnInit {
       }
     });
   }
+
+  // checkMore(){
+  //   if(this.serieFiltrata.length>5)
+  //     this.mostra=true;
+  //   else{
+  //     this.mostra=false;
+  //   }
+
+  //}
+
 }
