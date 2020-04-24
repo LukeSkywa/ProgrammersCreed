@@ -1,0 +1,15 @@
+<app-menu [version]=1></app-menu>
+<div class="all">
+    <h1>Scegli la tua immagine profilo</h1>
+    <div class="immagini">
+        <ng-container *ngFor="let immagine of immagini">
+            <img src="{{immagine}}" alt="avatar" (click)="modificaImmagine(immagine)">
+        </ng-container>
+    </div>
+    <h1>Oppure inserisci il link della tua immagine</h1>
+    <form [formGroup]="modificaImg" (ngSubmit)="modificaImmagineLink(modificaImg)">
+        <label for="immagine" id="labelImg">immagine</label>
+        <input type="text" id="immagine" formControlName="immagine" class="person"><br>
+        <button type="submit " [disabled]="modificaImg.status==='INVALID' " ng-class="disabled ">Invio</button>
+    </form>
+</div>

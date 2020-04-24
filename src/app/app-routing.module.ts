@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path:'**',component: PageNotFoundComponent }
 ];
