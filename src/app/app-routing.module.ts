@@ -20,14 +20,14 @@ import { MansonryComponent } from './components/mansonry/mansonry.component';
 
 
 const routes: Routes = [ 
-  {path: 'mansonry', component: MansonryComponent},
+  {path: 'cards', component: MansonryComponent},
   {path: 'login', component: LoginComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'signin', component: RegisterComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'feedback', component: FeedbackComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'list', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'list/:filtro', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'cards',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'mansonry',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},

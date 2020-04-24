@@ -1,4 +1,11 @@
 <app-menu [version]=3></app-menu>
+
+<div class="buttons">
+    <button class="primo" (click)="mostra=false;showList();controllo=null" autofocus>Tutti</button>
+    <button (click)="mostra=true;showList('preferiti');controllo='preferiti'">Preferiti</button>
+    <button (click)="mostra=true;showList('nascosto');controllo='nascosto'">Nascosti</button>
+</div>
+
 <div class="masonry-wrapper">
     <div class="masonry">
         <div class="masonry-item" *ngFor="let serie of serieFiltrata">
@@ -9,3 +16,9 @@
             </div>
         </div>
     </div>
+
+    <div class="btn">
+        <button *ngIf="mostra==false && controllo==null" (click)="mostra=true;showList()">Mostra altro</button>
+        <button *ngIf="mostra==true && controllo==null" (click)="mostra=false;showList()">Mostra di meno</button>
+    </div>
+</div>

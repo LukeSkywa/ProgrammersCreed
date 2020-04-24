@@ -52,7 +52,7 @@ export class MansonryComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.mostra=true;
+    this.mostra=false;
     this.showList();
   }
 
