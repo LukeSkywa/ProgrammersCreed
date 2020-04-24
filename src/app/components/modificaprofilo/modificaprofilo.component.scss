@@ -8,6 +8,23 @@
     text-align: center;
 }
 
+.image {
+    position: absolute;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: 53%;
+    top: 35%;
+    cursor: pointer;
+}
+
+.image img {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+}
+
 label {
     text-align: center;
     margin-left: -5px;
