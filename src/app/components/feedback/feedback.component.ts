@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Feedback } from 'src/app/models/feedback';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { MyHttpService } from 'src/app/services/my-http.service';
 
 
 
@@ -11,7 +12,9 @@ import { HttpHeaders } from '@angular/common/http';
   styleUrls: ['./feedback.component.scss']
 })
 export class FeedbackComponent implements OnInit {
-  http: any;
+  
+
+
   ngOnInit(): void {
   }
  
@@ -38,11 +41,11 @@ export class FeedbackComponent implements OnInit {
   get telefonoControl(): FormControl{
     return this.feedbackForm.get('telefono') as FormControl;
   }
-  get commenti(): FormControl{
+  get commentiControl(): FormControl{
     return this.feedbackForm.get('commenti') as FormControl;
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: MyHttpService) {
     this.feedbackForm = this.fb.group({
      
       nome: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
@@ -50,7 +53,7 @@ export class FeedbackComponent implements OnInit {
       sesso:['', Validators.required],
       email: ['', Validators.required],
       telefono: ['', Validators.required],
-      commenti: ['',],
+      commenti: ['', Validators.required],
     });
   }
 
@@ -58,36 +61,19 @@ export class FeedbackComponent implements OnInit {
     this.feedbackForm.reset();
   }
 
-  invio(feedbackForm){
-    let feedback : Feedback={
-      
-      nome: this.nomeControl.value,
-      cognome: this.cognomeControl.value,
-      sesso: this.sessoControl.value,
-      email: this.emailControl.value,
-      telefono: this.telefonoControl.value,
-      commenti: this.commenti.value
-    };
-    console.log(
-      this.nomeControl.value,
-      this.cognomeControl.value,
-      this.sessoControl.value,
-      this.emailControl.value,
-      this.telefonoControl.value,
-      this.commenti.value
-    );
+  invio(){
 
-    if (feedbackForm.valid) {
-      const email = feedbackForm.value;
+      const email = this.feedbackForm.value;
+      console.log(email);
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      this.http.post('https://formspree.io/asdlf7asdf',
+      this.http.invia('https://formspree.io/meqlyvwd',
         { name: email.nome, replyto: email.email, message: email.commenti },
         { 'headers': headers }).subscribe(
           response => {
-            console.log(response);
+            console.log(response+" risposta");
           }
         );
-    }
+    
     
   }
 

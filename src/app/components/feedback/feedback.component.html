@@ -2,7 +2,7 @@
 <div class="all">
     <div class="container">
         <h2 id="titolo"><strong>Inviaci un tuo Feedback</strong></h2>
-        <form [formGroup]="feedbackForm" (ngSubmit)="invio(feedbackForm.value)" #feedbackForm="ngForm">
+        <form [formGroup]="feedbackForm" (ngSubmit)="invio()" >
             <div>
                 <div>
                     <label for="nome">Nome</label>
@@ -48,6 +48,7 @@
                 <div class="input-group input-group-icon">
                     <label for="commenti"><span class="scritta">Commenti</span></label>
                     <textarea type="text" id="commenti" formControlName="commenti" rows="10" cols="15" ></textarea>
+                    <p *ngIf="commentiControl.status === 'INVALID' && commentiControl.dirty">Campo commenti obbligatorio</p>
                 </div>
             </div>
             <button type="submit" [disabled]="feedbackForm.status === 'INVALID'" ng-class="disabled">Invio</button>
