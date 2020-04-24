@@ -2,7 +2,7 @@
 <div class="all">
     <div class="container">
         <p class="title">Benvenuto </p>
-        <p class="nome">{{myProfile?.nome}} {{myProfile?.cognome}}</p>
+        <p class="nome">{{myProfile?.username}}</p>
         <img src="../assets/messi.jpg" alt="logo" class="logo">
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()" *ngIf="myProfile">
             <label for="nome" id="labelNome">Nome </label>
