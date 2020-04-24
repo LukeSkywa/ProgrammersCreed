@@ -44,6 +44,9 @@ export class LoginService {
   }
 
   addUser(form){
+    if(form.immagine==null){
+      form.immagine="../assets/profile/messi.jpg"
+    }
     this.myHttpService.postUser(form).subscribe(reponse => {
       this.getUsers();
       //console.log(this.usersList);
