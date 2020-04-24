@@ -73,7 +73,7 @@
                 </li>
             </ng-container>
             <div class="btn">
-                <button (click)="mostra=false">Mostra di meno</button>
+                <button (click)="mostra=false" *ngIf="serieFiltrata.length>5">Mostra di meno</button>
             </div>
         </ul>
     </div>
