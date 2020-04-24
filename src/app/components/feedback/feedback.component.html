@@ -1,8 +1,9 @@
 <app-menu [version]=1></app-menu>
 <div class="all">
-    <div class="container">
+    <div class="container" *ngIf="!inviato;else altro">
         <h2 id="titolo"><strong>Inviaci un tuo Feedback</strong></h2>
         <form [formGroup]="feedbackForm" (ngSubmit)="invio()" >
+
             <div>
                 <div>
                     <label for="nome">Nome</label>
@@ -54,4 +55,8 @@
             <button type="submit" [disabled]="feedbackForm.status === 'INVALID'" ng-class="disabled">Invio</button>
         </form>
     </div>
+    <ng-template #altro>
+        <h1>Feedback inviato correttamente</h1>
+        <button (click)="inviato=false; cls()" >invia un altro feedback</button>
+    </ng-template>
 </div>

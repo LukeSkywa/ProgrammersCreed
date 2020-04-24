@@ -13,7 +13,7 @@ import { MyHttpService } from 'src/app/services/my-http.service';
 })
 export class FeedbackComponent implements OnInit {
   
-
+  inviato:boolean;
 
   ngOnInit(): void {
   }
@@ -46,6 +46,7 @@ export class FeedbackComponent implements OnInit {
   }
 
   constructor(private fb: FormBuilder, private http: MyHttpService) {
+    this.inviato=false;
     this.feedbackForm = this.fb.group({
      
       nome: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
@@ -63,6 +64,8 @@ export class FeedbackComponent implements OnInit {
 
   invio(){
 
+     this.inviato=true;
+      
       const email = this.feedbackForm.value;
       console.log(email);
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
