@@ -26,72 +26,78 @@
 //     width: 80%;
 // }
 // //button mostra di più
-// .btn {
-//     text-align: center;
-//     margin: auto;
-// }
-// button {
-//     margin-top: 8px;
-//     margin-bottom: 18px;
-//     position: relative;
-//     outline: none;
-//     text-decoration: none;
-//     border-radius: 50px;
-//     justify-content: center;
-//     align-items: center;
-//     cursor: pointer;
-//     height: 50px;
-//     width: 210px;
-//     background-color: #ffffff;
-//     border: 1px solid rgba(22, 76, 167, 0.6);
-// }
-// button span {
-//     color: #164ca7;
-//     font-size: 13px;
-//     font-weight: 500;
-//     letter-spacing: 0.7px;
-// }
-// button:hover {
-//     animation: rotate 0.7s ease-in-out both;
-// }
-// button:hover span {
-//     animation: storm 0.7s ease-in-out both;
-//     animation-delay: 0.06s;
-// }
-// @keyframes rotate {
-//     0% {
-//         transform: rotate(0deg) translate3d(0, 0, 0);
-//     }
-//     25% {
-//         transform: rotate(3deg) translate3d(0, 0, 0);
-//     }
-//     50% {
-//         transform: rotate(-3deg) translate3d(0, 0, 0);
-//     }
-//     75% {
-//         transform: rotate(1deg) translate3d(0, 0, 0);
-//     }
-//     100% {
-//         transform: rotate(0deg) translate3d(0, 0, 0);
-//     }
-// }
-// @keyframes storm {
-//     0% {
-//         transform: translate3d(0, 0, 0) translateZ(0);
-//     }
-//     25% {
-//         transform: translate3d(4px, 0, 0) translateZ(0);
-//     }
-//     50% {
-//         transform: translate3d(-3px, 0, 0) translateZ(0);
-//     }
-//     75% {
-//         transform: translate3d(2px, 0, 0) translateZ(0);
-//     }
-//     100% {
-//         transform: translate3d(0, 0, 0) translateZ(0);
-//     }
-// }
+.btn {
+    text-align: center;
+    margin: 10px auto;
+}
+
+button {
+    margin: 0 auto;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 50px;
+    width: 210px;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+button span {
+    color: #164ca7;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
 // //bottoni
 // .buttons>button {
 //     margin-bottom: 3px;
@@ -161,9 +167,10 @@
 }
 
 .card {
+    margin: 0 auto;
     height: 100%;
     text-align: center;
-    width: 22%;
+    max-width: 22%;
     flex: 999 999 auto;
     margin: 15px;
     background-color: white;

@@ -8,9 +8,13 @@
 </div>-->
 
 <div class="container">
-    <div class="card" *ngFor="let serie of serie;">
+    <div class="card" *ngFor="let serie of serieFiltrata;let i=index">
         <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}2.jpg" class="img">
         <h4 class="titolo">{{serie.nome}}</h4>
         <p class="desc">{{serie.descrizione}}</p>
     </div>
+</div>
+<div class="btn">
+    <button *ngIf="mostra==false;" (click)="mostra=true;mostraP()">Mostra altro</button>
+    <button *ngIf="mostra==true" (click)="mostra=false;mostraP()">Mostra di meno</button>
 </div>
