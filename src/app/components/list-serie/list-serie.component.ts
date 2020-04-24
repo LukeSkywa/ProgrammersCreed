@@ -99,9 +99,9 @@ export class ListSerieComponent implements OnInit {
       if(element.id===id){
         element.nascosto=!element.nascosto;
         this.myHttpService.putSerie(element).subscribe(()=>{
-            this.caricaSerie();
+            this.caricaSerie(this.controllo);
+            this.daMostrare=null;
         }); 
-        console.log(element);
       }
     });
   }
@@ -114,5 +114,11 @@ export class ListSerieComponent implements OnInit {
   //   }
 
   //}
+
+  filtraLista(i:number){
+    this.filtra(i);
+    this.daMostrare=null;
+    this.ricerca=null;
+  }
 
 }
