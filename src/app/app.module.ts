@@ -18,6 +18,7 @@ import { ModificaprofiloComponent } from './components/modificaprofilo/modificap
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { HomeComponent } from './components/home/home.component';
+import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HomeComponent } from './components/home/home.component';
     ModificaprofiloComponent,
     PageNotFoundComponent,
     DettaglioComponent,
-    HomeComponent
+    HomeComponent,
+    ModificaImmagineComponent
   ],
   imports: [
     BrowserModule,
