@@ -5,7 +5,7 @@
         <p class="nome">{{myProfile?.username}}</p>
         <img src="{{myProfile?.immagine}}" alt="logo" class="logo">
         <div class="image">
-            <img src="../assets/icone/camera.png" alt="camera" class="logo">
+            <img src="../assets/icone/camera.png" alt="camera" class="logo" routerLink="/modificaImmagine">
         </div>
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()" *ngIf="myProfile">
             <label for="nome" id="labelNome">Nome </label>

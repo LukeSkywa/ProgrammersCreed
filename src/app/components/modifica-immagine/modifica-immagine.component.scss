@@ -8,8 +8,6 @@
     text-align: center;
 }
 
-.immagini {}
-
 .immagini img {
     //margin-top: -15px;
     //width: 10%;
@@ -27,4 +25,148 @@
 .immagini img:hover {
     border: solid 1px black;
     box-shadow: 10px 10px 10px 10px black;
+}
+
+label {
+    text-align: center;
+    margin-left: -5px;
+    padding-right: 24%;
+    padding-top: 1%;
+    //margin-left: -270px;
+    font-size: .58rem;
+    color: white;
+    color: white;
+    display: block;
+    float: initial;
+}
+
+#labelCognome,
+#labelNome,
+#labelTel,
+#labelEmail,
+#labelSesso {
+    margin-bottom: -15px;
+    margin-left: -10px;
+    padding-top: 0.5%;
+    padding-left: 0;
+}
+
+select {
+    border: 0;
+    margin-bottom: 5px;
+    height: 45px;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 33%;
+    font-weight: bold;
+    text-indent: 33px;
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+    padding-top: 8px;
+}
+
+select option {
+    background: rgba(75, 128, 171, 1);
+}
+
+input:focus,
+select:focus {
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+// .optSesso {
+//     background-color: rgba(255, 255, 255, 0.3);
+//     color: black;
+//     height: 40px;
+//     font-weight: bold;
+// }
+input {
+    border: 0;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid white;
+    color: white;
+    width: 33%;
+    height: 45px;
+    font-weight: bold;
+    text-indent: 35px;
+    background-repeat: no-repeat;
+    background-position: 5px 12px;
+}
+
+button {
+    //width:50%;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    width: 16%;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button span {
+    color: #164ca7;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+button:active {
+    height: 47px;
+    margin-top: 6px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
 }
