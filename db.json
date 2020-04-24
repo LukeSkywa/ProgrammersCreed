@@ -20,7 +20,7 @@
       "password": "123",
       "genere": "maschio",
       "telefono": "1234567890",
-      "immagine": "../assets/profile/messi.jpg"
+      "immagine": "../assets/profile/allegri.jpg"
     },
     {
       "id": 3,
@@ -43,6 +43,18 @@
       "genere": "maschio",
       "telefono": "1234567890",
       "immagine": "../assets/profile/messi.jpg"
+    },
+    {
+      "username": "pietrooooo",
+      "password": "111",
+      "immagine": "../assets/profile/messi.jpg",
+      "id": 5
+    },
+    {
+      "username": "utentepietrolocatelli",
+      "password": "1234",
+      "immagine": "../assets/profile/nagatomo.jpg",
+      "id": 6
     }
   ],
   "serie": [
