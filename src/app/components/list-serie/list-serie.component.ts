@@ -10,16 +10,26 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./list-serie.component.scss']
 })
 export class ListSerieComponent implements OnInit {
-  daMostrare:number;
-  controllo:number=0;
+  //ricerca
   sub:any;
-  //daMostrare;
-  mostra: boolean;
-  serie: Serie[] = [];
-  serieFiltrata: Serie[];
-  serieFiltrataLim:Serie[];
   ricerca:string;
-  lunghezza:number;
+
+  //popUp dettaglio
+  daMostrare:number;
+
+  //filtro salvato
+  controllo:number=0;
+
+  //array con +5 item
+  mostra: boolean;
+  //serie totale
+  serie: Serie[] = [];
+
+  //serie totale con filtro
+  serieFiltrata: Serie[];
+
+  //serie totale lim 5
+  serieFiltrataLim:Serie[];
 
   constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
     this.mostra = false;
