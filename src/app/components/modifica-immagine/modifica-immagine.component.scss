@@ -23,8 +23,7 @@
 }
 
 .immagini img:hover {
-    border: solid 1px black;
-    box-shadow: 10px 10px 10px 10px black;
+    filter: drop-shadow(0px 5px 15px white);
 }
 
 label {
