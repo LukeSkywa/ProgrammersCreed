@@ -17,6 +17,8 @@ export class ModificaprofiloComponent implements OnInit {
 
   modificaprofilo: FormGroup;
   sessi=['maschio', 'femmina', 'altro'];
+  user: User;
+  img:string;
   
   
   get nomeControl(): FormControl{
@@ -48,6 +50,7 @@ export class ModificaprofiloComponent implements OnInit {
         password: this.myProfile.password,
         genere:this.myProfile.genere,
         telefono: this.myProfile.telefono,
+        immagine: this.myProfile.immagine
       });
     });
   }
@@ -62,8 +65,9 @@ export class ModificaprofiloComponent implements OnInit {
   }
 
   invio(){
-    console.log(this.modificaprofilo.value);
-    let user=this.modificaprofilo.value;
+    // console.log(this.modificaprofilo.value);
+    // this.user=;
+    // console.log(this.user);
     // user.nome=this.nomeControl.value;
     // user.cognome=this.cognomeControl.value;
     // user.email=this.emailControl.value;
@@ -72,7 +76,7 @@ export class ModificaprofiloComponent implements OnInit {
     // user.id=this.myProfile.id;
     // user.username=this.myProfile.username;
     // user.password=this.myProfile.password;
-    this.myHttpService.putUser(user).subscribe(()=>{
+    this.myHttpService.putUser(this.modificaprofilo.value).subscribe(()=>{
       this.router.navigateByUrl('profile');
     });
   }
