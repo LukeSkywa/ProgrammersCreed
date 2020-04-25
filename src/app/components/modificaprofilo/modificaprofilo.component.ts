@@ -65,17 +65,6 @@ export class ModificaprofiloComponent implements OnInit {
   }
 
   invio(){
-    // console.log(this.modificaprofilo.value);
-    // this.user=;
-    // console.log(this.user);
-    // user.nome=this.nomeControl.value;
-    // user.cognome=this.cognomeControl.value;
-    // user.email=this.emailControl.value;
-    // user.telefono=this.telefonoControl.value;
-    // user.genere=this.cognomeControl.value;
-    // user.id=this.myProfile.id;
-    // user.username=this.myProfile.username;
-    // user.password=this.myProfile.password;
     this.myHttpService.putUser(this.modificaprofilo.value).subscribe(()=>{
       this.router.navigateByUrl('profile');
     });

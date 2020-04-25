@@ -170,8 +170,8 @@ button:hover span {
     animation-delay: 0.06s;
 }
 
-//bottoni nella lista
-.bottoni {
+//bottoni a destra nella lista
+.bottonidx {
     position: initial;
     line-height: 70px;
     float: right;
@@ -179,7 +179,7 @@ button:hover span {
     padding: 0;
 }
 
-.bottoni>button {
+.bottonidx>button {
     background-color: rgb(161, 214, 231);
     //background-color: red;
     width: 35px;
@@ -245,12 +245,12 @@ hr {
 //     background-image: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 100%);
 //     border: 0.5px solid white;
 // }
-.bottoni .cuoreNero {
+.bottonidx .cuoreNero {
     font-size: 26px;
     color: black;
 }
 
-.bottoni .cuoreRosso {
+.bottonidx .cuoreRosso {
     font-size: 26px;
     color: red;
 }

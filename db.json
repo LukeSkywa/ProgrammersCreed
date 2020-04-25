@@ -2,13 +2,14 @@
   "users": [
     {
       "id": 1,
-      "nome": "Luca123",
+      "nome": "Luca1234",
       "cognome": "Leporati34",
       "username": "lucaleporati",
       "email": "lucaleporati@gmail.com256",
       "password": "123",
       "genere": "maschio",
-      "telefono": "4563456"
+      "telefono": "4563456",
+      "immagine": "../assets/profile/candreva.jpg"
     },
     {
       "id": 2,
@@ -51,7 +52,7 @@
       "stagioni": 4,
       "genere": "drammatico,azione",
       "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -60,7 +61,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     },
     {
@@ -69,8 +70,8 @@
       "stagioni": 8,
       "genere": "fantastico,drammatico",
       "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
-      "preferiti": true,
-      "nascosto": true
+      "preferiti": false,
+      "nascosto": false
     },
     {
       "id": 4,
@@ -79,7 +80,7 @@
       "genere": "fantastico,horror",
       "descrizione": "Hawkins anni 80. Un gruppo di amici fa esperienza di una serie di eventi soprannaturali. In seguito alla misteriosa sparizione di un ragazzino, Jane fa la propria apparizione in città dopo essere scappata da un laboratorio segreto.",
       "preferiti": false,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 5,
@@ -87,8 +88,8 @@
       "stagioni": 4,
       "genere": "drammatico,commedia",
       "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
-      "preferiti": true,
-      "nascosto": true
+      "preferiti": false,
+      "nascosto": false
     },
     {
       "id": 6,
@@ -97,7 +98,7 @@
       "genere": "commedia",
       "descrizione": "Otis, il figlio insicuro di una sessuologa, e Maeve, una ribelle, sono due studenti delle scuole superiori che decidono di avviare una consulenza sessuale improvvisata nel loro liceo.",
       "preferiti": false,
-      "nascosto": true
+      "nascosto": false
     },
     {
       "id": 7,
@@ -105,8 +106,8 @@
       "stagioni": 5,
       "genere": "drammatico",
       "descrizione": "Tornati nei bassifondi di Birmingham dai campi di battaglia della Prima Guerra Mondiale, i fratelli Tommy e Arthur Shelby sono pronti ad affermarsi nel mondo della criminalità locale con le scommesse illegali e il mercato nero.",
-      "preferiti": true,
-      "nascosto": true
+      "preferiti": false,
+      "nascosto": false
     },
     {
       "id": 8,
@@ -123,7 +124,7 @@
       "stagioni": 7,
       "genere": "drammatico",
       "descrizione": "Una banda di motociclisti protegge la cittadina di Charming dagli aggressori che la minacciano.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": true
     },
     {
@@ -150,8 +151,8 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Michael Scofield decide di farsi arrestare di proposito in modo da poter entrare nel carcere di Fox River, dove il fratello è stato imprigionato ingiustamente. Il suo scopo è quello di progettare un'evasione dall'interno.",
-      "preferiti": false,
-      "nascosto": true
+      "preferiti": true,
+      "nascosto": false
     }
   ]
 }
