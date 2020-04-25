@@ -61,7 +61,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     },
     {
@@ -124,7 +124,7 @@
       "stagioni": 7,
       "genere": "drammatico",
       "descrizione": "Una banda di motociclisti protegge la cittadina di Charming dagli aggressori che la minacciano.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": true
     },
     {
@@ -142,7 +142,7 @@
       "stagioni": 6,
       "genere": "drammatico",
       "descrizione": "Con l'aiuto del fratello Rollo e dell'amico Floki, l'ambizioso guerriero vichingo Ragnar costruisce una flotta per spingersi verso le inesplorate coste inglesi: il suo progetto viene però ostacolato dal potente Jarl Haraldson.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     },
     {

@@ -29,40 +29,20 @@ export class MyHttpService {
     return this.httpClient.get('http://localhost:3000/serie');
   }
 
-  getSerieFiltrata(filtro?:string):Observable<any>{
+  getSerieFiltrata(filtro?:string, limit?:number):Observable<any>{
     let s:string='http://localhost:3000/serie?';
     if(filtro)
       s+=filtro+'=true';
     else
       s+='nascosto=false';
-    return this.httpClient.get(s);
-  }
-
-  get8SerieFiltrata(filtro?:string):Observable<any>{
-    let s:string='http://localhost:3000/serie?';
-    if(filtro)
-      s+=filtro+'=true&';
-    else
-      s+='nascosto=false&';
-    s+='_page=1&_limit=8';
+    if(limit)
+      s+='&_page=1&_limit='+limit;
     return this.httpClient.get(s);
   }
 
   getOneSerie(id:number):Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie/'+id);
   }
-
-
-  
-  /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
-    let genere: string=""+author;
-    let params: HttpParams;
-    if (genere != null) {
-      params = new HttpParams().set('genere', genere);
-    }
-    return this.httpClient.get<User[]>('http://localhost:3000/games', { observe: 'response', params: params });
-    //return this.httpClient.get<GameItem[]>('http://localhost:3000/games?genere=' + genere);
-  }*/
   
   postUser(user:User){
     console.log(user);

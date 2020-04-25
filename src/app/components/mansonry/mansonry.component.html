@@ -1,9 +1,9 @@
 <app-menu [version]=3></app-menu>
 
 <div class="buttons">
-    <button class="primo" (click)="mostra=false;showList();" autofocus>Tutti</button>
-    <button (click)="mostra=false;controllo='preferiti';showList('preferiti');">Preferiti</button>
-    <button (click)="mostra=false;controllo='nascosto';showList('nascosto');">Nascosti</button>
+    <button class="primo" (click)="btnTop(null,8);" autofocus>Tutti</button>
+    <button (click)="btnTop('preferiti',8);">Preferiti</button>
+    <button (click)="btnTop('nascosto',8);">Nascosti</button>
 </div>
 
 <div class="masonry-wrapper">
@@ -13,10 +13,10 @@
                 <button class="share">
                     <span class="material-icons">share</span>
                 </button>
-                <button class="like" *ngIf="!serie.preferiti" (click)="gestisciPreferiti(serie.id)">
+                <button class="like" *ngIf="!serie.preferiti" (click)="preferiti(serie.id)">
                     <span class="material-icons">favorite_border</span>
                 </button>
-                <button class="like" *ngIf="serie.preferiti" (click)="gestisciPreferiti(serie.id)">
+                <button class="like" *ngIf="serie.preferiti" (click)="preferiti(serie.id)">
                     <span class="material-icons">favorite</span>
                 </button>
                 <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}.jpg" class="img">
@@ -28,7 +28,7 @@
     </div>
 
     <div class="btn">
-        <button *ngIf="mostra==false" (click)="mostra=true;showList(controllo)">Mostra altro</button>
-        <button *ngIf="mostra==true" (click)="mostra=false;showList(controllo)">Mostra di meno</button>
+        <button *ngIf="mostra==false" (click)="btnBot()">Mostra altro</button>
+        <button *ngIf="mostra==true" (click)="btnBot()">Mostra di meno</button>
     </div>
 </div>
