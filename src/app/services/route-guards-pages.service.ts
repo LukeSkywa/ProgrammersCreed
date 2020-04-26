@@ -11,7 +11,7 @@ export class RouteGuardsPagesService {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     if (sessionStorage.getItem('user') || localStorage.getItem('user')) {
-      this.router.navigateByUrl('/profile');
+      this.router.navigateByUrl('/home');
       return false;
     } else {
       return true;
