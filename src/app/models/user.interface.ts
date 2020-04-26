@@ -1,3 +1,5 @@
+import { Serie } from './serie.interface';
+
 export interface User{
     id:number;
     nome:string;
@@ -8,4 +10,5 @@ export interface User{
     genere: string;
     telefono:string;
     immagine:string;
+    serie:Serie[];
 }

@@ -51,8 +51,10 @@ export class LoginService {
     if(form.immagine==null){
       form.immagine="../assets/profile/messi.jpg";
     }
+    form.serie=this.myHttpService.getSerieDefault();
     this.myHttpService.postUser(form).subscribe(reponse => {
       this.getUsers();
+      sessionStorage.setItem('registrato',form.id);
       this.router.navigateByUrl('/login');
     });
   }

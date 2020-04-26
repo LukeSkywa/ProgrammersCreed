@@ -10,33 +10,39 @@ import { stringify } from 'querystring';
   providedIn: 'root'
 })
 export class MyHttpService {
+  idUtente:string='';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+    if(sessionStorage.getItem('user'))
+      this.idUtente=sessionStorage.getItem('user');
+    else if(localStorage.getItem('user'))
+      this.idUtente=localStorage.getItem('user');
+   }
+
+  
 
   getUsers(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
   }
 
-  getMyProfile():Observable<any>{
-    let s:string='http://localhost:3000/users/';
-    if(sessionStorage.getItem('user'))
-      s+=Number.parseInt(sessionStorage.getItem('user'));
-    else if(localStorage.getItem('user'))
-      s+=Number.parseInt(localStorage.getItem('user'));
-    
-    return this.httpClient.get(s);
+  getMyProfile():Observable<any>{    
+    return this.httpClient.get("http://localhost:3000/users/"+this.idUtente);
   }
 
   get8Serie(): Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie?_page=1&_limit=8');
+    return this.httpClient.get('http://localhost:3000/users/'+this.idUtente+'/serie?_page=1&_limit=8');
   }
 
   getSerie(): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/users/'+this.idUtente+'/serie');
+  }
+
+  getSerieDefault(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie');
   }
 
   getSerieFiltrata(filtro?:string, limit?:number):Observable<any>{
-    let s:string='http://localhost:3000/serie?';
+    let s:string='http://localhost:3000/users/'+this.idUtente+'/serie?';
     if(filtro)
       s+=filtro+'=true';
     else
@@ -47,7 +53,7 @@ export class MyHttpService {
   }
 
   getOneSerie(id:number):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie/'+id);
+    return this.httpClient.get('http://localhost:3000/users/'+this.idUtente+'/serie/'+id);
   }
   
   postUser(user:User){
@@ -57,12 +63,11 @@ export class MyHttpService {
 
   putUser(user: User){
     console.log(".put(http://localhost:3000/users/"+user.id, user);
-    //sessionStorage.setItem('user',JSON.stringify(user));
     return this.httpClient.put('http://localhost:3000/users/'+user.id, user);
   }
 
   putSerie(serie: Serie){
-    return this.httpClient.put('http://localhost:3000/serie/'+serie.id, serie);
+    return this.httpClient.put('http://localhost:3000/users/'+this.idUtente+'/serie/'+serie.id, serie);
   }
 
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
