@@ -17,9 +17,8 @@ export class MyHttpService {
       this.idUtente=sessionStorage.getItem('user');
     else if(localStorage.getItem('user'))
       this.idUtente=localStorage.getItem('user');
+    console.log("porcodio id: "+this.idUtente);
    }
-
-  
 
   getUsers(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/users');
@@ -62,12 +61,11 @@ export class MyHttpService {
   }
 
   putUser(user: User){
-    console.log(".put(http://localhost:3000/users/"+user.id, user);
     return this.httpClient.put('http://localhost:3000/users/'+user.id, user);
   }
 
   putSerie(serie: Serie){
-    return this.httpClient.put('http://localhost:3000/users/'+this.idUtente+'/serie/'+serie.id, serie);
+    return this.httpClient.post('http://localhost:3000/users/'+this.idUtente+'/serie/'+serie.id, serie);
   }
 
   invia(url: string, body: { name: any; replyto: any; message: any; }, arg2: {
