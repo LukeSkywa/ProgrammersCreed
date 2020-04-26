@@ -2,16 +2,16 @@
 <div class="all">
     <div class="container" *ngIf="!inviato;else altro">
         <h2 id="titolo"><strong>Inviaci un tuo Feedback</strong></h2>
-        <form [formGroup]="feedbackForm" (ngSubmit)="invio()" >
+        <form [formGroup]="feedbackForm" (ngSubmit)="invio()">
 
             <div>
                 <div>
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" formControlName="nome" class="person" >
+                    <input type="text" id="nome" formControlName="nome" class="person">
                     <p *ngIf="nomeControl.status === 'INVALID' && nomeControl.dirty">Campo nome obbligatorio</p>
                 </div>
 
-                <div class="input-group input-group-icon" id="idCognome">
+                <div id="idCognome">
                     <label id="labelCognome" for="cognome">Cognome</label>
                     <input type="text" id="cognome" formControlName="cognome" class="person">
                     <p *ngIf="cognomeControl.status === 'INVALID' && cognomeControl.dirty">Campo cognome obbligatorio</p>
@@ -34,21 +34,21 @@
             <div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" id="email" formControlName="email" class="email" >
+                    <input type="text" id="email" formControlName="email" class="email">
                     <p *ngIf="emailControl.status === 'INVALID' && emailControl.dirty">Campo mail obbligatorio</p>
                 </div>
             </div>
             <div>
-                <div class="input-group input-group-icon">
+                <div>
                     <label for="telefono">Telefono</label>
                     <input type="text" id="telefono" formControlName="telefono" class="phone">
                     <p *ngIf="telefonoControl.status === 'INVALID' && telefonoControl.dirty">Campo telefono obbligatorio</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="input-group input-group-icon">
+            <div>
+                <div>
                     <label for="commenti"><span class="scritta">Commenti</span></label>
-                    <textarea type="text" id="commenti" formControlName="commenti" rows="10" cols="15" ></textarea>
+                    <textarea type="text" id="commenti" formControlName="commenti" rows="10" cols="15"></textarea>
                     <p *ngIf="commentiControl.status === 'INVALID' && commentiControl.dirty">Campo commenti obbligatorio</p>
                 </div>
             </div>
@@ -57,6 +57,6 @@
     </div>
     <ng-template #altro>
         <h1>Feedback inviato correttamente</h1>
-        <button (click)="inviato=false; cls()" id="altro" >invia un altro feedback</button>
+        <button (click)="inviato=false; cls()" id="altro">invia un altro feedback</button>
     </ng-template>
 </div>

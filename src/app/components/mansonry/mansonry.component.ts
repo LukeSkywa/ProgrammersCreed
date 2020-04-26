@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Serie } from 'src/app/models/serie.interface';
-import { SerieService } from 'src/app/services/serie.service';
 import { MyHttpService } from 'src/app/services/my-http.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -16,12 +15,13 @@ export class MansonryComponent implements OnInit {
   sub:any;
   //daMostrare;
   mostra: boolean=false;
+
   serie: Serie[] = [];
   serieFiltrata: Serie[];
   ricerca:string;
   lunghezza:number;
 
-  constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
+  constructor(private myHttpService: MyHttpService,private route: ActivatedRoute, private router: Router) {
   }
 
   showList(filtro?:string,limite?:number){
@@ -30,6 +30,7 @@ export class MansonryComponent implements OnInit {
         this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
           this.serie = reponse;
         });
+
         this.myHttpService.getSerieFiltrata(filtro,limite).subscribe(reponse => {
           this.serieFiltrata = reponse;
           if(this.serie.length<=8){
@@ -57,7 +58,6 @@ export class MansonryComponent implements OnInit {
 
   btnTop(filter:string, limit:number){
     this.mostra=false;
-    this.controllo=filter;
     this.showList(filter,limit);
   }
 

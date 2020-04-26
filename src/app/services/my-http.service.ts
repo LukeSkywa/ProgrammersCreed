@@ -23,6 +23,7 @@ export class MyHttpService {
       s+=Number.parseInt(sessionStorage.getItem('user'));
     else if(localStorage.getItem('user'))
       s+=Number.parseInt(localStorage.getItem('user'));
+    
     return this.httpClient.get(s);
   }
 

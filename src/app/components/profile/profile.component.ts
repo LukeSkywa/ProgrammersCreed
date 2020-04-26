@@ -14,13 +14,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.myHttpService.getMyProfile().subscribe(reponse => {
       this.myProfile = reponse;
-      console.log(this.myProfile);
     }, err => {
       console.log('error');
     });
-  }
-
-  stampa(){
-    console.log("ciao");
   }
 }

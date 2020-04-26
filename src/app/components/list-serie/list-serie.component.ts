@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SerieService } from 'src/app/services/serie.service';
 import { Serie } from 'src/app/models/serie.interface';
 import { MyHttpService } from 'src/app/services/my-http.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -31,7 +30,7 @@ export class ListSerieComponent implements OnInit {
   //serie totale lim 5
   serieFiltrataLim:Serie[];
 
-  constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
+  constructor(private myHttpService: MyHttpService,private route: ActivatedRoute, private router: Router) {
     this.mostra = false;
   }
 

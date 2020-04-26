@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Serie } from 'src/app/models/serie.interface';
-import { SerieService } from 'src/app/services/serie.service';
 import { MyHttpService } from 'src/app/services/my-http.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -20,7 +19,7 @@ export class CardsComponent implements OnInit {
   ricerca:string;
   lunghezza:number;
 
-  constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
+  constructor(private myHttpService: MyHttpService,private route: ActivatedRoute, private router: Router) {
   }
 
   showList(filtro?:string){

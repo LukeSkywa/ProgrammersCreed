@@ -12,23 +12,22 @@
             <ng-template #plur>risultati</ng-template>
         </p>
     </ng-template>
-
     <div *ngIf="serieFiltrata?.length>0; else vuoto">
         <ul>
             <li *ngFor="let item of serieFiltrataLim; let i = index;">
                 <div class="bottonidx">
                     <button *ngIf="!item.preferiti" (click)="gestisciPreferiti(item.id)">
                             <span class="cuoreNero">&#10084;</span>
-                        </button>
+                    </button>
                     <button *ngIf="item.preferiti" (click)="gestisciPreferiti(item.id)">
                             <span class="cuoreRosso">&#10084;</span>
                         </button>
                     <button class="icons">
                             <img src="../assets/icone/share.png" >
-                        </button>
+                    </button>
                     <button class="icons" (click)="show(i)">
                             <img src="../assets/icone/dots.png">
-                        </button>
+                    </button>
                     <div class="grid-container" *ngIf="daMostrare==i">
                         <div class="showMore" [routerLink]="['/dettaglio', item.id]">
                             <img src="../assets/icone/link.png" class="imgPop">
