@@ -8,15 +8,15 @@
     text-align: center;
 }
 
-.image {
-    position: absolute;
+.foto {
+    position: relative;
     background-color: white;
-    height: 30px;
-    width: 30px;
+    height: 33px;
+    width: 33px;
     border-radius: 50%;
-    left: 53%;
-    top: 35%;
     cursor: pointer;
+    margin-bottom: -130px;
+    margin-left: 100px;
 }
 
 .image img {
@@ -97,7 +97,7 @@ button {
     //width:50%;
     margin-top: 8px;
     margin-bottom: 15px;
-    position: relative;
+    //position: relative;
     outline: none;
     text-decoration: none;
     border-radius: 50px;

@@ -3,16 +3,8 @@
     <div class="container">
         <p class="title">Benvenuto </p>
         <p class="nome">{{myProfile?.username}}</p>
+        <img src="../assets/icone/camera.png" alt="camera" class="foto" routerLink="/modificaImmagine"><br>
         <img src="{{myProfile?.immagine}}" alt="logo" class="logo">
-        <!-- <ng-container *ngIf="myProfile.immagine==undefined; else elseBlock">
-            <img src="../assets/profile/messi.jpg" alt="logo" class="logo">
-        </ng-container>
-        <ng-container #elseBlock>
-            <img src="{{myProfile?.immagine}}" alt="logo" class="logo">
-        </ng-container> -->
-        <div class="image">
-            <img src="../assets/icone/camera.png" alt="camera" class="logo" routerLink="/modificaImmagine">
-        </div>
         <form [formGroup]="modificaprofilo" (ngSubmit)="invio()" *ngIf="myProfile">
             <label for="nome" id="labelNome">Nome </label>
             <input type="text" id="nome" formControlName="nome" class="person">

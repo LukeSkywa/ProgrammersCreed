@@ -1,24 +1,34 @@
 <app-menu [version]=3></app-menu>
 
 <div class="buttons">
-    <button class="primo" (click)="mostra=false;showList();controllo=null" autofocus>Tutti</button>
-    <button (click)="mostra=true;showList('preferiti');controllo='preferiti'">Preferiti</button>
-    <button (click)="mostra=true;showList('nascosto');controllo='nascosto'">Nascosti</button>
+    <button class="primo" (click)="btnTop(null,8);" autofocus>Tutti</button>
+    <button (click)="btnTop('preferiti',8);">Preferiti</button>
+    <button (click)="btnTop('nascosto',8);">Nascosti</button>
 </div>
 
 <div class="masonry-wrapper">
     <div class="masonry">
         <div class="masonry-item" *ngFor="let serie of serieFiltrata">
             <div class="masonry-content">
-                <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}2.jpg" class="img">
+                <button class="share">
+                    <span class="material-icons">share</span>
+                </button>
+                <button class="like" *ngIf="!serie.preferiti" (click)="preferiti(serie.id)">
+                    <span class="material-icons">favorite_border</span>
+                </button>
+                <button class="like" *ngIf="serie.preferiti" (click)="preferiti(serie.id)">
+                    <span class="material-icons">favorite</span>
+                </button>
+                <img src="../assets/img/{{serie.nome | lowercase | removewhitespaces}}.jpg" class="img">
                 <h3 class="masonry-title">{{serie.nome}}</h3>
                 <p class="masonry-description">{{serie.descrizione}}</p>
+                <span class="material-icons" id="more" routerLink="/dettaglio/{{serie.id}}">more_horiz</span>
             </div>
         </div>
     </div>
 
     <div class="btn">
-        <button *ngIf="mostra==false && controllo==null" (click)="mostra=true;showList()">Mostra altro</button>
-        <button *ngIf="mostra==true && controllo==null" (click)="mostra=false;showList()">Mostra di meno</button>
+        <button *ngIf="mostra==false" (click)="btnBot()">Mostra altro</button>
+        <button *ngIf="mostra==true" (click)="btnBot()">Mostra di meno</button>
     </div>
 </div>

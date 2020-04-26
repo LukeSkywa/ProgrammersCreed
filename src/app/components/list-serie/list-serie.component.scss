@@ -13,7 +13,6 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    padding-bottom: 15px;
     margin-bottom: 0;
 }
 
@@ -62,7 +61,7 @@ li:hover {
 
 button {
     margin-top: 8px;
-    //margin-bottom: 18px;
+    margin-bottom: 15px;
     //position: relative;
     outline: none;
     text-decoration: none;
@@ -170,8 +169,8 @@ button:hover span {
     animation-delay: 0.06s;
 }
 
-//bottoni nella lista
-.bottoni {
+//bottoni a destra nella lista
+.bottonidx {
     position: initial;
     line-height: 70px;
     float: right;
@@ -179,7 +178,7 @@ button:hover span {
     padding: 0;
 }
 
-.bottoni>button {
+.bottonidx>button {
     background-color: rgb(161, 214, 231);
     //background-color: red;
     width: 35px;
@@ -189,50 +188,11 @@ button:hover span {
     line-height: 50px;
 }
 
-.icons:hover {
+.icons:hover,
+.icons:focus {
     //background-color: rgb(161, 214, 231);
     background-image: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 100%);
     border: 0.5px solid white;
-}
-
-.dropdown-content {
-    display: block;
-    background-color: rgb(204, 227, 235);
-    right: 5%;
-    position: absolute;
-    height: 80px;
-    margin-top: -65px;
-    border-radius: 20px;
-    line-height: 31px;
-}
-
-.items {
-    text-decoration: none;
-    // line-height: 31px;
-    text-align: center;
-    padding: 0 70px;
-    position: relative;
-}
-
-#showMore {
-    background-image: url('../../../assets/icone/link.png');
-    background-repeat: no-repeat;
-    background-position: 15px;
-    line-height: 30px;
-}
-
-#nascondi,
-#nascondi2 {
-    color: blue;
-    cursor: pointer;
-    background-image: url('../../../assets/icone/chiudi.png');
-    background-repeat: no-repeat;
-    background-position: 15px;
-}
-
-hr {
-    margin-left: -0.2px;
-    width: 99.1%;
 }
 
 .imglink {
@@ -245,12 +205,80 @@ hr {
 //     background-image: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 100%);
 //     border: 0.5px solid white;
 // }
-.bottoni .cuoreNero {
+.bottonidx .cuoreNero {
     font-size: 26px;
     color: black;
 }
 
-.bottoni .cuoreRosso {
+.bottonidx .cuoreRosso {
     font-size: 26px;
     color: red;
+}
+
+//dropDown
+.grid-container {
+    cursor: pointer;
+    display: grid;
+    //grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.3fr 1.3fr;
+    gap: 0px;
+    grid-template-areas: "showMore items" "nascondi items2";
+    background-color: rgb(204, 227, 235);
+    right: 5%;
+    position: absolute;
+    margin-top: -65px;
+    border-radius: 20px;
+    line-height: 40px;
+}
+
+.showMore {
+    grid-area: showMore;
+    border-bottom: 1px solid black;
+    padding: 0 10px;
+    height: 40px;
+}
+
+.nascondi {
+    grid-area: nascondi;
+    padding: 0 10px;
+    height: 40px;
+}
+
+.items {
+    grid-area: items;
+    height: 40px;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    // line-height: 31px;
+    text-align: left;
+    padding: 0 50px;
+    padding-left: 20px;
+}
+
+.items2 {
+    grid-area: items2;
+    height: 40px;
+    text-decoration: none;
+    // line-height: 31px;
+    text-align: left;
+    padding: 0 50px;
+    padding-left: 20px;
+}
+
+.imgPop {
+    margin-top: 3px;
+}
+
+.search,
+.vuoto {
+    color: white;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.vuoto {
+    color: white;
+    margin: auto;
+    margin-top: 220px;
+    text-align: center;
 }

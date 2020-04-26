@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item';
 import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-menu',
@@ -15,6 +16,9 @@ export class MenuComponent implements OnInit {
   @Input()
   nome:string;
 
+  constructor(private router: Router, private location: Location) {
+  }
+
   createMenu(){
     if(this.version===1 || this.version==3){
       this.menuList=[     
@@ -26,14 +30,11 @@ export class MenuComponent implements OnInit {
         { id:6, desc:"Exit"},
       ]
     }
-    else if(this.version===2){
+    else if(this.version===2 || this.version==4){
       this.menuList=[     
         { id:7, desc:this.nome},
       ];
     }
-  }
-
-  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
@@ -43,26 +44,20 @@ export class MenuComponent implements OnInit {
   change(id:number){
     if(id===6){
       sessionStorage.removeItem('user');
+      localStorage.removeItem('user');
       this.router.navigateByUrl('login');
     }
     else if(id===7){
       this.router.navigateByUrl('list');
     }
-    this.router.events.subscribe(() => {
-      // if(id===2 || id===3){
-      //   this.cerca=true;
-      //   console.log("apro");
-      // }
-      // else{
-      //   this.cerca=false;
-      //   console.log("chiudo");
-      // }
-      this.createMenu();
-    });
   }
 
   ricerca(s:string){
     this.router.navigateByUrl("list/"+s);
+  }
+
+  back(){
+    this.location.back();
   }
 }
 

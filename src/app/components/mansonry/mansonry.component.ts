@@ -15,7 +15,7 @@ export class MansonryComponent implements OnInit {
   controllo:string=null;
   sub:any;
   //daMostrare;
-  mostra: boolean;
+  mostra: boolean=false;
   serie: Serie[] = [];
   serieFiltrata: Serie[];
   ricerca:string;
@@ -24,47 +24,51 @@ export class MansonryComponent implements OnInit {
   constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
   }
 
-  showList(filtro?:string){
+  showList(filtro?:string,limite?:number){
     this.controllo=filtro;
-    if(!this.mostra){
-        this.myHttpService.get8Serie().subscribe(reponse => {
+        //gestisco un array di 8 elementi
+        this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
+          this.serie = reponse;
+        });
+        this.myHttpService.getSerieFiltrata(filtro,limite).subscribe(reponse => {
           this.serieFiltrata = reponse;
-          if(this.serieFiltrata.length<8)
+          if(this.serie.length<=8){
             this.mostra=null;
+          }
       });
-    }
-    else{
-      if(filtro)
-      this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
-        this.serieFiltrata = reponse;
-        if(this.serieFiltrata.length<8)
-          this.mostra=null;
-      });
-      else{
-        this.myHttpService.getSerie().subscribe(reponse => {
-          this.serieFiltrata = reponse;
-          if(this.serieFiltrata.length<8)
-            this.mostra=null;
-      });
-      }
-    }
+
   }
   
 
   ngOnInit(): void {
-    this.mostra=false;
-    this.showList();
+    this.showList(null,8);
   }
 
-  gestisciPreferiti(id:number){
-    console.log(this.serie);
+  preferiti(id:number){
     this.serie.forEach(element => {
       if(element.id===id){
         element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
+          this.showList(this.controllo);
         }); 
-        console.log(element);
       }
     });
   }
+
+  btnTop(filter:string, limit:number){
+    this.mostra=false;
+    this.controllo=filter;
+    this.showList(filter,limit);
+  }
+
+  btnBot(){
+    if(this.mostra)
+      this.showList(this.controllo,8);
+    else
+      this.showList(this.controllo);
+    
+    this.mostra=!this.mostra;
+  }
+
+
 }

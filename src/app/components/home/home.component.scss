@@ -517,3 +517,22 @@
         z-index: 0;
     }
 }
+
+@media screen and (max-width: 550px) {
+    #proparallax,
+    .slider {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .slider {
+        width: 70%;
+    }
+    .mask {
+        width: 690px;
+    }
+    #proparallax {
+        display: none;
+    }
+}

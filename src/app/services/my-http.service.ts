@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { User } from '../models/user.interface';
 import { Serie } from '../models/serie.interface';
 import { isInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
+import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,12 @@ export class MyHttpService {
   }
 
   getMyProfile():Observable<any>{
-    return this.httpClient.get('http://localhost:3000/users/'+Number.parseInt(sessionStorage.getItem('user')));
+    let s:string='http://localhost:3000/users/';
+    if(sessionStorage.getItem('user'))
+      s+=Number.parseInt(sessionStorage.getItem('user'));
+    else if(localStorage.getItem('user'))
+      s+=Number.parseInt(localStorage.getItem('user'));
+    return this.httpClient.get(s);
   }
 
   get8Serie(): Observable<any>{
@@ -28,29 +34,20 @@ export class MyHttpService {
     return this.httpClient.get('http://localhost:3000/serie');
   }
 
-  getSerieFiltrata(filtro:string):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie?'+filtro+'=true');
-  }
-
-  get8SerieFiltrata(filtro:string, limit:number):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie?_page=1&_limit='+limit+'?'+filtro+'=true');
+  getSerieFiltrata(filtro?:string, limit?:number):Observable<any>{
+    let s:string='http://localhost:3000/serie?';
+    if(filtro)
+      s+=filtro+'=true';
+    else
+      s+='nascosto=false';
+    if(limit)
+      s+='&_page=1&_limit='+limit;
+    return this.httpClient.get(s);
   }
 
   getOneSerie(id:number):Observable<any>{
     return this.httpClient.get('http://localhost:3000/serie/'+id);
   }
-
-
-  
-  /*getUsersUsername(author: number): Observable<HttpResponse<User[]>> {
-    let genere: string=""+author;
-    let params: HttpParams;
-    if (genere != null) {
-      params = new HttpParams().set('genere', genere);
-    }
-    return this.httpClient.get<User[]>('http://localhost:3000/games', { observe: 'response', params: params });
-    //return this.httpClient.get<GameItem[]>('http://localhost:3000/games?genere=' + genere);
-  }*/
   
   postUser(user:User){
     console.log(user);

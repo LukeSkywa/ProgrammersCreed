@@ -10,36 +10,46 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./list-serie.component.scss']
 })
 export class ListSerieComponent implements OnInit {
-  daMostrare:number;
-  controllo:number=0;
+  //ricerca
   sub:any;
-  //daMostrare;
-  mostra: boolean;
-  serie: Serie[] = [];
-  serieFiltrata: Serie[];
   ricerca:string;
-  lunghezza:number;
+
+  //popUp dettaglio
+  daMostrare:number;
+
+  //filtro salvato
+  controllo:number=0;
+
+  //array con +5 item
+  mostra: boolean;
+  //serie totale
+  serie: Serie[] = [];
+
+  //serie totale con filtro
+  serieFiltrata: Serie[];
+
+  //serie totale lim 5
+  serieFiltrataLim:Serie[];
 
   constructor(private myHttpService: MyHttpService, private serieService: SerieService,private route: ActivatedRoute, private router: Router) {
     this.mostra = false;
   }
 
   ngOnInit(): void {
-    //console.log(this.serie);
     this.sub = this.route.params.subscribe(params => {
       this.ricerca= params['filtro'];
       this.caricaSerie(0);
-      //this.checkMore();
    });
   }
 
-  caricaSerie(id?:number){
+  caricaSerie(id:number){
     this.myHttpService.getSerie().subscribe(reponse => {
       this.serie = reponse;
       if(this.ricerca)
         this.filtra(3);
-      else if(id!=null)
+      else
         this.filtra(id);
+      this.limitaLista();
     });
   }
 
@@ -59,28 +69,12 @@ export class ListSerieComponent implements OnInit {
       if(element.id===id){
         element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
-          if(element.preferiti && this.controllo!=2)
-            this.caricaSerie(0);
-          else if(this.controllo==1)
-            this.caricaSerie(1);
+          this.caricaSerie(this.controllo);
         }); 
         console.log(element);
       }
     });
   }
-
-  // rimuoviPreferiti(id:number){
-  //   console.log(this.serie);
-  //   this.serie.forEach(element => {
-  //     if(element.id===id){
-  //       element.preferiti=false;
-  //       this.myHttpService.putSerie(element).subscribe(()=>{
-  //           this.caricaSerie();
-  //       });
-  //       console.log(element);
-  //     }
-  //   });
-  // }
 
   filtra(filtro: number) {
     this.controllo=filtro;
@@ -92,6 +86,7 @@ export class ListSerieComponent implements OnInit {
         case 3: return item.nome.toLowerCase().includes(this.ricerca.toLowerCase()) || item.descrizione.toLowerCase().includes(this.ricerca.toLowerCase());
       }
     });
+    this.limitaLista();
   }
 
   nascondi(id:number){
@@ -106,19 +101,23 @@ export class ListSerieComponent implements OnInit {
     });
   }
 
-  // checkMore(){
-  //   if(this.serieFiltrata.length>5)
-  //     this.mostra=true;
-  //   else{
-  //     this.mostra=false;
-  //   }
+  limitaLista(){
+    if(this.mostra==false)
+      this.serieFiltrataLim=this.serieFiltrata.slice(0,5);
+    else{
+      this.serieFiltrataLim=this.serieFiltrata;
+    }
+  }
 
-  //}
-
-  filtraLista(i:number){
-    this.filtra(i);
+  btnTop(filtro:number){
+    this.filtra(filtro);
+    this.mostra=false;
     this.daMostrare=null;
-    this.ricerca=null;
+  }
+
+  btnBot(){
+    this.mostra=!this.mostra;
+    this.limitaLista();
   }
 
 }

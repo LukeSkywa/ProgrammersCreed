@@ -2,14 +2,14 @@
   "users": [
     {
       "id": 1,
-      "nome": "Luca12",
+      "nome": "Luca1234",
       "cognome": "Leporati34",
       "username": "lucaleporati",
       "email": "lucaleporati@gmail.com256",
       "password": "123",
       "genere": "maschio",
       "telefono": "4563456",
-      "immagine": "../assets/profile/nagatomo.jpg"
+      "immagine": "../assets/profile/candreva.jpg"
     },
     {
       "id": 2,
@@ -70,7 +70,7 @@
       "genere": "fantastico,drammatico",
       "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 4,
@@ -97,7 +97,7 @@
       "genere": "commedia",
       "descrizione": "Otis, il figlio insicuro di una sessuologa, e Maeve, una ribelle, sono due studenti delle scuole superiori che decidono di avviare una consulenza sessuale improvvisata nel loro liceo.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 7,
@@ -115,7 +115,7 @@
       "genere": "drammatico",
       "descrizione": "Serie antologica che esplora le peggiori paure legate alla tecnologia, con storie che attingono ai disagi collettivi del mondo moderno.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 9,
@@ -124,7 +124,7 @@
       "genere": "drammatico",
       "descrizione": "Una banda di motociclisti protegge la cittadina di Charming dagli aggressori che la minacciano.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 10,
@@ -132,7 +132,7 @@
       "stagioni": 3,
       "genere": "drammatico",
       "descrizione": "Eventi reali connessi alle vicende di alcuni dei più noti signori della droga e il lavoro delle forze dell'ordine che cercano di fermarne i loro affari illeciti.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": true
     },
     {
@@ -141,8 +141,8 @@
       "stagioni": 6,
       "genere": "drammatico",
       "descrizione": "Con l'aiuto del fratello Rollo e dell'amico Floki, l'ambizioso guerriero vichingo Ragnar costruisce una flotta per spingersi verso le inesplorate coste inglesi: il suo progetto viene però ostacolato dal potente Jarl Haraldson.",
-      "preferiti": true,
-      "nascosto": false
+      "preferiti": false,
+      "nascosto": true
     },
     {
       "id": 12,

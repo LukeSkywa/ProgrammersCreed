@@ -13,14 +13,12 @@ import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { HomeComponent } from './components/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 import { MansonryComponent } from './components/mansonry/mansonry.component';
 
 
 
 const routes: Routes = [ 
-  {path: 'cards', component: MansonryComponent,canActivate: [RouteGuardsPagesService]},
   {path: 'login', component: LoginComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'signin', component: RegisterComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
@@ -32,6 +30,7 @@ const routes: Routes = [
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'cards', component: MansonryComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path:'**',component: PageNotFoundComponent }
 ];
