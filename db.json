@@ -13,14 +13,13 @@
     },
     {
       "id": 2,
-      "nome": "Pietro",
-      "cognome": "Locatelli",
+      "nome": "",
+      "cognome": "",
       "username": "pietrolocatelli",
-      "email": "pietrolocatelli@gmail.com",
+      "email": "",
       "password": "123",
-      "genere": "maschio",
-      "telefono": "1234567890",
-      "immagine": "../assets/profile/messi.jpg"
+      "genere": "femmina",
+      "telefono": ""
     },
     {
       "id": 3,
@@ -79,7 +78,7 @@
       "stagioni": 3,
       "genere": "fantastico,horror",
       "descrizione": "Hawkins anni 80. Un gruppo di amici fa esperienza di una serie di eventi soprannaturali. In seguito alla misteriosa sparizione di un ragazzino, Jane fa la propria apparizione in città dopo essere scappata da un laboratorio segreto.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": true
     },
     {
@@ -88,7 +87,7 @@
       "stagioni": 4,
       "genere": "drammatico,commedia",
       "descrizione": "Lucifer, annoiato e infelice, abbandona il regno degli inferi per vivere a Los Angeles nei panni di un umano. Una volta sulla Terra conosce l'affascinante detective Chloe Decker, donna misteriosa e imperscrutabile.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     },
     {
@@ -151,7 +150,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Michael Scofield decide di farsi arrestare di proposito in modo da poter entrare nel carcere di Fox River, dove il fratello è stato imprigionato ingiustamente. Il suo scopo è quello di progettare un'evasione dall'interno.",
-      "preferiti": true,
+      "preferiti": false,
       "nascosto": false
     }
   ]
