@@ -1,5 +1,5 @@
 <div class="login">
-    <form [formGroup]="loginForm" class="loginForm" (ngSubmit)="login(loginForm.value)">
+    <form [formGroup]="loginForm" class="loginForm" (ngSubmit)="login()">
         <button class="btn-registrati" routerLink="/signin">+</button>
         <div>
             <img src="../assets/logo.png" alt="logo" class="logo">
@@ -13,7 +13,7 @@
         <div>
             <span class="password">memorizza password</span>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" formControlName="salva">
                 <span class="slider round"></span>
             </label>
         </div>

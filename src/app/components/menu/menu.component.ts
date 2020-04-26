@@ -43,6 +43,7 @@ export class MenuComponent implements OnInit {
   change(id:number){
     if(id===6){
       sessionStorage.removeItem('user');
+      localStorage.removeItem('user');
       this.router.navigateByUrl('login');
     }
     else if(id===7){

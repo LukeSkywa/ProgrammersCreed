@@ -18,7 +18,12 @@ export class MyHttpService {
   }
 
   getMyProfile():Observable<any>{
-    return this.httpClient.get('http://localhost:3000/users/'+Number.parseInt(sessionStorage.getItem('user')));
+    let s:string='http://localhost:3000/users/';
+    if(sessionStorage.getItem('user'))
+      s+=Number.parseInt(sessionStorage.getItem('user'));
+    else if(localStorage.getItem('user'))
+      s+=Number.parseInt(localStorage.getItem('user'));
+    return this.httpClient.get(s);
   }
 
   get8Serie(): Observable<any>{

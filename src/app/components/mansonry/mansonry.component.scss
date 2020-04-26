@@ -2,11 +2,11 @@
       padding: 1.5em;
       margin-right: auto;
       margin-left: auto;
-      width: 95%;
+      //width: 95%;
   }
   
   .masonry {
-      width: 100%;
+      //width: 100%;
       columns: 1;
       column-gap: 30px;
   }
@@ -230,6 +230,7 @@
   
   //bottoni sulle card
   .share {
+      position: relative;
       display: none;
       margin-left: 8px;
       float: left;
@@ -240,6 +241,7 @@
   }
   
   .like {
+      position: relative;
       display: none;
       margin-right: 8px;
       float: right;

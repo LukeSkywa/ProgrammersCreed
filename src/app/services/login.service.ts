@@ -14,18 +14,22 @@ export class LoginService {
     this.getUsers();
   }
 
-  accesso(form/*username: string,password:string*/): boolean{
+  accesso(form): boolean{
     let controllo=false;
     this.usersList.forEach(element => {
       if(element.username==form.username && element.password==form.password){
-        sessionStorage.setItem('user', JSON.stringify(element.id));
+        if(form.salva)
+          localStorage.setItem('user', JSON.stringify(element.id));
+        else
+          sessionStorage.setItem('user', JSON.stringify(element.id));
+          
         controllo=true;
       }
     });
     return controllo;
   }
 
-  eseguiLogin(/*username: string,password:string*/form){
+  eseguiLogin(form){
     if (this.accesso(form)) {
       this.router.navigateByUrl('/home');
     }
@@ -49,7 +53,6 @@ export class LoginService {
     }
     this.myHttpService.postUser(form).subscribe(reponse => {
       this.getUsers();
-      //console.log(this.usersList);
       this.router.navigateByUrl('/login');
     });
   }

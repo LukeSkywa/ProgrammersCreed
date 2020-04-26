@@ -30,7 +30,6 @@ export class MansonryComponent implements OnInit {
         this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
           this.serie = reponse;
         });
-
         this.myHttpService.getSerieFiltrata(filtro,limite).subscribe(reponse => {
           this.serieFiltrata = reponse;
           if(this.serie.length<=8){
@@ -42,7 +41,7 @@ export class MansonryComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.showList();
+    this.showList(null,8);
   }
 
   preferiti(id:number){
