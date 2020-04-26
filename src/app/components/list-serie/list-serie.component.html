@@ -1,44 +1,52 @@
 <app-menu [version]=3></app-menu>
 <div class="all">
-    <div class="buttons">
-        <button class="primo" (click)="btnTop(0);" ng-focus="controllo==0">Tutti</button>
-        <button (click)="btnTop(1);" ng-focus="controllo==1">Preferiti</button>
-        <button (click)="btnTop(2);" ng-focus="controllo==2">Nascosti</button>
+    <div class="buttons" *ngIf="ricerca==null;else cercato">
+        <button class="primo" (click)="btnTop(0);" (focus)="controllo==0" autofocus>Tutti</button>
+        <button (click)="btnTop(1);" (focus)="controllo==1">Preferiti</button>
+        <button (click)="btnTop(2);" (focus)="controllo==2">Nascosti</button>
     </div>
-    <ul>
-        <li *ngFor="let item of serieFiltrataLim; let i = index;">
-            <div class="bottonidx">
-                <button *ngIf="!item.preferiti" (click)="gestisciPreferiti(item.id)">
+    <ng-template #cercato>
+        <h1 class="search">Hai cercato: {{ricerca}}</h1>
+    </ng-template>
+    <div *ngIf="serieFiltrata?.length>0; else vuoto">
+        <ul>
+            <li *ngFor="let item of serieFiltrataLim; let i = index;">
+                <div class="bottonidx">
+                    <button *ngIf="!item.preferiti" (click)="gestisciPreferiti(item.id)">
                             <span class="cuoreNero">&#10084;</span>
                         </button>
-                <button *ngIf="item.preferiti" (click)="gestisciPreferiti(item.id)">
+                    <button *ngIf="item.preferiti" (click)="gestisciPreferiti(item.id)">
                             <span class="cuoreRosso">&#10084;</span>
                         </button>
-                <button class="icons">
+                    <button class="icons">
                             <img src="../assets/icone/share.png" >
                         </button>
-                <button class="icons" (click)="show(i)">
+                    <button class="icons" (click)="show(i)">
                             <img src="../assets/icone/dots.png">
                         </button>
-                <div class="grid-container" *ngIf="daMostrare==i">
-                    <div class="showMore" [routerLink]="['/dettaglio', item.id]">
-                        <img src="../assets/icone/link.png" class="imgPop">
+                    <div class="grid-container" *ngIf="daMostrare==i">
+                        <div class="showMore" [routerLink]="['/dettaglio', item.id]">
+                            <img src="../assets/icone/link.png" class="imgPop">
+                        </div>
+                        <div class="nascondi">
+                            <img src="../assets/icone/chiudi.png" class="imgPop">
+                        </div>
+                        <div class="items" [routerLink]="['/dettaglio', item.id]">Dettaglio</div>
+                        <div class="items2" *ngIf="!item.nascosto" (click)="nascondi(item.id)">Nascondi</div>
+                        <div class="items2" *ngIf="item.nascosto" (click)="nascondi(item.id)">Mostra</div>
                     </div>
-                    <div class="nascondi">
-                        <img src="../assets/icone/chiudi.png" class="imgPop">
-                    </div>
-                    <div class="items" [routerLink]="['/dettaglio', item.id]">Dettaglio</div>
-                    <div class="items2" *ngIf="!item.nascosto" (click)="nascondi(item.id)">Nascondi</div>
-                    <div class="items2" *ngIf="item.nascosto" (click)="nascondi(item.id)">Mostra</div>
                 </div>
-            </div>
-            <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
-            <span class="nome">{{item.nome}}</span><br>
-            <span class="descrizione">{{item.descrizione}}</span>
-        </li>
-    </ul>
-    <div class="btn" *ngIf="serieFiltrata?.length>5">
-        <button *ngIf="mostra==false" (click)="btnBot()">Mostra di più</button>
-        <button *ngIf="mostra==true" (click)="btnBot()">Mostra di meno</button>
+                <img src="/../assets/img/{{item.nome | lowercase | removewhitespaces}}.jpg" alt="" class="logo">
+                <span class="nome">{{item.nome}}</span><br>
+                <span class="descrizione">{{item.descrizione}}</span>
+            </li>
+        </ul>
+        <div class="btn" *ngIf="serieFiltrata?.length>5">
+            <button *ngIf="mostra==false" (click)="btnBot()">Mostra di più</button>
+            <button *ngIf="mostra==true" (click)="btnBot()">Mostra di meno</button>
+        </div>
     </div>
+    <ng-template #vuoto>
+        <h2 class="vuoto">Nessuna serie disponibile</h2>
+    </ng-template>
 </div>

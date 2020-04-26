@@ -110,10 +110,9 @@ export class ListSerieComponent implements OnInit {
   }
 
   btnTop(filtro:number){
+    this.filtra(filtro);
     this.mostra=false;
     this.daMostrare=null;
-    this.ricerca=null;
-    this.filtra(filtro);
   }
 
   btnBot(){
