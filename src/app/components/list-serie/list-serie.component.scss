@@ -13,7 +13,6 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    padding-bottom: 15px;
     margin-bottom: 0;
 }
 
@@ -62,7 +61,7 @@ li:hover {
 
 button {
     margin-top: 8px;
-    //margin-bottom: 18px;
+    margin-bottom: 15px;
     //position: relative;
     outline: none;
     text-decoration: none;
@@ -189,7 +188,8 @@ button:hover span {
     line-height: 50px;
 }
 
-.icons:hover {
+.icons:hover,
+.icons:focus {
     //background-color: rgb(161, 214, 231);
     background-image: linear-gradient(90deg, rgba(1, 29, 40, 1) 0%, rgba(75, 128, 171, 1) 100%);
     border: 0.5px solid white;
