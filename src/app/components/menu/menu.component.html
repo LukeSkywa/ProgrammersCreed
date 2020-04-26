@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <nav class="menu">
     <ol>
-        <li *ngIf="version===2" class="menu-item" id="freccia">
-            <a href=#0 routerLink='/list' id="align">
+        <li *ngIf="version===2" class="menu-item" id="freccia" (click)="back()">
+            <a id="align">
                 <span class="material-icons">arrow_back</span>
             </a>
         </li>

@@ -101,12 +101,6 @@ export class ListSerieComponent implements OnInit {
     });
   }
 
-  filtraLista(i:number){
-    this.filtra(i);
-    this.daMostrare=null;
-    this.ricerca=null;
-  }
-
   limitaLista(){
     if(this.mostra==false)
       this.serieFiltrataLim=this.serieFiltrata.slice(0,5);
@@ -117,7 +111,9 @@ export class ListSerieComponent implements OnInit {
 
   btnTop(filtro:number){
     this.mostra=false;
-    this.filtraLista(filtro);
+    this.daMostrare=null;
+    this.ricerca=null;
+    this.filtra(filtro);
   }
 
   btnBot(){
