@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
   }
 
   createMenu(){
-    if(this.version===1 || this.version==3){
+    if(this.version===1 || this.version==3 || this.version==4){
       this.menuList=[     
         { id:1, desc:"Home"},
         { id:2, desc:"List"},
@@ -30,7 +30,7 @@ export class MenuComponent implements OnInit {
         { id:6, desc:"Exit"},
       ]
     }
-    else if(this.version===2 || this.version==4){
+    else if(this.version===2){
       this.menuList=[     
         { id:7, desc:this.nome},
       ];
@@ -52,8 +52,12 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  ricerca(s:string){
+  ricercaL(s:string){
     this.router.navigateByUrl("list/"+s);
+  }
+
+  ricercaC(s:string){
+    this.router.navigateByUrl("cards/"+s);
   }
 
   back(){

@@ -10,10 +10,11 @@
             <a href=#0 routerLink="/{{menuItem.desc|lowercase}}" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
         </li>
 
-        <li class="menu-Item" *ngIf="version==3">
+        <li class="menu-Item" *ngIf="version==3 || version==4">
             <form>
                 <input type="text" #search>
-                <i class="fa fa-search" (click)="ricerca(search.value)"></i>
+                <i *ngIf="version==3" class="fa fa-search" (click)="ricercaL(search.value)"></i>
+                <i *ngIf="version==4" class="fa fa-search" (click)="ricercaC(search.value)"></i>
             </form>
         </li>
         <li class="menu-item" id="logo">

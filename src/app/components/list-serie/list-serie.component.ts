@@ -119,4 +119,8 @@ export class ListSerieComponent implements OnInit {
     this.limitaLista();
   }
 
+  share(){
+    this.daMostrare=null;
+    alert('social WIP');
+  }
 }

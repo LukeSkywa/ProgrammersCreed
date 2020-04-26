@@ -1,16 +1,19 @@
-<app-menu [version]=3></app-menu>
+<app-menu [version]=4></app-menu>
 
-<div class="buttons">
+<div class="buttons" *ngIf="ricerca==null; else search">
     <button class="primo" (click)="btnTop(null,8);" autofocus>Tutti</button>
     <button (click)="btnTop('preferiti',8);">Preferiti</button>
     <button (click)="btnTop('nascosto',8);">Nascosti</button>
 </div>
+<ng-template #search>
+    <h1 class="ric">Ricerca</h1>
+</ng-template>
 
 <div class="masonry-wrapper">
     <div class="masonry">
         <div class="masonry-item" *ngFor="let serie of serieFiltrata">
             <div class="masonry-content">
-                <button class="share">
+                <button class="share" (click)="share()">
                     <span class="material-icons">share</span>
                 </button>
                 <button class="like" *ngIf="!serie.preferiti" (click)="preferiti(serie.id)">

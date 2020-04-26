@@ -52,8 +52,8 @@
       "stagioni": 4,
       "genere": "drammatico,azione",
       "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-      "preferiti": false,
-      "nascosto": false
+      "preferiti": true,
+      "nascosto": true
     },
     {
       "id": 2,
@@ -61,7 +61,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     },
     {
@@ -70,7 +70,7 @@
       "stagioni": 8,
       "genere": "fantastico,drammatico",
       "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     },
     {
@@ -151,7 +151,7 @@
       "stagioni": 5,
       "genere": "drammatico,azione",
       "descrizione": "Michael Scofield decide di farsi arrestare di proposito in modo da poter entrare nel carcere di Fox River, dove il fratello è stato imprigionato ingiustamente. Il suo scopo è quello di progettare un'evasione dall'interno.",
-      "preferiti": false,
+      "preferiti": true,
       "nascosto": false
     }
   ]

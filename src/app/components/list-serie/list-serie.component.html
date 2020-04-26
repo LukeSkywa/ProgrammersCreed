@@ -22,7 +22,7 @@
                     <button *ngIf="item.preferiti" (click)="gestisciPreferiti(item.id)">
                             <span class="cuoreRosso">&#10084;</span>
                         </button>
-                    <button class="icons">
+                    <button class="icons" (click)="share()">
                             <img src="../assets/icone/share.png" >
                     </button>
                     <button class="icons" (click)="show(i)">

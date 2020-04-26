@@ -19,30 +19,40 @@ export class MansonryComponent implements OnInit {
   serie: Serie[] = [];
   serieFiltrata: Serie[];
   ricerca:string;
-  lunghezza:number;
 
   constructor(private myHttpService: MyHttpService,private route: ActivatedRoute, private router: Router) {
   }
 
   showList(filtro?:string,limite?:number){
-    this.controllo=filtro;
-        //gestisco un array di 8 elementi
-        this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
-          this.serie = reponse;
-        });
-
-        this.myHttpService.getSerieFiltrata(filtro,limite).subscribe(reponse => {
-          this.serieFiltrata = reponse;
-          if(this.serie.length<=8){
+        if(this.ricerca)
+          this.myHttpService.ricerca(filtro).subscribe(reponse => {
+            this.serieFiltrata = reponse;
             this.mostra=null;
-          }
-      });
+          });
+        else{
+          //gestisco un array di 8 elementi
+          this.myHttpService.getSerieFiltrata(filtro).subscribe(reponse => {
+            this.serie = reponse;
+          });
 
+          this.myHttpService.getSerieFiltrata(filtro,limite).subscribe(reponse => {
+            this.serieFiltrata = reponse;
+            if(this.serie.length<=8){
+              this.mostra=null;
+            }
+          });
+        }
   }
   
 
   ngOnInit(): void {
-    this.showList(null,8);
+    this.sub = this.route.params.subscribe(params => {
+      this.ricerca= params['filtro'];
+      if(this.ricerca)
+        this.showList(this.ricerca,8);
+      else
+        this.showList(null,8);
+   });
   }
 
   preferiti(id:number){
@@ -57,6 +67,7 @@ export class MansonryComponent implements OnInit {
   }
 
   btnTop(filter:string, limit:number){
+    this.controllo=filter;
     this.mostra=false;
     this.showList(filter,limit);
   }
@@ -70,5 +81,8 @@ export class MansonryComponent implements OnInit {
     this.mostra=!this.mostra;
   }
 
+  share(){
+    alert('social WIP');
+  }
 
 }

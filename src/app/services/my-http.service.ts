@@ -14,7 +14,7 @@ export class MyHttpService {
   constructor(private httpClient: HttpClient) { }
 
   getUsers(): Observable<any>{
-    return this.httpClient.get('http://localhost:3000/users');
+    return this.httpClient.get<User[]>('http://localhost:3000/users');
   }
 
   getMyProfile():Observable<any>{
@@ -24,15 +24,15 @@ export class MyHttpService {
     else if(localStorage.getItem('user'))
       s+=Number.parseInt(localStorage.getItem('user'));
     
-    return this.httpClient.get(s);
+    return this.httpClient.get<User>(s);
   }
 
   get8Serie(): Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie?_page=1&_limit=8');
+    return this.httpClient.get<Serie[]>('http://localhost:3000/serie?_page=1&_limit=8');
   }
 
   getSerie(): Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie');
+    return this.httpClient.get<Serie[]>('http://localhost:3000/serie');
   }
 
   getSerieFiltrata(filtro?:string, limit?:number):Observable<any>{
@@ -43,11 +43,11 @@ export class MyHttpService {
       s+='nascosto=false';
     if(limit)
       s+='&_page=1&_limit='+limit;
-    return this.httpClient.get(s);
+    return this.httpClient.get<Serie[]>(s);
   }
 
   getOneSerie(id:number):Observable<any>{
-    return this.httpClient.get('http://localhost:3000/serie/'+id);
+    return this.httpClient.get<Serie>('http://localhost:3000/serie/'+id);
   }
   
   postUser(user:User){
@@ -69,6 +69,11 @@ export class MyHttpService {
     headers: import("@angular/common/http").HttpHeaders;
   }) {
     return this.httpClient.post(url,body,arg2); 
+  }
+
+  ricerca(filtro:string):Observable<any>{
+    let params: HttpParams=new HttpParams().set('q', filtro);
+    return this.httpClient.get<Serie[]>('http://localhost:3000/serie/', { params: params });
   }
 
 }

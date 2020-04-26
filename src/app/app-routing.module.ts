@@ -31,6 +31,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards', component: MansonryComponent, canActivate: [RouteGuardsLoginRegisterService]},
+  {path: 'cards/:filtro', component: MansonryComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path:'**',component: PageNotFoundComponent }
 ];
