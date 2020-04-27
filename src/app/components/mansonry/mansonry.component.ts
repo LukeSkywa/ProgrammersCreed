@@ -9,15 +9,20 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./mansonry.component.scss']
 })
 export class MansonryComponent implements OnInit {
-
-  daMostrare:number;
-  controllo:string=null;
   sub:any;
-  //daMostrare;
+
+  //filtri salvati
+  controllo:string=null;
+  limite:number;
+
+  //bottoni sotto
   mostra: boolean=false;
 
+  //serie tot filtrata
   serie: Serie[] = [];
+  //serie limitata a 8
   serieFiltrata: Serie[];
+  //ricerca da url
   ricerca:string;
 
   constructor(private myHttpService: MyHttpService,private route: ActivatedRoute, private router: Router) {
@@ -49,7 +54,7 @@ export class MansonryComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.ricerca= params['filtro'];
       if(this.ricerca)
-        this.showList(this.ricerca,8);
+        this.showList(this.ricerca);
       else
         this.showList(null,8);
    });
@@ -60,23 +65,28 @@ export class MansonryComponent implements OnInit {
       if(element.id===id){
         element.preferiti=!element.preferiti;
         this.myHttpService.putSerie(element).subscribe(()=>{
-          this.showList(this.controllo);
+          this.showList(this.controllo,this.limite);
         }); 
       }
     });
   }
 
   btnTop(filter:string, limit:number){
+    this.limite=limit;
     this.controllo=filter;
     this.mostra=false;
     this.showList(filter,limit);
   }
 
   btnBot(){
-    if(this.mostra)
+    if(this.mostra){
       this.showList(this.controllo,8);
-    else
+      this.limite=8;
+    }
+    else{
       this.showList(this.controllo);
+      this.limite=null;
+    }
     
     this.mostra=!this.mostra;
   }

@@ -111,6 +111,7 @@ export class ListSerieComponent implements OnInit {
   btnTop(filtro:number){
     this.filtra(filtro);
     this.mostra=false;
+    this.limitaLista();
     this.daMostrare=null;
   }
 

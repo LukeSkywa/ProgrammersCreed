@@ -10,7 +10,7 @@
 </ng-template>
 
 <div class="masonry-wrapper">
-    <div class="masonry">
+    <div class="masonry" *ngIf="serieFiltrata?.length>0; else vuoto">
         <div class="masonry-item" *ngFor="let serie of serieFiltrata">
             <div class="masonry-content">
                 <button class="share" (click)="share()">
@@ -29,7 +29,9 @@
             </div>
         </div>
     </div>
-
+    <ng-template #vuoto>
+        <h2 class="vuoto">Nessuna serie disponibile</h2>
+    </ng-template>
     <div class="btn">
         <button *ngIf="mostra==false" (click)="btnBot()">Mostra altro</button>
         <button *ngIf="mostra==true" (click)="btnBot()">Mostra di meno</button>
