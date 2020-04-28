@@ -13,7 +13,7 @@
     <div class="masonry" *ngIf="serieFiltrata?.length>0; else vuoto">
         <div class="masonry-item" *ngFor="let serie of serieFiltrata">
             <div class="masonry-content">
-                <button class="share" (click)="share()">
+                <button class="share" (click)="share('localhost:4200/dettaglio/'+serie.id)">
                     <span class="material-icons">share</span>
                 </button>
                 <button class="like" *ngIf="!serie.preferiti" (click)="preferiti(serie.id)">

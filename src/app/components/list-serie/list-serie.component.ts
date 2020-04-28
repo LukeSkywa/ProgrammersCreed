@@ -120,8 +120,12 @@ export class ListSerieComponent implements OnInit {
     this.limitaLista();
   }
 
-  share(){
-    this.daMostrare=null;
-    alert('social WIP');
+  share(item) {
+    document.addEventListener('copy', (e: ClipboardEvent) => {
+      e.clipboardData.setData('text/plain', (item));
+      e.preventDefault();
+      document.removeEventListener('copy', null);
+    });
+    document.execCommand('copy');
   }
 }
