@@ -6,7 +6,7 @@
                 <span class="material-icons">arrow_back</span>
             </a>
         </li>
-        <li class="menu-item" *ngFor="let menuItem of menuList">
+        <li class="menu-item" *ngFor="let menuItem of menuList" routerLinkActive="active">
             <a href=#0 routerLink="/{{menuItem.desc|lowercase}}" (click)="change(menuItem.id)">{{menuItem.desc}}</a>
         </li>
 

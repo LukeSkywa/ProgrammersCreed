@@ -9,7 +9,7 @@
       "password": "123",
       "genere": "maschio",
       "telefono": "4563456",
-      "immagine": "../assets/profile/candreva.jpg"
+      "immagine": "../assets/profile/allegri.jpg"
     },
     {
       "id": 2,
@@ -58,8 +58,8 @@
       "stagioni": 4,
       "genere": "drammatico,azione",
       "descrizione": "Un criminale ha un piano per realizzare la più grande rapina della storia, da realizzare alla Zecca Reale di Spagna. Per realizzare i propri scopi, l'uomo recluta otto persone che non hanno nulla da perdere.",
-      "preferiti": false,
-      "nascosto": false
+      "preferiti": true,
+      "nascosto": true
     },
     {
       "id": 2,
@@ -68,7 +68,7 @@
       "genere": "drammatico,azione",
       "descrizione": "Un professore di chimica, Walter White, scopre di avere un cancro ai polmoni giudicato incurabile e decide di diventare socio di uno spacciatore di droga, Jesse, nella produzione di anfetamine, di modo da garantire benessere alla famiglia.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 3,
@@ -77,7 +77,7 @@
       "genere": "fantastico,drammatico",
       "descrizione": "La lotta per il potere tra sette casate nobiliari provoca massacri e disastri, lasciando la popolazione nella povertà e nel degrado, mentre il mondo è minacciato dall'avvento di un'era glaciale che risveglia forze oscure e creature leggendarie.",
       "preferiti": false,
-      "nascosto": false
+      "nascosto": true
     },
     {
       "id": 4,

@@ -305,3 +305,8 @@ form:hover .fa {
     right: 8px;
     width: 20%;
 }
+
+.active {
+    border-bottom: 2px solid whitesmoke;
+    background: rgba(75, 128, 171, 1);
+}
