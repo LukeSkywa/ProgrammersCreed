@@ -4,7 +4,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
@@ -14,7 +13,6 @@ import { SharedModule } from './shared/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
     ModificaprofiloComponent,
     ModificaImmagineComponent,
   ],
