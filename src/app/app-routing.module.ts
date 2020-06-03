@@ -1,16 +1,12 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
-import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 
 
 
 const routes: Routes = [
-  {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
   { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
@@ -22,7 +18,8 @@ const routes: Routes = [
   { path: 'signin', loadChildren: () => import('./features/register/register.module').then(m => m.RegisterModule) },
   { path: 'dettaglio/:id', loadChildren: () => import('./features/dettaglio/dettaglio.module').then(m => m.DettaglioModule) },
   { path: 'profile', loadChildren: () => import('./features/profile/profile.module').then(m => m.ProfileModule) },
-  { path: 'MyFeature', loadChildren: () => import('./my-feature/my-feature.module').then(m => m.MyFeatureModule) },
+  { path: 'modificaProfilo', loadChildren: () => import('./features/modificaprofilo/modificaprofilo.module').then(m => m.ModificaprofiloModule) },
+  { path: 'modificaImmagine', loadChildren: () => import('./features/modifica-immagine/modifica-immagine.module').then(m => m.ModificaImmagineModule) },
   { path: '**', loadChildren: () => import('./features/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) }
 ]
 
