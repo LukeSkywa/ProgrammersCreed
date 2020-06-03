@@ -31,6 +31,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
   { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
+  { path: 'list', loadChildren: () => import('./features/list/list.module').then(m => m.ListModule) },
   { path:'**',component: PageNotFoundComponent }
 ];
 
