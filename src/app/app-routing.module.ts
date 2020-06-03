@@ -32,6 +32,7 @@ const routes: Routes = [
   {path: 'cards/:filtro', component: MansonryComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
+  { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
   { path:'**',component: PageNotFoundComponent }
 ];
 
