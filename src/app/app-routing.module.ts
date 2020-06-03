@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
@@ -16,7 +15,6 @@ import { ModificaImmagineComponent } from './components/modifica-immagine/modifi
 const routes: Routes = [ 
   {path: 'signin', component: RegisterComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'feedback', component: FeedbackComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
@@ -27,6 +25,7 @@ const routes: Routes = [
   { path: 'list/:filtro', loadChildren: () => import('./features/list/list.module').then(m => m.ListModule) },
   { path: 'cards', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
   { path: 'cards/:filtro', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
+  { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
   { path:'**',component: PageNotFoundComponent }
 ];
 

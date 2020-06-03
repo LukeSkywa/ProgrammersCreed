@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
-import { FeedbackComponent } from './components/feedback/feedback.component'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
@@ -19,7 +18,6 @@ import { SharedModule } from './shared/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    FeedbackComponent,
     RegisterComponent,
     ProfileComponent,
     ModificaprofiloComponent,
