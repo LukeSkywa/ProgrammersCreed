@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
-import { ListSerieComponent } from './components/list-serie/list-serie.component';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
@@ -20,8 +19,6 @@ const routes: Routes = [
   {path: 'signin', component: RegisterComponent, canActivate: [RouteGuardsPagesService]},
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'feedback', component: FeedbackComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'list', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'list/:filtro', component: ListSerieComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'mansonry',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
@@ -32,6 +29,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
   { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
   { path: 'list', loadChildren: () => import('./features/list/list.module').then(m => m.ListModule) },
+  { path: 'list/:filtro', loadChildren: () => import('./features/list/list.module').then(m => m.ListModule) },
   { path:'**',component: PageNotFoundComponent }
 ];
 

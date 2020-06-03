@@ -10,9 +10,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FeedbackComponent } from './components/feedback/feedback.component'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ListSerieComponent } from './components/list-serie/list-serie.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
@@ -26,10 +24,8 @@ import { SharedModule } from './shared/shared/shared.module';
     FeedbackComponent,
     RegisterComponent,
     ProfileComponent,
-    ListSerieComponent,
     CardsComponent,
     CardsComponent,
-    RemovewhitespacesPipe,
     ModificaprofiloComponent,
     PageNotFoundComponent,
     DettaglioComponent,
