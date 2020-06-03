@@ -6,7 +6,6 @@ import { ModificaprofiloComponent } from './components/modificaprofilo/modificap
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 
 
@@ -14,7 +13,6 @@ import { ModificaImmagineComponent } from './components/modifica-immagine/modifi
 const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
@@ -25,6 +23,7 @@ const routes: Routes = [
   { path: 'cards/:filtro', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
   { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
   { path: 'signin', loadChildren: () => import('./features/register/register.module').then(m => m.RegisterModule) },
+  { path: 'dettaglio/:id', loadChildren: () => import('./features/dettaglio/dettaglio.module').then(m => m.DettaglioModule) },
   { path:'**',component: PageNotFoundComponent }
 ];
 
