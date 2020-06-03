@@ -5,7 +5,6 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 
 
@@ -24,8 +23,8 @@ const routes: Routes = [
   { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
   { path: 'signin', loadChildren: () => import('./features/register/register.module').then(m => m.RegisterModule) },
   { path: 'dettaglio/:id', loadChildren: () => import('./features/dettaglio/dettaglio.module').then(m => m.DettaglioModule) },
-  { path:'**',component: PageNotFoundComponent }
-];
+  { path: '**', loadChildren: () => import('./features/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) }
+]
 
 @NgModule({
   imports: [

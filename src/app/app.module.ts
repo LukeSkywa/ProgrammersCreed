@@ -8,7 +8,6 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 import { SharedModule } from './shared/shared/shared.module';
 
@@ -17,7 +16,6 @@ import { SharedModule } from './shared/shared/shared.module';
     AppComponent,
     ProfileComponent,
     ModificaprofiloComponent,
-    PageNotFoundComponent,
     ModificaImmagineComponent,
   ],
   imports: [
