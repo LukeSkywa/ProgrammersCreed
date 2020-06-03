@@ -4,11 +4,11 @@ import { MyHttpService } from 'src/app/services/my-http.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-mansonry',
-  templateUrl: './mansonry.component.html',
-  styleUrls: ['./mansonry.component.scss']
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss']
 })
-export class MansonryComponent implements OnInit {
+export class CardsComponent implements OnInit {
   sub:any;
 
   //filtri salvati
