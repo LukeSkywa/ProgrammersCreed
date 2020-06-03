@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item';
 import { Router } from '@angular/router';
 import {Location} from '@angular/common';
+import { RouterServiceService } from 'src/app/services/router-service.service';
 
 @Component({
   selector: 'app-menu',
@@ -16,7 +17,7 @@ export class MenuComponent implements OnInit {
   @Input()
   nome:string;
 
-  constructor(private router: Router, private location: Location) {
+  constructor(private router: Router, private location: Location, private routerService:RouterServiceService) {
   }
 
   createMenu(){
@@ -41,14 +42,23 @@ export class MenuComponent implements OnInit {
     this.createMenu();
   }
 
-  change(id:number){
-    if(id===6){
+  change(item:MenuItem){
+    if(item.id===6){
       sessionStorage.removeItem('user');
       localStorage.removeItem('user');
       this.router.navigateByUrl('login');
     }
-    else if(id===7){
+    else if(item.id===7){
       this.router.navigateByUrl('list');
+    }
+    else{
+      if(item!=null){
+        this.routerService.navigateTo(item.desc.toLowerCase());
+      }
+      else{
+        this.routerService.navigateTo("/home");
+      }
+      
     }
   }
 

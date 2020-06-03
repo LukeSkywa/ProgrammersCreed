@@ -11,7 +11,6 @@ import { RouteGuardsLoginRegisterService } from './services/route-guards-login-r
 import { RouteGuardsPagesService } from './services/route-guards-pages.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { HomeComponent } from './components/home/home.component';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 import { MansonryComponent } from './components/mansonry/mansonry.component';
 
@@ -26,7 +25,6 @@ const routes: Routes = [
   {path: 'mansonry',  component:CardsComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
-  {path: 'home', component: HomeComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaImmagine', component: ModificaImmagineComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards', component: MansonryComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'cards/:filtro', component: MansonryComponent, canActivate: [RouteGuardsLoginRegisterService]},

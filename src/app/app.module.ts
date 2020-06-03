@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './components/menu/menu.component';
+
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -16,15 +16,14 @@ import { RemovewhitespacesPipe } from './pipes/removewhitespaces.pipe';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { HomeComponent } from './components/home/home.component';
 import { ModificaImmagineComponent } from './components/modifica-immagine/modifica-immagine.component';
 import { MansonryComponent } from './components/mansonry/mansonry.component';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     FeedbackComponent,
-    MenuComponent,
     RegisterComponent,
     ProfileComponent,
     ListSerieComponent,
@@ -34,7 +33,6 @@ import { MansonryComponent } from './components/mansonry/mansonry.component';
     ModificaprofiloComponent,
     PageNotFoundComponent,
     DettaglioComponent,
-    HomeComponent,
     ModificaImmagineComponent,
     MansonryComponent
   ],
@@ -46,6 +44,7 @@ import { MansonryComponent } from './components/mansonry/mansonry.component';
     BrowserAnimationsModule,
     HttpClientModule,
     NgbModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
