@@ -4,7 +4,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -26,7 +25,6 @@ import { MansonryComponent } from './components/mansonry/mansonry.component';
     AppComponent,
     FeedbackComponent,
     MenuComponent,
-    LoginComponent,
     RegisterComponent,
     ProfileComponent,
     ListSerieComponent,
@@ -47,7 +45,6 @@ import { MansonryComponent } from './components/mansonry/mansonry.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
     NgbModule,
   ],
   providers: [],
