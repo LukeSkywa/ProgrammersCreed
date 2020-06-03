@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { RegisterComponent } from './components/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -18,7 +16,6 @@ import { SharedModule } from './shared/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     ProfileComponent,
     ModificaprofiloComponent,
     PageNotFoundComponent,

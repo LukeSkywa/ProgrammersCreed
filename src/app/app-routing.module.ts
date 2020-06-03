@@ -1,7 +1,6 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ModificaprofiloComponent } from './components/modificaprofilo/modificaprofilo.component';
 import { RouteGuardsLoginRegisterService } from './services/route-guards-login-register.service';
@@ -12,8 +11,7 @@ import { ModificaImmagineComponent } from './components/modifica-immagine/modifi
 
 
 
-const routes: Routes = [ 
-  {path: 'signin', component: RegisterComponent, canActivate: [RouteGuardsPagesService]},
+const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'modificaProfilo', component: ModificaprofiloComponent, canActivate: [RouteGuardsLoginRegisterService]},
   {path: 'dettaglio/:id', component: DettaglioComponent, canActivate: [RouteGuardsLoginRegisterService]},
@@ -26,6 +24,7 @@ const routes: Routes = [
   { path: 'cards', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
   { path: 'cards/:filtro', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
   { path: 'feedback', loadChildren: () => import('./features/feedback/feedback.module').then(m => m.FeedbackModule) },
+  { path: 'signin', loadChildren: () => import('./features/register/register.module').then(m => m.RegisterModule) },
   { path:'**',component: PageNotFoundComponent }
 ];
 
